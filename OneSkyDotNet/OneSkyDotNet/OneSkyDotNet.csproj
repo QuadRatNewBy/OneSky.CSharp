@@ -34,9 +34,18 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IOneSkyPlatform.cs" />
-    <Compile Include="IOneSkyPlatformPlainClient.cs" />
-    <Compile Include="IOneSkyPlatformPlainProjectGroup.cs" />
+    <Compile Include="IPlatform.cs" />
+    <Compile Include="IPlatformPlainClient.cs" />
+    <Compile Include="IPlatformPlainFile.cs" />
+    <Compile Include="IPlatformPlainImportTask.cs" />
+    <Compile Include="IPlatformPlainLocale.cs" />
+    <Compile Include="IPlatformPlainOrder.cs" />
+    <Compile Include="IPlatformPlainProject.cs" />
+    <Compile Include="IPlatformPlainProjectGroup.cs" />
+    <Compile Include="IPlatformPlainProjectType.cs" />
+    <Compile Include="IPlatformPlainQuotation.cs" />
+    <Compile Include="IPlatformPlainScreenshot.cs" />
+    <Compile Include="IPlatformPlainTranslation.cs" />
     <Compile Include="OneSkyClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

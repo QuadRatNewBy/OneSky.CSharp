@@ -4,7 +4,7 @@
 
     public static class OneSkyClient
     {
-        public static IOneSkyPlatform Platform
+        public static IPlatform Platform
         {
             get
             {
