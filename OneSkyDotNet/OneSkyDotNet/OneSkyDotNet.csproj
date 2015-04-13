@@ -47,6 +47,8 @@
     <Compile Include="IPlatformPlainScreenshot.cs" />
     <Compile Include="IPlatformPlainTranslation.cs" />
     <Compile Include="OneSkyClient.cs" />
+    <Compile Include="Plain\OneSky.cs" />
+    <Compile Include="Plain\OneSkyRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
