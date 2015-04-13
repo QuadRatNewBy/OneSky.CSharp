@@ -4,12 +4,12 @@
     {
         string List(int page = 1, int perPage = 50);
 
-        string Show();
+        string Show(int projectGroupId);
 
         string Create(string name, string locale = "en");
 
-        string Delete();
+        string Delete(int projectGroupId);
 
-        string Languages();
+        string Languages(int projectGroupId);
     }
 }

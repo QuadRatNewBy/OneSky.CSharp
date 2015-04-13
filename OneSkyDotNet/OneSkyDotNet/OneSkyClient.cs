@@ -4,12 +4,9 @@
 
     public static class OneSkyClient
     {
-        public static IPlatform Platform
+        public static IOneSkyPlainClient CreatePlainClient(string publicKey, string secretKey)
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
+            throw new NotImplementedException();
         }
     }
 }

@@ -2,6 +2,6 @@
 {
     public interface IPlatformPlainLocale
     {
-         
+        string List();
     }
 }

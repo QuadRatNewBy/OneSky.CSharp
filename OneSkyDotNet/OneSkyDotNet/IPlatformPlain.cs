@@ -1,8 +1,6 @@
 ﻿namespace OneSkyDotNet
 {
-    using System;
-
-    public interface IPlatformPlainClient
+    public interface IPlatformPlain
     {
         IPlatformPlainProjectGroup ProjectGroup { get; }
 

@@ -34,8 +34,8 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IPlatform.cs" />
-    <Compile Include="IPlatformPlainClient.cs" />
+    <Compile Include="IOneSkyPlainClient.cs" />
+    <Compile Include="IPlatformPlain.cs" />
     <Compile Include="IPlatformPlainFile.cs" />
     <Compile Include="IPlatformPlainImportTask.cs" />
     <Compile Include="IPlatformPlainLocale.cs" />

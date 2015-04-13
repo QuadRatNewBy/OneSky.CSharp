@@ -2,12 +2,12 @@
 {
     public interface IPlatformPlainTranslation
     {
-        string Export(string locale, string sourceFileName, string exportFileName = null);
+        string Export(int projectId, string locale, string sourceFileName, string exportFileName = null);
 
-        string ExportMultilingualFile(string sourceFileName, string exportFileName = null, string fileFormat = null);
+        string ExportMultilingualFile(int projectId, string sourceFileName, string exportFileName = null, string fileFormat = null);
 
-        string AppDescription(string locale);
+        string AppDescription(int projectId, string locale);
 
-        string Status(string fileName, string locale);
+        string Status(int projectId, string fileName, string locale);
     }
 }

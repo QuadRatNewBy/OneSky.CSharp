@@ -1,9 +1,12 @@
 ﻿namespace OneSkyDotNet
 {
+    using System.Collections.Generic;
+
     public interface IPlatformPlainQuotation
     {
         string Show(
-            string files,
+            int projectId,
+            IEnumerable<string> files,
             string toLocale,
             bool isIncludingNotTranslated = true,
             bool isIncludingNotApproved = true,
