@@ -1,6 +1,7 @@
 ﻿namespace OneSkyDotNet
 {
     using System;
+    using System.Collections;
     using System.Collections.Generic;
     using System.IO;
     using System.Linq;
@@ -45,12 +46,32 @@
 
             foreach (var keyValuePair in this.body)
             {
-                sb.Append(
-                    string.Format(
-                        "{2}\"{0}\":\"{1}\"",
-                        keyValuePair.Key,
-                        keyValuePair.Value,
-                        notFirst ? "," : string.Empty));
+                var ienum = keyValuePair.Value as IEnumerable;
+
+                if (ienum != null)
+                {
+                    var innerFirst = true;
+                    sb.Append(string.Format("{1}\"{0}\": [", keyValuePair.Key, notFirst ? "," : string.Empty));
+                    foreach (var obj in ienum)
+                    {
+                        if (!innerFirst)
+                        {
+                            sb.Append(", ");
+                        }
+                        sb.Append(obj);
+                        innerFirst = false;
+                    }
+                    sb.Append("]");
+                }
+                else
+                {
+                    sb.Append(
+                        string.Format(
+                            "{2}\"{0}\":\"{1}\"",
+                            keyValuePair.Key,
+                            keyValuePair.Value,
+                            notFirst ? "," : string.Empty));
+                }
                 notFirst = true;
             }
 
