@@ -13,7 +13,7 @@ For now it's only "pull-and-compile". After release there will be NuGet package 
 
 ### Help, Wiki and Examples ###
 * Help (TODO)
-* [Wiki](https://github.com/QuadRatNewBy/OneSky-DotNet/wiki/Home.md)
+* [Wiki](https://github.com/QuadRatNewBy/OneSky-DotNet/wiki/Home)
 * Examples (TODO)
 
 ### Credits ###
@@ -31,13 +31,13 @@ Aims to cover OneSky *Platform* and *Plugin* API to return strings as responses.
 1. Cover *Platform* endpoints
 2. Cover *Plugin* endpoints
 
-View full list on [Wiki](https://github.com/QuadRatNewBy/OneSky-DotNet/wiki/Roadmap.md).
+View full list on [Wiki](https://github.com/QuadRatNewBy/OneSky-DotNet/wiki/Roadmap).
 
 ### Release Phase ###
 Aims to cover OneSky *Platform* and *Plugin* APIs and parse its JSON response to C# classes.  
 After release there will be NuGet package available.
 
-View full list on [Wiki](https://github.com/QuadRatNewBy/OneSky-DotNet/wiki/Roadmap.md).  
+View full list on [Wiki](https://github.com/QuadRatNewBy/OneSky-DotNet/wiki/Roadmap).  
 
 ### Further Improvements ###
 * Unit Tests for all endpoints (questionable).
