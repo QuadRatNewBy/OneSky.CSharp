@@ -24,38 +24,25 @@ Well and me - [QuadRatNewBy](https://github.com/QuadRatNewBy).
 
 ## Roadmap ##
 
-### Prerelease Phase ###
+### Prerelease Phase (current)###
 Aims to cover OneSky *Platform* and *Plugin* API to return strings as responses.  
-(*JSON parsing will be done during phase TWO*)
+(*JSON parsing will be done during release phase*)
 
-[[Cut to WIKI]]
- 
-1. Cover *Platform* **Locale** endpoint(s) [Done: 0/1]
-2. Cover *Platform* **Project Group** endpoint(s) [Done: 0/5]
-3. Cover *Platform* **Project Type** endpoint(s) [Done: 0/1]
-4. Cover *Platform* **Project** endpoint(s) [Done: 0/6]
-5. Cover *Platform* **File** endpoint(s) [Done: 0/3]
-6. Cover *Platform* **Import Task** endpoint(s) [Done: 0/2]
-7. Cover *Platform* **Translation** endpoint(s) [Done: 0/4]
-8. Cover *Platform* **Screenshot** endpoint(s) [Done: 0/1]
-9. Cover *Platform* **Quotation** endpoint(s) [Done: 0/1]
-10. Cover *Platform* **Order** endpoint(s) [Done: 0/3]
-11. Cover *Plugin* **Account** endpoint(s) [Done: 0/3]
-12. Cover *Plugin* **Locale** endpoint(s) [Done: 0/1]
-13. Cover *Plugin* **Specialization** endpoint(s) [Done: 0/1]
-14. Cover *Plugin* **Project** endpoint(s) [Done: 0/2]
-15. Cover *Plugin* **Item** endpoint(s) [Done: 0/3]
-16. Cover *Plugin* **Order** endpoint(s) [Done: 0/5]
-17. Cover *Plugin* **Quotation** endpoint(s) [Done: 0/1]
+1. Cover *Platform* endpoints
+2. Cover *Plugin* endpoints
+
+View full list on [Wiki](wiki/Roadmap.md).
 
 ### Release Phase ###
 Aims to cover OneSky *Platform* and *Plugin* APIs and parse its JSON response to C# classes.  
-After release there will be NuGet package available.  
+After release there will be NuGet package available.
+
+View full list on [Wiki](wiki/Roadmap.md).  
 
 ### Further Improvements ###
-* Tests for all endpoints.
-* XML documentstion for public (and provate) classes/interfaces.
-* Caching, Repositoryand other fancy stuff.
+* Unit Tests for all endpoints (questionable).
+* XML documentstion for public (and private?) classes/interfaces.
+* Caching, Repositoryand and other fancy stuff.
 
 ## License ##
 [MIT](LICENSE.md)
