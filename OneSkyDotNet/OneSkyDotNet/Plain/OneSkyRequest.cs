@@ -27,11 +27,11 @@
             this.files = new List<KeyValuePair<string, string>>();
 
             var urlParam = url.Split(new[] { '?' });
-            var param = string.Join("?", urlParam.Skip(1)).Split(new[] { '&' });
+            var param = string.Join("?", urlParam.Skip(1)).Split(new[] { '&' }, StringSplitOptions.RemoveEmptyEntries);
 
             this.url = urlParam[0];
 
-            foreach (var kvp in param.Select(s => s.Split(new[] { '=' })))
+            foreach (var kvp in param.Select(s => s.Split(new[] { '=' }, StringSplitOptions.RemoveEmptyEntries)))
             {
                 this.Parameter(kvp[0], kvp[1]);
             }
