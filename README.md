@@ -31,13 +31,16 @@ Aims to cover OneSky *Platform* and *Plugin* API to return strings as responses.
 1. Cover *Platform* endpoints
 2. Cover *Plugin* endpoints
 
-View full list on [Wiki](https://github.com/QuadRatNewBy/OneSky-DotNet/wiki/Roadmap).
+View full list on [Wiki](https://github.com/QuadRatNewBy/OneSky-DotNet/wiki/Roadmap#prerelease-phase).
 
 ### Release Phase ###
 Aims to cover OneSky *Platform* and *Plugin* APIs and parse its JSON response to C# classes.  
 After release there will be NuGet package available.
 
-View full list on [Wiki](https://github.com/QuadRatNewBy/OneSky-DotNet/wiki/Roadmap).  
+1. Cover *Platform* endpoints
+2. Cover *Plugin* endpoints
+
+View full list on [Wiki](https://github.com/QuadRatNewBy/OneSky-DotNet/wiki/Roadmap#release-phase).  
 
 ### Further Improvements ###
 * Unit Tests for all endpoints (questionable).
