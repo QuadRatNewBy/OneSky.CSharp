@@ -6,11 +6,11 @@
 
     internal class OneSky
     {
-        private readonly string authenticationApiKey = "api_key";
+        private const string AuthenticationApiKey = "api_key";
 
-        private readonly string authenticationTimestamp = "timestamp";
+        private const string AuthenticationTimestamp = "timestamp";
 
-        private readonly string authenticationDevHash = "dev_hash";
+        private const string AuthenticationDevHash = "dev_hash";
 
         private string publicKey;
 
@@ -51,7 +51,7 @@
             return sb.ToString();
         }
 
-        private OneSkyRequest CreateRequest(string url)
+        internal OneSkyRequest CreateRequest(string url)
         {
             var timestamp = this.Timestamp;
             var devHash = this.GetDevHash(timestamp);
@@ -59,9 +59,9 @@
             this.RequestCount++;
 
             return
-                (new OneSkyRequest(url)).Parameter(this.authenticationApiKey, this.publicKey)
-                    .Parameter(this.authenticationTimestamp, timestamp)
-                    .Parameter(this.authenticationDevHash, devHash);
+                (new OneSkyRequest(url)).Parameter(AuthenticationApiKey, this.publicKey)
+                    .Parameter(AuthenticationTimestamp, timestamp)
+                    .Parameter(AuthenticationDevHash, devHash);
         }
     }
 }

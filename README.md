@@ -46,6 +46,7 @@ View full list on [Wiki](https://github.com/QuadRatNewBy/OneSky-DotNet/wiki/Road
 * Unit Tests for all endpoints (questionable).
 * XML documentstion for public (and private?) classes/interfaces.
 * Caching, Repositoryand and other fancy stuff.
+* Add `async` methods.
 
 ## License ##
 [MIT](LICENSE.md)

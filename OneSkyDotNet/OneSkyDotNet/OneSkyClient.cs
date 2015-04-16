@@ -6,7 +6,8 @@
     {
         public static IOneSkyPlainClient CreatePlainClient(string publicKey, string secretKey)
         {
-            throw new NotImplementedException();
+            var oneSky = new OneSky(publicKey, secretKey);
+            return new OneSkyPlainClient(oneSky);
         }
     }
 }
