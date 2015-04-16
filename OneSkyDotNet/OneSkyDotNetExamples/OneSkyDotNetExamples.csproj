@@ -4,15 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{88411FA0-2EAF-40A3-8F86-1254A950A612}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{3BA4F170-ED38-4DDF-A65C-83B1492241AB}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OneSkyDotNet</RootNamespace>
-    <AssemblyName>OneSkyDotNet</AssemblyName>
+    <RootNamespace>OneSkyDotNetExamples</RootNamespace>
+    <AssemblyName>OneSkyDotNetExamples</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -34,22 +37,17 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IOneSkyPlainClient.cs" />
-    <Compile Include="IPlatformPlain.cs" />
-    <Compile Include="IPlatformPlainFile.cs" />
-    <Compile Include="IPlatformPlainImportTask.cs" />
-    <Compile Include="IPlatformPlainLocale.cs" />
-    <Compile Include="IPlatformPlainOrder.cs" />
-    <Compile Include="IPlatformPlainProject.cs" />
-    <Compile Include="IPlatformPlainProjectGroup.cs" />
-    <Compile Include="IPlatformPlainProjectType.cs" />
-    <Compile Include="IPlatformPlainQuotation.cs" />
-    <Compile Include="IPlatformPlainScreenshot.cs" />
-    <Compile Include="IPlatformPlainTranslation.cs" />
-    <Compile Include="OneSkyClient.cs" />
-    <Compile Include="Plain\OneSky.cs" />
-    <Compile Include="Plain\OneSkyRequest.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OneSkyDotNet\OneSkyDotNet.csproj">
+      <Project>{88411fa0-2eaf-40a3-8f86-1254a950a612}</Project>
+      <Name>OneSkyDotNet</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

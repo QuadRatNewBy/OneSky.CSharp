@@ -1,3 +1,7 @@
 *.suo
 OneSkyDotNet/OneSkyDotNet/bin/
 OneSkyDotNet/OneSkyDotNet/obj/
+/OneSkyDotNet/OneSkyDotNetExamples/obj/Debug/*.force
+/OneSkyDotNet/OneSkyDotNetExamples/obj/Debug/*.cache
+OneSkyDotNet/OneSkyDotNetExamples/obj/
+/OneSkyDotNet/OneSkyDotNet/*.DotSettings
