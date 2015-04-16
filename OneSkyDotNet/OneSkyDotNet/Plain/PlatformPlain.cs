@@ -80,7 +80,7 @@
 
         internal PlatformPlain(OneSky oneSky)
         {
-            this.Locale = new PlatformLocale(oneSky);
+            this.Locale = new PlatformPlainLocale(oneSky);
         }
     }
 }
