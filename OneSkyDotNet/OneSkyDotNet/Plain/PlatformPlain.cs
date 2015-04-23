@@ -4,13 +4,7 @@
 
     public class PlatformPlain : IPlatformPlain
     {
-        public IPlatformPlainProjectGroup ProjectGroup
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public IPlatformPlainProjectGroup ProjectGroup { get; private set; }
 
         public IPlatformPlainProject Project
         {
@@ -76,6 +70,7 @@
         {
             this.Locale = new PlatformPlainLocale(oneSky);
             this.ProjectType = new PlatformPlainProjectType(oneSky);
+            this.ProjectGroup = new PlatformPlainProjectGroup(oneSky);
         }
     }
 }
