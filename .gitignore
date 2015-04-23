@@ -4,4 +4,5 @@ OneSkyDotNet/OneSkyDotNet/obj/
 /OneSkyDotNet/OneSkyDotNetExamples/obj/Debug/*.force
 /OneSkyDotNet/OneSkyDotNetExamples/obj/Debug/*.cache
 OneSkyDotNet/OneSkyDotNetExamples/obj/
+OneSkyDotNet/OneSkyDotNetExamples/bin/
 /OneSkyDotNet/OneSkyDotNet/*.DotSettings
