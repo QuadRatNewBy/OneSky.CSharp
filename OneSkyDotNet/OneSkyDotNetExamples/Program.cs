@@ -8,9 +8,10 @@
 
             // Plain.PlatformProjectTypeExample.ProjectTypePlainList();
 
-            Plain.PlatformProjectGroupExample.ProjectGroupPlainList();
-            Plain.PlatformProjectGroupExample.ProjectGroupPlainShow();
-            Plain.PlatformProjectGroupExample.ProjectGroupPlainCreate();
+            // Plain.PlatformProjectGroupExample.ProjectGroupPlainList();
+            // Plain.PlatformProjectGroupExample.ProjectGroupPlainShow();
+            // Plain.PlatformProjectGroupExample.ProjectGroupPlainCreate();
+            Plain.PlatformProjectGroupExample.ProjectGroupPlaindelete();
         }
     }
 }
