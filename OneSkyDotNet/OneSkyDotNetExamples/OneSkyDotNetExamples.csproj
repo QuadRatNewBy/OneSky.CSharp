@@ -37,7 +37,8 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Plain\LocaleTest.cs" />
+    <Compile Include="Plain\PlatformLocaleExample.cs" />
+    <Compile Include="Plain\PlatformProjectTypeExample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.cs" />

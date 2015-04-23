@@ -20,13 +20,7 @@
             }
         }
 
-        public IPlatformPlainProjectType ProjectType
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public IPlatformPlainProjectType ProjectType { get; private set; }
 
         public IPlatformPlainLocale Locale { get; private set; }
 
@@ -80,7 +74,8 @@
 
         internal PlatformPlain(OneSky oneSky)
         {
-            this.Locale = new PlatformLocale(oneSky);
+            this.Locale = new PlatformPlainLocale(oneSky);
+            this.ProjectType = new PlatformPlainProjectType(oneSky);
         }
     }
 }

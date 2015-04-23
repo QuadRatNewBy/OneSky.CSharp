@@ -1,12 +1,12 @@
 ﻿namespace OneSkyDotNet
 {
-    internal class PlatformLocale : IPlatformPlainLocale
+    internal class PlatformPlainLocale : IPlatformPlainLocale
     {
         private const string LocaleListAddress = "https://platform.api.onesky.io/1/locales";
 
         private OneSky oneSky;
 
-        public PlatformLocale(OneSky oneSky)
+        internal PlatformPlainLocale(OneSky oneSky)
         {
             this.oneSky = oneSky;
         }

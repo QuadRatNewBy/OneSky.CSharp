@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-            Plain.PlatformLocaleExample.LocalePlainList();
+            // Plain.PlatformLocaleExample.LocalePlainList();
+            Plain.PlatformProjectTypeExample.ProjectTypePlainList();
         }
     }
 }
