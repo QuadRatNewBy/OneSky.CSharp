@@ -11,6 +11,9 @@
         private const string ProjectGroupListPageParam = "page";
         private const string ProjectGroupListPerPageParam = "per_page";
 
+        private const string ProjectGroupCreateNameBody = "name";
+        private const string ProjectGroupCreateLocaleBody = "locale";
+
         private const string ProjectGroupIdPlacehoder = "project_group_id";
             
         private OneSky oneSky;
@@ -39,7 +42,11 @@
 
         public string Create(string name, string locale = "en")
         {
-            throw new System.NotImplementedException();
+            return
+                this.oneSky.CreateRequest(ProjectGroupCreateAddress)
+                    .Body(ProjectGroupCreateNameBody, name)
+                    .Body(ProjectGroupCreateLocaleBody, locale)
+                    .Post();
         }
 
         public string Delete(int projectGroupId)

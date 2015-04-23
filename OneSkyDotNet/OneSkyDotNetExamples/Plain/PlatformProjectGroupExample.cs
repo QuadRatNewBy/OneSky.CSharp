@@ -22,5 +22,16 @@
             Console.WriteLine("Press any key");
             Console.ReadKey();
         }
+
+        public static void ProjectGroupPlainCreate()
+        {
+            var name = "Project Group create Example";
+            var locale = "be";
+            var oneSky = OneSkyDotNet.OneSkyClient.CreatePlainClient(Settings.PublicKey, Settings.PrivateKey);
+            var projectGroup = oneSky.Platform.ProjectGroup.Create(name, locale);
+            Console.WriteLine(projectGroup);
+            Console.WriteLine("Press any key");
+            Console.ReadKey();
+        }
     }
 }

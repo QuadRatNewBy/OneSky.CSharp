@@ -48,7 +48,7 @@
             {
                 var ienum = keyValuePair.Value as IEnumerable;
 
-                if (ienum != null)
+                if (keyValuePair.Value.GetType() != typeof(string) && ienum != null)
                 {
                     var innerFirst = true;
                     sb.Append(string.Format("{1}\"{0}\": [", keyValuePair.Key, notFirst ? "," : string.Empty));
