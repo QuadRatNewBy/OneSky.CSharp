@@ -9,6 +9,7 @@
             // Plain.PlatformProjectTypeExample.ProjectTypePlainList();
 
             Plain.PlatformProjectGroupExample.ProjectGroupPlainList();
+            Plain.PlatformProjectGroupExample.ProjectGroupPlainShow();
         }
     }
 }

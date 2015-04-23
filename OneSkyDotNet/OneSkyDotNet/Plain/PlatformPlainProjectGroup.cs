@@ -10,6 +10,8 @@
 
         private const string ProjectGroupListPageParam = "page";
         private const string ProjectGroupListPerPageParam = "per_page";
+
+        private const string ProjectGroupIdPlacehoder = "project_group_id";
             
         private OneSky oneSky;
 
@@ -29,7 +31,10 @@
 
         public string Show(int projectGroupId)
         {
-            throw new System.NotImplementedException();
+            return
+                this.oneSky.CreateRequest(ProjectGroupShowAddress)
+                    .Placeholder(ProjectGroupIdPlacehoder, projectGroupId)
+                    .Get();
         }
 
         public string Create(string name, string locale = "en")
