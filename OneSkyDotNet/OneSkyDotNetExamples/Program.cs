@@ -15,7 +15,8 @@
             // Plain.PlatformProjectGroupExample.ProjectGroupPlainLanguages();
 
             // Plain.PlatformProjectExample.ProjectPlainList();
-            Plain.PlatformProjectExample.ProjectPlainShow();
+            // Plain.PlatformProjectExample.ProjectPlainShow();
+            Plain.PlatformProjectExample.ProjectPlainCreate();
         }
     }
 }

@@ -8,6 +8,10 @@
         private const string ProjectUpdateAddress = "https://platform.api.onesky.io/1/projects/{project_id}";
         private const string ProjectDeleteAddress = "https://platform.api.onesky.io/1/projects/{project_id}";
         private const string ProjectLanguagesAddress = "https://platform.api.onesky.io/1/projects/{project_id}/languages";
+        
+        private const string ProjectCreateProjectTypeBody = "project_type";
+        private const string ProjectCreateNameBody = "name";
+        private const string ProjectCreateDescriptionBody = "description";
 
         private const string ProjectGroupIdPlacehoder = "project_group_id";
         private const string ProjectIdPlacehoder = "project_id";
@@ -34,7 +38,13 @@
 
         public string Create(int projectGroupId, string projectType, string name = null, string description = null)
         {
-            throw new System.NotImplementedException();
+            return
+                this.oneSky.CreateRequest(ProjectCreateAddress)
+                    .Placeholder(ProjectGroupIdPlacehoder, projectGroupId)
+                    .Body(ProjectCreateProjectTypeBody, projectType)
+                    .Body(ProjectCreateNameBody, name, name != null)
+                    .Body(ProjectCreateDescriptionBody, description, description != null)
+                    .Post();
         }
 
         public string Update(int projectId, string name = null, string description = null)

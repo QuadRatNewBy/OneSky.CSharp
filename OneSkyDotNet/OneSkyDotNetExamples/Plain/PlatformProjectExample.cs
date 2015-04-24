@@ -23,5 +23,19 @@
             Console.WriteLine("Press any key");
             Console.ReadKey();
         }
+
+        public static void ProjectPlainCreate()
+        {
+            var projectGroupId = 24856;
+            var oneSky = OneSkyDotNet.OneSkyClient.CreatePlainClient(Settings.PublicKey, Settings.PrivateKey);
+            var project = oneSky.Platform.Project.Create(
+                projectGroupId,
+                "website",
+                "Proj create Name",
+                "Proj create Desc");
+            Console.WriteLine(project);
+            Console.WriteLine("Press any key");
+            Console.ReadKey();
+        }
     }
 }
