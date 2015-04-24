@@ -29,7 +29,7 @@
 
         public string Show(int projectId)
         {
-            throw new System.NotImplementedException();
+            return this.oneSky.CreateRequest(ProjectShowAddress).Placeholder(ProjectIdPlacehoder, projectId).Get();
         }
 
         public string Create(int projectGroupId, string projectType, string name = null, string description = null)
