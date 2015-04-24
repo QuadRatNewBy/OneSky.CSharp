@@ -16,7 +16,8 @@
 
             // Plain.PlatformProjectExample.ProjectPlainList();
             // Plain.PlatformProjectExample.ProjectPlainShow();
-            Plain.PlatformProjectExample.ProjectPlainCreate();
+            // Plain.PlatformProjectExample.ProjectPlainCreate();
+            Plain.PlatformProjectExample.ProjectPlainUpdate();
         }
     }
 }

@@ -37,5 +37,18 @@
             Console.WriteLine("Press any key");
             Console.ReadKey();
         }
+
+        public static void ProjectPlainUpdate()
+        {
+            var projectId = 57445;
+            var oneSky = OneSkyDotNet.OneSkyClient.CreatePlainClient(Settings.PublicKey, Settings.PrivateKey);
+            var project = oneSky.Platform.Project.Update(projectId, "Proj update Name", "Proj update Desc");
+            Console.WriteLine(project);
+
+            project = oneSky.Platform.Project.Show(projectId);
+            Console.WriteLine(project);
+            Console.WriteLine("Press any key");
+            Console.ReadKey();
+        }
     }
 }

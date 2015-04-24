@@ -13,6 +13,9 @@
         private const string ProjectCreateNameBody = "name";
         private const string ProjectCreateDescriptionBody = "description";
 
+        private const string ProjectUpdateNameBody = "name";
+        private const string ProjectUpdateDescriptionBody = "description";
+
         private const string ProjectGroupIdPlacehoder = "project_group_id";
         private const string ProjectIdPlacehoder = "project_id";
 
@@ -49,7 +52,12 @@
 
         public string Update(int projectId, string name = null, string description = null)
         {
-            throw new System.NotImplementedException();
+            return
+                this.oneSky.CreateRequest(ProjectCreateAddress)
+                    .Placeholder(ProjectIdPlacehoder, projectId)
+                    .Body(ProjectCreateNameBody, name, name != null)
+                    .Body(ProjectCreateDescriptionBody, description, description != null)
+                    .Put();
         }
 
         public string Delete(int projectId)
