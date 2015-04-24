@@ -60,5 +60,15 @@
             Console.WriteLine("Press any key");
             Console.ReadKey();
         }
+
+        public static void ProjectPlainLanguages()
+        {
+            var projectId = 56704;
+            var oneSky = OneSkyDotNet.OneSkyClient.CreatePlainClient(Settings.PublicKey, Settings.PrivateKey);
+            var projectlangs = oneSky.Platform.Project.Languages(projectId);
+            Console.WriteLine(projectlangs);
+            Console.WriteLine("Press any key");
+            Console.ReadKey();
+        }
     }
 }

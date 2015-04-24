@@ -67,7 +67,7 @@
 
         public string Languages(int projectId)
         {
-            throw new System.NotImplementedException();
+            return this.oneSky.CreateRequest(ProjectLanguagesAddress).Placeholder(ProjectIdPlacehoder, projectId).Get();
         }
     }
 }
