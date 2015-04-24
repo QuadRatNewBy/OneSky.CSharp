@@ -53,10 +53,10 @@
         public string Update(int projectId, string name = null, string description = null)
         {
             return
-                this.oneSky.CreateRequest(ProjectCreateAddress)
+                this.oneSky.CreateRequest(ProjectUpdateAddress)
                     .Placeholder(ProjectIdPlacehoder, projectId)
-                    .Body(ProjectCreateNameBody, name, name != null)
-                    .Body(ProjectCreateDescriptionBody, description, description != null)
+                    .Body(ProjectUpdateNameBody, name, name != null)
+                    .Body(ProjectUpdateDescriptionBody, description, description != null)
                     .Put();
         }
 
