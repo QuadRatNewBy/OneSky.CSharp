@@ -50,5 +50,15 @@
             Console.WriteLine("Press any key");
             Console.ReadKey();
         }
+
+        public static void ProjectPlainDelete()
+        {
+            var projectId = 63486;
+            var oneSky = OneSkyDotNet.OneSkyClient.CreatePlainClient(Settings.PublicKey, Settings.PrivateKey);
+            var project = oneSky.Platform.Project.Delete(projectId);
+            Console.WriteLine(project);
+            Console.WriteLine("Press any key");
+            Console.ReadKey();
+        }
     }
 }

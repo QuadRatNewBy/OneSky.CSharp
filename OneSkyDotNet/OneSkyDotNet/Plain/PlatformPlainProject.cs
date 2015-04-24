@@ -62,7 +62,7 @@
 
         public string Delete(int projectId)
         {
-            throw new System.NotImplementedException();
+            return this.oneSky.CreateRequest(ProjectDeleteAddress).Placeholder(ProjectIdPlacehoder, projectId).Delete();
         }
 
         public string Languages(int projectId)
