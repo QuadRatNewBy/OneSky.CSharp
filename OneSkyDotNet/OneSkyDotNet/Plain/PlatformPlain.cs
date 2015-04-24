@@ -6,13 +6,7 @@
     {
         public IPlatformPlainProjectGroup ProjectGroup { get; private set; }
 
-        public IPlatformPlainProject Project
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public IPlatformPlainProject Project { get; private set; }
 
         public IPlatformPlainProjectType ProjectType { get; private set; }
 
@@ -71,6 +65,7 @@
             this.Locale = new PlatformPlainLocale(oneSky);
             this.ProjectType = new PlatformPlainProjectType(oneSky);
             this.ProjectGroup = new PlatformPlainProjectGroup(oneSky);
+            this.Project = new PlatformPlainProject(oneSky);
         }
     }
 }
