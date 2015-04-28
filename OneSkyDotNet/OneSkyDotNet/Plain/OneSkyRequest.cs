@@ -218,7 +218,21 @@
             if (condition)
             {
                 var prefix = this.hasParams ? '&' : '?';
-                this.url += string.Format("{0}{1}={2}", prefix, parameter, value);
+
+                var ienum = value as IEnumerable;
+
+                if (value.GetType() != typeof(string) && ienum != null)
+                {
+                    foreach (var c in ienum)
+                    {
+                        this.url += string.Format("{0}{1}[]={2}", prefix, parameter, c);
+                    }
+                }
+                else
+                {
+                    this.url += string.Format("{0}{1}={2}", prefix, parameter, value);
+                }
+
                 this.hasParams = true;
             }
             return this;

@@ -28,13 +28,7 @@
             }
         }
 
-        public IPlatformPlainQuotation Quotation
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public IPlatformPlainQuotation Quotation { get; private set; }
 
         public IPlatformPlainImportTask ImportTask
         {
@@ -66,6 +60,7 @@
             this.ProjectType = new PlatformPlainProjectType(oneSky);
             this.ProjectGroup = new PlatformPlainProjectGroup(oneSky);
             this.Project = new PlatformPlainProject(oneSky);
+            this.Quotation = new PlatformPlainQuotation(oneSky);
         }
     }
 }

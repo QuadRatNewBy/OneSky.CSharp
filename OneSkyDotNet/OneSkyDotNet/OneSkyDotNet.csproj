@@ -55,6 +55,7 @@
     <Compile Include="Plain\PlatformPlainProject.cs" />
     <Compile Include="Plain\PlatformPlainProjectGroup.cs" />
     <Compile Include="Plain\PlatformPlainProjectType.cs" />
+    <Compile Include="Plain\PlatformPlainQuotation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
