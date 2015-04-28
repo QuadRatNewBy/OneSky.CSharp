@@ -38,6 +38,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Plain\PlatformLocaleExample.cs" />
+    <Compile Include="Plain\PlatformOrderExample.cs" />
     <Compile Include="Plain\PlatformProjectExample.cs" />
     <Compile Include="Plain\PlatformProjectGroupExample.cs" />
     <Compile Include="Plain\PlatformProjectTypeExample.cs" />

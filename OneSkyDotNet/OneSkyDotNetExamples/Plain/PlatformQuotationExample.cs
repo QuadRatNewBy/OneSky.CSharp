@@ -10,8 +10,8 @@
             var oneSky = OneSkyDotNet.OneSkyClient.CreatePlainClient(Settings.PublicKey, Settings.PrivateKey);
             var quotation = oneSky.Platform.Quotation.Show(
                 56704,
-                new List<string> { "zecond.txt", "Main.txt" },
-                "fr",
+                new List<string> { "zecond.txt" },
+                "de",
                 specialization: "game");
             Console.WriteLine(quotation);
             Console.WriteLine("Press any key");

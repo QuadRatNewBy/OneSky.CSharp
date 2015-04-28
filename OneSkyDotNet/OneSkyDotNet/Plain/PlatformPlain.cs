@@ -46,13 +46,7 @@
             }
         }
 
-        public IPlatformPlainOrder Order
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public IPlatformPlainOrder Order { get; private set; }
 
         internal PlatformPlain(OneSky oneSky)
         {
@@ -61,6 +55,7 @@
             this.ProjectGroup = new PlatformPlainProjectGroup(oneSky);
             this.Project = new PlatformPlainProject(oneSky);
             this.Quotation = new PlatformPlainQuotation(oneSky);
+            this.Order = new PlatformPlainOrder(oneSky);
         }
     }
 }

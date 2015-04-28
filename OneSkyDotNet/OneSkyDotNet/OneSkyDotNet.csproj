@@ -52,6 +52,7 @@
     <Compile Include="Plain\OneSkyRequest.cs" />
     <Compile Include="Plain\PlatformPlainLocale.cs" />
     <Compile Include="Plain\PlatformPlain.cs" />
+    <Compile Include="Plain\PlatformPlainOrder.cs" />
     <Compile Include="Plain\PlatformPlainProject.cs" />
     <Compile Include="Plain\PlatformPlainProjectGroup.cs" />
     <Compile Include="Plain\PlatformPlainProjectType.cs" />

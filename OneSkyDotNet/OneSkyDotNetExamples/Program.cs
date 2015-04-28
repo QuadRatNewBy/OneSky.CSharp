@@ -21,7 +21,11 @@
             // Plain.PlatformProjectExample.ProjectPlainDelete();
             // Plain.PlatformProjectExample.ProjectPlainLanguages();
 
-            Plain.PlatformQuotationExample.QuotationPlainShow();
+            // Plain.PlatformQuotationExample.QuotationPlainShow();
+
+            // Plain.PlatformOrderExample.OrderPlainCreate();
+            // Plain.PlatformOrderExample.OrderPlainList();
+            // Plain.PlatformOrderExample.OrderPlainShow();
         }
     }
 }
