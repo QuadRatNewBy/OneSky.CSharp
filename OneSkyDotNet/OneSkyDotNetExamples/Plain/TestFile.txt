@@ -1,0 +1,3 @@
+﻿test_key_1 = Test string
+test_key_2 = Second line
+test_key_3 = That's enough

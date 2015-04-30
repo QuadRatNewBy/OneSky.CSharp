@@ -28,6 +28,7 @@
             // Plain.PlatformOrderExample.OrderPlainShow();
 
             // Plain.PlatformFileExample.OrderPlainList();
+            Plain.PlatformFileExample.OrderPlainUpload();
         }
     }
 }

@@ -126,8 +126,10 @@
                 }
 
                 result = new byte[memoryStream.Length];
+
+                memoryStream.Seek(0, SeekOrigin.Begin);
                 memoryStream.Read(result, 0, result.Length);
-            }
+            }            
 
             return result;
         }
