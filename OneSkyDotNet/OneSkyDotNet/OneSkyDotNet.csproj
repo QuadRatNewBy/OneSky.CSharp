@@ -51,6 +51,7 @@
     <Compile Include="Plain\OneSkyPlainClient.cs" />
     <Compile Include="Plain\OneSkyRequest.cs" />
     <Compile Include="Plain\PlatformPlainFile.cs" />
+    <Compile Include="Plain\PlatformPlainImportTask.cs" />
     <Compile Include="Plain\PlatformPlainLocale.cs" />
     <Compile Include="Plain\PlatformPlain.cs" />
     <Compile Include="Plain\PlatformPlainOrder.cs" />

@@ -2,11 +2,11 @@
 {
     using System;
 
-    public class PlatformFileExample
+    public static class PlatformFileExample
     {
         private static int projectId = 56704;
 
-        public static void OrderPlainList()
+        public static void FilePlainList()
         {
             var oneSky = OneSkyDotNet.OneSkyClient.CreatePlainClient(Settings.PublicKey, Settings.PrivateKey);
             var files = oneSky.Platform.File.List(projectId, 1, 1);
@@ -15,7 +15,7 @@
             Console.ReadKey();
         }
         
-        public static void OrderPlainUpload()
+        public static void FilePlainUpload()
         {
             var oneSky = OneSkyDotNet.OneSkyClient.CreatePlainClient(Settings.PublicKey, Settings.PrivateKey);
             var file = oneSky.Platform.File.Upload(projectId, "Plain/TestFile.txt", "INI");
@@ -24,7 +24,7 @@
             Console.ReadKey();
         }
 
-        public static void OrderPlainDelete()
+        public static void FilePlainDelete()
         {
             var oneSky = OneSkyDotNet.OneSkyClient.CreatePlainClient(Settings.PublicKey, Settings.PrivateKey);
             var file = oneSky.Platform.File.Delete(projectId, "TestFile.txt");

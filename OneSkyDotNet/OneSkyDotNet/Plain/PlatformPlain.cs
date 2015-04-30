@@ -24,13 +24,7 @@
 
         public IPlatformPlainQuotation Quotation { get; private set; }
 
-        public IPlatformPlainImportTask ImportTask
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public IPlatformPlainImportTask ImportTask { get; private set; }
 
         public IPlatformPlainScreenshot Screenshot
         {
@@ -51,6 +45,7 @@
             this.Quotation = new PlatformPlainQuotation(oneSky);
             this.Order = new PlatformPlainOrder(oneSky);
             this.File = new PlatformPlainFile(oneSky);
+            this.ImportTask = new PlatformPlainImportTask(oneSky);
         }
     }
 }

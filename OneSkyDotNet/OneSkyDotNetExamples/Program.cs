@@ -27,9 +27,12 @@
             // Plain.PlatformOrderExample.OrderPlainList();
             // Plain.PlatformOrderExample.OrderPlainShow();
 
-            // Plain.PlatformFileExample.OrderPlainList();
-            // Plain.PlatformFileExample.OrderPlainUpload();
-            Plain.PlatformFileExample.OrderPlainDelete();
+            // Plain.PlatformFileExample.FilePlainList();
+            // Plain.PlatformFileExample.FilePlainUpload();
+            // Plain.PlatformFileExample.FilePlainDelete();
+
+            Plain.PlatformImportTaskExample.TaskPlainList();
+            Plain.PlatformImportTaskExample.TaskPlainShow();
         }
     }
 }
