@@ -17,6 +17,9 @@
 
         private const string TranslationAppDescriptionLocaleParam = "locale";
 
+        private const string TranslationStatusLocaleParam = "locale";
+        private const string TranslationStatusFileNameParam = "file_name";
+
         private const string ProjectIdPlacehoder = "project_id";
 
         private OneSky oneSky;
@@ -61,7 +64,12 @@
 
         public string Status(int projectId, string fileName, string locale)
         {
-            throw new System.NotImplementedException();
+            return
+                this.oneSky.CreateRequest(TranslationStatusAddress)
+                    .Placeholder(ProjectIdPlacehoder, projectId)
+                    .Parameter(TranslationStatusFileNameParam, fileName)
+                    .Parameter(TranslationStatusLocaleParam, locale)
+                    .Get();
         }
     }
 }

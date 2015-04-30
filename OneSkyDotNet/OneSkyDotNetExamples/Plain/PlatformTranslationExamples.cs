@@ -4,7 +4,7 @@
 
     public static class PlatformTranslationExamples
     {
-        private static int projectId = 64702;
+        private static int projectId = 56704;
 
         public static void TranslationPlainExport()
         {
@@ -27,11 +27,20 @@
             Console.ReadKey();
         }
 
-        public static void TranslationPlainExportAppDescription()
+        public static void TranslationPlainAppDescription()
         {
             var oneSky = OneSkyDotNet.OneSkyClient.CreatePlainClient(Settings.PublicKey, Settings.PrivateKey);
-            var translation = oneSky.Platform.Translation.AppDescription(projectId, "en");
+            var translation = oneSky.Platform.Translation.AppDescription(64702, "en");
             Console.WriteLine(translation);
+            Console.WriteLine("Press any key");
+            Console.ReadKey();
+        }
+
+        public static void TranslationPlainStatus()
+        {
+            var oneSky = OneSkyDotNet.OneSkyClient.CreatePlainClient(Settings.PublicKey, Settings.PrivateKey);
+            var status = oneSky.Platform.Translation.Status(projectId, "Main.txt", "de");
+            Console.WriteLine(status);
             Console.WriteLine("Press any key");
             Console.ReadKey();
         }
