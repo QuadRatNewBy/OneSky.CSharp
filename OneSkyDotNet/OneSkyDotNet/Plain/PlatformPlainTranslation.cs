@@ -15,6 +15,8 @@
         private const string TranslationExportMultilingualFileExportFileNameParam = "export_file_name";
         private const string TranslationExportMultilingualFileFormatParam = "file_format";
 
+        private const string TranslationAppDescriptionLocaleParam = "locale";
+
         private const string ProjectIdPlacehoder = "project_id";
 
         private OneSky oneSky;
@@ -50,7 +52,11 @@
 
         public string AppDescription(int projectId, string locale)
         {
-            throw new System.NotImplementedException();
+            return
+                this.oneSky.CreateRequest(TranslationAppDescriptionAddress)
+                    .Placeholder(ProjectIdPlacehoder, projectId)
+                    .Parameter(TranslationAppDescriptionLocaleParam, locale)
+                    .Get();
         }
 
         public string Status(int projectId, string fileName, string locale)

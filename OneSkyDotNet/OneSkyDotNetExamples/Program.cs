@@ -34,8 +34,9 @@
             // Plain.PlatformImportTaskExample.TaskPlainList();
             // Plain.PlatformImportTaskExample.TaskPlainShow();
 
-            // Plain.PlatformTranslationExamples.TranslationPlainExport();
+            Plain.PlatformTranslationExamples.TranslationPlainExport();
             Plain.PlatformTranslationExamples.TranslationPlainExportMultilingualFile();
+            Plain.PlatformTranslationExamples.TranslationPlainExportAppDescription();
         }
     }
 }
