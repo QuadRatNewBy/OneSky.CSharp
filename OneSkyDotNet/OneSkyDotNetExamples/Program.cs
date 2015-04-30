@@ -31,8 +31,10 @@
             // Plain.PlatformFileExample.FilePlainUpload();
             // Plain.PlatformFileExample.FilePlainDelete();
 
-            Plain.PlatformImportTaskExample.TaskPlainList();
-            Plain.PlatformImportTaskExample.TaskPlainShow();
+            // Plain.PlatformImportTaskExample.TaskPlainList();
+            // Plain.PlatformImportTaskExample.TaskPlainShow();
+
+            Plain.PlatformTranslationExamples.TranslationPlainExport();
         }
     }
 }

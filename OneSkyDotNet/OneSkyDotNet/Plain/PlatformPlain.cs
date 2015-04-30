@@ -14,13 +14,7 @@
 
         public IPlatformPlainFile File { get; private set; }
 
-        public IPlatformPlainTranslation Translation
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public IPlatformPlainTranslation Translation { get; private set; }
 
         public IPlatformPlainQuotation Quotation { get; private set; }
 
@@ -46,6 +40,7 @@
             this.Order = new PlatformPlainOrder(oneSky);
             this.File = new PlatformPlainFile(oneSky);
             this.ImportTask = new PlatformPlainImportTask(oneSky);
+            this.Translation = new PlatformPlainTranslation(oneSky);
         }
     }
 }

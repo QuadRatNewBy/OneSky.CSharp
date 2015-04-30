@@ -177,6 +177,7 @@
                             if (line != null)
                             {
                                 result.Append(line);
+                                result.Append('\n');
                             }
                         }
                     }
