@@ -12,13 +12,7 @@
 
         public IPlatformPlainLocale Locale { get; private set; }
 
-        public IPlatformPlainFile File
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public IPlatformPlainFile File { get; private set; }
 
         public IPlatformPlainTranslation Translation
         {
@@ -56,6 +50,7 @@
             this.Project = new PlatformPlainProject(oneSky);
             this.Quotation = new PlatformPlainQuotation(oneSky);
             this.Order = new PlatformPlainOrder(oneSky);
+            this.File = new PlatformPlainFile(oneSky);
         }
     }
 }
