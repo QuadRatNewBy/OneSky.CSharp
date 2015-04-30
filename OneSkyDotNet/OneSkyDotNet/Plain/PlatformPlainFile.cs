@@ -14,6 +14,8 @@
         private const string FileUploadLocaleBody = "locale";
         private const string FileUploadIsKeepingAllStringsBody = "is_keeping_all_strings";
 
+        private const string FileDeleteFileNameParameter = "file_name";
+
         private const string ProjectIdPlacehoder = "project_id";
 
         private OneSky oneSky;
@@ -47,7 +49,11 @@
 
         public string Delete(int projectId, string fileName)
         {
-            throw new System.NotImplementedException();
+            return
+                this.oneSky.CreateRequest(FileDeleteAddress)
+                    .Placeholder(ProjectIdPlacehoder, projectId)
+                    .Parameter(FileDeleteFileNameParameter, fileName)
+                    .Delete();
         }
     }
 }

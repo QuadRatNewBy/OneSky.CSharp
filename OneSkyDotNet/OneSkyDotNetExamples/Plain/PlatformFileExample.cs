@@ -23,5 +23,14 @@
             Console.WriteLine("Press any key");
             Console.ReadKey();
         }
+
+        public static void OrderPlainDelete()
+        {
+            var oneSky = OneSkyDotNet.OneSkyClient.CreatePlainClient(Settings.PublicKey, Settings.PrivateKey);
+            var file = oneSky.Platform.File.Delete(projectId, "TestFile.txt");
+            Console.WriteLine(file);
+            Console.WriteLine("Press any key");
+            Console.ReadKey();
+        }
     }
 }
