@@ -1,6 +1,6 @@
 ﻿namespace OneSkyDotNet
 {
-    public interface IPlatformPlainProjectGroup
+    public interface IPlatformProjectGroup
     {
         string List(int page = 1, int perPage = 50);
 

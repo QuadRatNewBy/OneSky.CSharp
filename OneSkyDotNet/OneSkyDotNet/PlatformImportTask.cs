@@ -1,6 +1,6 @@
 ﻿namespace OneSkyDotNet
 {
-    public class PlatformPlainImportTask : IPlatformPlainImportTask
+    public class PlatformImportTask : IPlatformImportTask
     {
         private const string ImportTaskListAddress = "https://platform.api.onesky.io/1/projects/{project_id}/import-tasks";
         private const string ImportTaskShowAddress = "https://platform.api.onesky.io/1/projects/{project_id}/import-tasks/{import_id}";
@@ -14,7 +14,7 @@
 
         private OneSky oneSky;
 
-        internal PlatformPlainImportTask(OneSky oneSky)
+        internal PlatformImportTask(OneSky oneSky)
         {
             this.oneSky = oneSky;
         }

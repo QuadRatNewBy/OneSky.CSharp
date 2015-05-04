@@ -2,7 +2,7 @@
 {
     using System.Collections.Generic;
 
-    public interface IPlatformPlainOrder
+    public interface IPlatformOrder
     {
 
         string List(int projectId, int page = 1, int perPage = 50, string fileName = null);

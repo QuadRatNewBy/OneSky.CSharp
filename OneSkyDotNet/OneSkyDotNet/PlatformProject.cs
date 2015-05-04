@@ -1,6 +1,6 @@
 ﻿namespace OneSkyDotNet
 {
-    internal class PlatformPlainProject : IPlatformPlainProject
+    internal class PlatformProject : IPlatformProject
     {
         private const string ProjectListAddress = "https://platform.api.onesky.io/1/project-groups/{project_group_id}/projects";
         private const string ProjectShowAddress = "https://platform.api.onesky.io/1/projects/{project_id}";
@@ -21,7 +21,7 @@
 
         private OneSky oneSky;
 
-        internal PlatformPlainProject(OneSky oneSky)
+        internal PlatformProject(OneSky oneSky)
         {
             this.oneSky = oneSky;
         }

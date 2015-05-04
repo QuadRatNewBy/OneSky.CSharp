@@ -1,9 +1,8 @@
 ﻿namespace OneSkyDotNet
 {
     using System.Collections.Generic;
-    using System.Linq;
 
-    internal class PlatformPlainQuotation : IPlatformPlainQuotation
+    internal class PlatformQuotation : IPlatformQuotation
     {
         private const string QuotationShowAddress = "https://platform.api.onesky.io/1/projects/{project_id}/quotations";
 
@@ -18,7 +17,7 @@
 
         private OneSky oneSky;
 
-        internal PlatformPlainQuotation(OneSky oneSky)
+        internal PlatformQuotation(OneSky oneSky)
         {
             this.oneSky = oneSky;
         }

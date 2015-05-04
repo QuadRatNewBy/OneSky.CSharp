@@ -1,6 +1,6 @@
 ﻿namespace OneSkyDotNet
 {
-    public interface IPlatformPlainProjectType
+    public interface IPlatformLocale
     {
         string List();
     }

@@ -2,7 +2,7 @@
 {
     using System.Collections.Generic;
 
-    public interface IPlatformPlainScreenshot
+    public interface IPlatformScreenshot
     {
         string Upload(int projectId, IEnumerable<string> screenshots);
     }

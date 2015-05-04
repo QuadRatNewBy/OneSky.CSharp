@@ -1,9 +1,8 @@
 ﻿namespace OneSkyDotNet
 {
     using System.Collections.Generic;
-    using System.IO;
 
-    internal class PlatformPlainOrder : IPlatformPlainOrder
+    internal class PlatformOrder : IPlatformOrder
     {
         private const string OrderListAddress = "https://platform.api.onesky.io/1/projects/{project_id}/orders";
         private const string OrderShowAddress = "https://platform.api.onesky.io/1/projects/{project_id}/orders/{order_id}";
@@ -29,7 +28,7 @@
 
         private OneSky oneSky;
 
-        internal PlatformPlainOrder(OneSky oneSky)
+        internal PlatformOrder(OneSky oneSky)
         {
             this.oneSky = oneSky;
         }

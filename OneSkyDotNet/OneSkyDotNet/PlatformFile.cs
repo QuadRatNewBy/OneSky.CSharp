@@ -1,6 +1,6 @@
 ﻿namespace OneSkyDotNet
 {
-    internal class PlatformPlainFile : IPlatformPlainFile
+    internal class PlatformFile : IPlatformFile
     {
         private const string FileListAddress = "https://platform.api.onesky.io/1/projects/{project_id}/files";
         private const string FileUploadAddress = "https://platform.api.onesky.io/1/projects/{project_id}/files";
@@ -20,7 +20,7 @@
 
         private OneSky oneSky;
 
-        internal PlatformPlainFile(OneSky oneSky)
+        internal PlatformFile(OneSky oneSky)
         {
             this.oneSky = oneSky;
         }

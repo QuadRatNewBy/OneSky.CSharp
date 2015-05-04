@@ -1,6 +1,6 @@
 ﻿namespace OneSkyDotNet
 {
-    public interface IPlatformPlainTranslation
+    public interface IPlatformTranslation
     {
         string Export(int projectId, string locale, string sourceFileName, string exportFileName = null);
 

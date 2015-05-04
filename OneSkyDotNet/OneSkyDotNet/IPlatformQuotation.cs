@@ -2,7 +2,7 @@
 {
     using System.Collections.Generic;
 
-    public interface IPlatformPlainQuotation
+    public interface IPlatformQuotation
     {
         string Show(
             int projectId,

@@ -1,6 +1,6 @@
 ﻿namespace OneSkyDotNet
 {
-    internal class PlatformPlainTranslation : IPlatformPlainTranslation
+    internal class PlatformTranslation : IPlatformTranslation
     {
         private const string TranslationExportAddress = "https://platform.api.onesky.io/1/projects/{project_id}/translations";
         private const string TranslationExportMultilingualFileAddress = "https://platform.api.onesky.io/1/projects/{project_id}/translations/multilingual";
@@ -24,7 +24,7 @@
 
         private OneSky oneSky;
 
-        internal PlatformPlainTranslation(OneSky oneSky)
+        internal PlatformTranslation(OneSky oneSky)
         {
             this.oneSky = oneSky;
         }
