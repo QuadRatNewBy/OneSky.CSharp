@@ -20,13 +20,7 @@
 
         public IPlatformPlainImportTask ImportTask { get; private set; }
 
-        public IPlatformPlainScreenshot Screenshot
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public IPlatformPlainScreenshot Screenshot { get; private set; }
 
         public IPlatformPlainOrder Order { get; private set; }
 
@@ -41,6 +35,7 @@
             this.File = new PlatformPlainFile(oneSky);
             this.ImportTask = new PlatformPlainImportTask(oneSky);
             this.Translation = new PlatformPlainTranslation(oneSky);
+            this.Screenshot = new PlatformPlainScreenshot(oneSky);
         }
     }
 }
