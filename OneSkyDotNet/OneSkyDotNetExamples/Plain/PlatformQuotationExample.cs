@@ -7,7 +7,7 @@
     {
         public static void QuotationPlainShow()
         {
-            var oneSky = OneSkyDotNet.OneSkyClient.CreatePlainClient(Settings.PublicKey, Settings.PrivateKey);
+            var oneSky = OneSkyDotNet.OneSkyClient.CreateClient(Settings.PublicKey, Settings.PrivateKey);
             var quotation = oneSky.Platform.Quotation.Show(
                 56704,
                 new List<string> { "zecond.txt" },

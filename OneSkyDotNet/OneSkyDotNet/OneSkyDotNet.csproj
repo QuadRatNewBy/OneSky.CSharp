@@ -34,7 +34,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IOneSkyPlainClient.cs" />
+    <Compile Include="IOneSkyClient.cs" />
     <Compile Include="IPlatform.cs" />
     <Compile Include="IPlatformFile.cs" />
     <Compile Include="IPlatformImportTask.cs" />

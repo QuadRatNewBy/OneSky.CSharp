@@ -6,7 +6,7 @@
     {
         public static void ProjectTypePlainList()
         {
-            var oneSky = OneSkyDotNet.OneSkyClient.CreatePlainClient(Settings.PublicKey, Settings.PrivateKey);
+            var oneSky = OneSkyDotNet.OneSkyClient.CreateClient(Settings.PublicKey, Settings.PrivateKey);
             var projectTypes = oneSky.Platform.ProjectType.List();
             Console.WriteLine(projectTypes);
             Console.WriteLine("Press any key");

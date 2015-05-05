@@ -1,8 +1,8 @@
 ﻿namespace OneSkyDotNet
 {
-    public class OneSkyClient : IOneSkyPlainClient
+    public class OneSkyClient : IOneSkyClient
     {
-        public static IOneSkyPlainClient CreatePlainClient(string publicKey, string secretKey)
+        public static IOneSkyClient CreateClient(string publicKey, string secretKey)
         {
             var oneSky = new OneSky(publicKey, secretKey);
             return new OneSkyClient(oneSky);

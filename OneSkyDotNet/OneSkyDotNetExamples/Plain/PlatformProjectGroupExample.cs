@@ -6,7 +6,7 @@
     {
         public static void ProjectGroupPlainList()
         {
-            var oneSky = OneSkyDotNet.OneSkyClient.CreatePlainClient(Settings.PublicKey, Settings.PrivateKey);
+            var oneSky = OneSkyDotNet.OneSkyClient.CreateClient(Settings.PublicKey, Settings.PrivateKey);
             var projectGroups = oneSky.Platform.ProjectGroup.List();
             Console.WriteLine(projectGroups);
             Console.WriteLine("Press any key");
@@ -16,7 +16,7 @@
         public static void ProjectGroupPlainShow()
         {
             var projectId = 24856;
-            var oneSky = OneSkyDotNet.OneSkyClient.CreatePlainClient(Settings.PublicKey, Settings.PrivateKey);
+            var oneSky = OneSkyDotNet.OneSkyClient.CreateClient(Settings.PublicKey, Settings.PrivateKey);
             var projectGroup = oneSky.Platform.ProjectGroup.Show(projectId);
             Console.WriteLine(projectGroup);
             Console.WriteLine("Press any key");
@@ -27,7 +27,7 @@
         {
             var name = "Project Group create Example";
             var locale = "be";
-            var oneSky = OneSkyDotNet.OneSkyClient.CreatePlainClient(Settings.PublicKey, Settings.PrivateKey);
+            var oneSky = OneSkyDotNet.OneSkyClient.CreateClient(Settings.PublicKey, Settings.PrivateKey);
             var projectGroup = oneSky.Platform.ProjectGroup.Create(name, locale);
             Console.WriteLine(projectGroup);
             Console.WriteLine("Press any key");
@@ -37,7 +37,7 @@
         public static void ProjectGroupPlainDelete()
         {
             var projectId = 28155;
-            var oneSky = OneSkyDotNet.OneSkyClient.CreatePlainClient(Settings.PublicKey, Settings.PrivateKey);
+            var oneSky = OneSkyDotNet.OneSkyClient.CreateClient(Settings.PublicKey, Settings.PrivateKey);
             var projectGroup = oneSky.Platform.ProjectGroup.Delete(projectId);
             Console.WriteLine(projectGroup);
             Console.WriteLine("Press any key");
@@ -47,7 +47,7 @@
         public static void ProjectGroupPlainLanguages()
         {
             var projectId = 24856;
-            var oneSky = OneSkyDotNet.OneSkyClient.CreatePlainClient(Settings.PublicKey, Settings.PrivateKey);
+            var oneSky = OneSkyDotNet.OneSkyClient.CreateClient(Settings.PublicKey, Settings.PrivateKey);
             var projectGroupLanguages = oneSky.Platform.ProjectGroup.Languages(projectId);
             Console.WriteLine(projectGroupLanguages);
             Console.WriteLine("Press any key");

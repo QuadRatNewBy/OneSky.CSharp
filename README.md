@@ -44,9 +44,11 @@ View full list on [Wiki](https://github.com/QuadRatNewBy/OneSky-DotNet/wiki/Road
 
 ### Further Improvements ###
 * Unit Tests for all endpoints (questionable).
-* XML documentstion for public (and private?) classes/interfaces.
-* Caching, Repositoryand and other fancy stuff.
+* XML documentation for public (and private?) classes/interfaces.
 * Add `async` methods.
+* F# version (Why not).
+* Caching, Repository and and other fancy stuff.
+
 
 ## License ##
 [MIT](LICENSE.md)

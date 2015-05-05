@@ -20,6 +20,7 @@
             // Plain.PlatformProjectExample.ProjectPlainUpdate();
             // Plain.PlatformProjectExample.ProjectPlainDelete();
             // Plain.PlatformProjectExample.ProjectPlainLanguages();
+            // Plain.PlatformProjectExample.ProjectPlainShowMultiple();
 
             // Plain.PlatformQuotationExample.QuotationPlainShow();
 
@@ -37,7 +38,8 @@
             // Plain.PlatformTranslationExamples.TranslationPlainExport();
             // Plain.PlatformTranslationExamples.TranslationPlainExportMultilingualFile();
             // Plain.PlatformTranslationExamples.TranslationPlainAppDescription();
-            Plain.PlatformTranslationExamples.TranslationPlainStatus();
+            // Plain.PlatformTranslationExamples.TranslationPlainStatus();
+            Plain.PlatformTranslationExamples.TranslationPlainAppDescriptionMultiple();
         }
     }
 }

@@ -6,7 +6,7 @@
     {
         public static void LocalePlainList()
         {
-            var oneSky = OneSkyDotNet.OneSkyClient.CreatePlainClient(Settings.PublicKey, Settings.PrivateKey);
+            var oneSky = OneSkyDotNet.OneSkyClient.CreateClient(Settings.PublicKey, Settings.PrivateKey);
             var locales = oneSky.Platform.Locale.List();
             Console.WriteLine(locales);
             Console.WriteLine("Press any key");
