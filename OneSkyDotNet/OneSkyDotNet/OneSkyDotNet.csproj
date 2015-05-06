@@ -71,6 +71,7 @@
     <Compile Include="PlatformTranslation.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="PluginLocale.cs" />
+    <Compile Include="PluginProject.cs" />
     <Compile Include="PluginSpecialization.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

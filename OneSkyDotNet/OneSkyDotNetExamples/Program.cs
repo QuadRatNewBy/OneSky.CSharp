@@ -43,7 +43,10 @@
 
             // Plain.PluginLocaleExample.LocalePlainGet();
 
-            Plain.PluginSpecializationExplain.SpecializationsPlainGet();
+            // Plain.PluginSpecializationExplain.SpecializationsPlainGet();
+
+            Plain.PluginProjectExample.ProjectPlainPost();
+            Plain.PluginProjectExample.ProjectsPlainGet();
         }
     }
 }
