@@ -22,9 +22,10 @@
 
         public IPlugin Plugin { get; private set; }
 
-        internal OneSkyClient(OneSky oneSky)
+        private OneSkyClient(OneSky oneSky)
         {
             this.Platform = new Platform(oneSky);
+            this.Plugin = new Plugin(oneSky);
         }
     }
 }

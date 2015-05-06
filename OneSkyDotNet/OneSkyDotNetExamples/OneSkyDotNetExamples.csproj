@@ -46,6 +46,7 @@
     <Compile Include="Plain\PlatformProjectTypeExample.cs" />
     <Compile Include="Plain\PlatformQuotationExample.cs" />
     <Compile Include="Plain\PlatformTranslationExamples.cs" />
+    <Compile Include="Plain\PluginLocaleExample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.cs" />

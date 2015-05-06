@@ -46,6 +46,15 @@
     <Compile Include="IPlatformQuotation.cs" />
     <Compile Include="IPlatformScreenshot.cs" />
     <Compile Include="IPlatformTranslation.cs" />
+    <Compile Include="IPlugin.cs" />
+    <Compile Include="IPluginAccount.cs" />
+    <Compile Include="IPluginAnonymous.cs" />
+    <Compile Include="IPluginItem.cs" />
+    <Compile Include="IPluginLocale.cs" />
+    <Compile Include="IPluginOrder.cs" />
+    <Compile Include="IPluginProject.cs" />
+    <Compile Include="IPluginQuotation.cs" />
+    <Compile Include="IPluginSpecialization.cs" />
     <Compile Include="OneSky.cs" />
     <Compile Include="OneSkyClient.cs" />
     <Compile Include="OneSkyRequest.cs" />
@@ -60,6 +69,8 @@
     <Compile Include="PlatformQuotation.cs" />
     <Compile Include="PlatformScreenshot.cs" />
     <Compile Include="PlatformTranslation.cs" />
+    <Compile Include="Plugin.cs" />
+    <Compile Include="PluginLocale.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

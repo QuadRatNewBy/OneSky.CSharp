@@ -39,7 +39,9 @@
             // Plain.PlatformTranslationExamples.TranslationPlainExportMultilingualFile();
             // Plain.PlatformTranslationExamples.TranslationPlainAppDescription();
             // Plain.PlatformTranslationExamples.TranslationPlainStatus();
-            Plain.PlatformTranslationExamples.TranslationPlainAppDescriptionMultiple();
+            // Plain.PlatformTranslationExamples.TranslationPlainAppDescriptionMultiple();
+
+            Plain.PluginLocaleExample.LocalePlainGet();
         }
     }
 }
