@@ -1,4 +1,7 @@
 ﻿namespace OneSkyDotNet
 {
-    public interface IPluginLocale { }
+    public interface IPluginLocale
+    {
+        string GetLocales();
+    }
 }

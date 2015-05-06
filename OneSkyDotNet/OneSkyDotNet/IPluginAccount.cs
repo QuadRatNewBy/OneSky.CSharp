@@ -1,7 +1,7 @@
 ﻿namespace OneSkyDotNet
 {
-    public interface IPluginAccount
+    public interface IPluginAccount : IPluginAnonymous
     {
-         
+        string GetCredit();
     }
 }

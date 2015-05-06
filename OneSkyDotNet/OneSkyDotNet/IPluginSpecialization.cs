@@ -1,4 +1,7 @@
 namespace OneSkyDotNet
 {
-    public interface IPluginSpecialization { }
+    public interface IPluginSpecialization
+    {
+        string GetSpecializations();
+    }
 }
