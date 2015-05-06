@@ -63,5 +63,10 @@
                     .Parameter(AuthenticationTimestamp, timestamp)
                     .Parameter(AuthenticationDevHash, devHash);
         }
+
+        internal static OneSkyRequest CreateAnonymousRequest(string url)
+        {
+            return new OneSkyRequest(url);
+        }
     }
 }

@@ -2,6 +2,16 @@
 {
     public class OneSkyClient : IOneSkyClient
     {
+        private static IPluginAnonymous anonymous = null;
+
+        public static IPluginAnonymous Anonymous
+        {
+            get
+            {
+                return anonymous;
+            }
+        }
+
         public static IOneSkyClient CreateClient(string publicKey, string secretKey)
         {
             var oneSky = new OneSky(publicKey, secretKey);
@@ -9,6 +19,8 @@
         }
 
         public IPlatform Platform { get; private set; }
+
+        public IPlugin Plugin { get; private set; }
 
         internal OneSkyClient(OneSky oneSky)
         {
