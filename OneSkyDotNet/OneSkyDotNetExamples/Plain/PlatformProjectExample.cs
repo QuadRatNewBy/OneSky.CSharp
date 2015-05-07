@@ -17,7 +17,7 @@
 
         public static void ProjectPlainShow()
         {
-            var projectId = 56704;
+            var projectId = 66001;
             var oneSky = OneSkyDotNet.OneSkyClient.CreateClient(Settings.PublicKey, Settings.PrivateKey);
             var project = oneSky.Platform.Project.Show(projectId);
             Console.WriteLine(project);
