@@ -7,7 +7,7 @@
     {
         public static void ProjectPlainList()
         {
-            var projectGroupId = 24856;
+            var projectGroupId = 29479;
             var oneSky = OneSkyDotNet.OneSkyClient.CreateClient(Settings.PublicKey, Settings.PrivateKey);
             var projects = oneSky.Platform.Project.List(projectGroupId);
             Console.WriteLine(projects);

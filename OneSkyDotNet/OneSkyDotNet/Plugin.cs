@@ -21,6 +21,7 @@
             this.Locale = new PluginLocale(oneSky);
             this.Specialization = new PluginSpecialization(oneSky);
             this.Project = new PluginProject(oneSky);
+            this.Item = new PluginItem(oneSky);
         }
     }
 }

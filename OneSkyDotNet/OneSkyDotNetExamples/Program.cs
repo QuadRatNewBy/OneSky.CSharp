@@ -6,7 +6,7 @@
         {
             // Plain.PlatformLocaleExample.LocalePlainList();
 
-            Plain.PlatformProjectTypeExample.ProjectTypePlainList();
+            // Plain.PlatformProjectTypeExample.ProjectTypePlainList();
 
             // Plain.PlatformProjectGroupExample.ProjectGroupPlainList();
             // Plain.PlatformProjectGroupExample.ProjectGroupPlainShow();
@@ -47,6 +47,8 @@
 
             // Plain.PluginProjectExample.ProjectPlainPost();
             // Plain.PluginProjectExample.ProjectsPlainGet();
+
+            Plain.PluginItemExample.ItemsPlainGet();
         }
     }
 }
