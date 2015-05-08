@@ -50,7 +50,7 @@
 
             // Plain.PluginItemExample.ItemsPlainGet();
 
-            Plain.PluginQuotationsExample.QuotationPlainPost();
+            // Plain.PluginQuotationsExample.QuotationPlainPost();
         }
     }
 }

@@ -10,7 +10,7 @@ namespace OneSkyDotNet
 
         string GetOrderMessages(int projectId, int orderId, int page = 1, int perPage = 15);
 
-        string PostOrder(
+        string PostOrders(
             int projectId,
             string fromLocale,
             string toLocales,
@@ -18,6 +18,6 @@ namespace OneSkyDotNet
             string tone = null,
             string note = null,
             bool isIncludingReview = false,
-            string specialization = null);
+            string specialization = "general");
     }
 }

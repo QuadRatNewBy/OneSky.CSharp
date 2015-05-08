@@ -23,6 +23,7 @@
             this.Project = new PluginProject(oneSky);
             this.Item = new PluginItem(oneSky);
             this.Quotation = new PluginQuotation(oneSky);
+            this.Order = new PluginOrder(oneSky);
         }
     }
 }

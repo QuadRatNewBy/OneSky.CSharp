@@ -72,6 +72,7 @@
     <Compile Include="Plugin.cs" />
     <Compile Include="PluginItem.cs" />
     <Compile Include="PluginLocale.cs" />
+    <Compile Include="PluginOrder.cs" />
     <Compile Include="PluginProject.cs" />
     <Compile Include="PluginQuotation.cs" />
     <Compile Include="PluginSpecialization.cs" />
