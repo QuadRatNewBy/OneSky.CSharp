@@ -73,6 +73,7 @@
     <Compile Include="PluginItem.cs" />
     <Compile Include="PluginLocale.cs" />
     <Compile Include="PluginProject.cs" />
+    <Compile Include="PluginQuotation.cs" />
     <Compile Include="PluginSpecialization.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

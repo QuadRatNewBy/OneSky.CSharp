@@ -48,7 +48,9 @@
             // Plain.PluginProjectExample.ProjectPlainPost();
             // Plain.PluginProjectExample.ProjectsPlainGet();
 
-            Plain.PluginItemExample.ItemsPlainGet();
+            // Plain.PluginItemExample.ItemsPlainGet();
+
+            Plain.PluginQuotationsExample.QuotationPlainPost();
         }
     }
 }

@@ -63,6 +63,15 @@
                     }
                     sb.Append("]");
                 }
+                else if (keyValuePair.Value.ToString().StartsWith("{") && keyValuePair.Value.ToString().EndsWith("}"))
+                {
+                    sb.Append(
+                        string.Format(
+                            "{2}\"{0}\":{1}",
+                            keyValuePair.Key,
+                            keyValuePair.Value,
+                            notFirst ? "," : string.Empty));
+                }
                 else
                 {
                     sb.Append(

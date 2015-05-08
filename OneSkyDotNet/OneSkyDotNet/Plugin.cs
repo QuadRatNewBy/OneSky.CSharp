@@ -22,6 +22,7 @@
             this.Specialization = new PluginSpecialization(oneSky);
             this.Project = new PluginProject(oneSky);
             this.Item = new PluginItem(oneSky);
+            this.Quotation = new PluginQuotation(oneSky);
         }
     }
 }
