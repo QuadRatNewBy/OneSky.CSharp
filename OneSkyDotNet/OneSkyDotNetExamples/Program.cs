@@ -54,7 +54,10 @@
 
             // Plain.PluginOrderExample.OrdersPlainGet();
             // Plain.PluginOrderExample.OrderPlainPost();
-            Plain.PluginAccountExample.CreditPlainGet();
+
+            // Plain.PluginAccountExample.CreditPlainGet();
+            // Plain.PluginAccountExample.PlainSingUp();
+            Plain.PluginAccountExample.PlainSingIn();
         }
     }
 }
