@@ -53,7 +53,8 @@
             // Plain.PluginQuotationsExample.QuotationPlainPost();
 
             // Plain.PluginOrderExample.OrdersPlainGet();
-            Plain.PluginOrderExample.OrderPlainPost();
+            // Plain.PluginOrderExample.OrderPlainPost();
+            Plain.PluginAccountExample.CreditPlainGet();
         }
     }
 }

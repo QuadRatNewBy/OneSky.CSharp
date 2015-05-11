@@ -70,6 +70,8 @@
     <Compile Include="PlatformScreenshot.cs" />
     <Compile Include="PlatformTranslation.cs" />
     <Compile Include="Plugin.cs" />
+    <Compile Include="PluginAccount.cs" />
+    <Compile Include="PluginAnonymous.cs" />
     <Compile Include="PluginItem.cs" />
     <Compile Include="PluginLocale.cs" />
     <Compile Include="PluginOrder.cs" />

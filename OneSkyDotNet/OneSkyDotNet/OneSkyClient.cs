@@ -2,7 +2,7 @@
 {
     public class OneSkyClient : IOneSkyClient
     {
-        private static IPluginAnonymous anonymous = null;
+        private static IPluginAnonymous anonymous = new PluginAnonymous();
 
         public static IPluginAnonymous Anonymous
         {

@@ -24,6 +24,7 @@
             this.Item = new PluginItem(oneSky);
             this.Quotation = new PluginQuotation(oneSky);
             this.Order = new PluginOrder(oneSky);
+            this.Account = new PluginAccount(oneSky, OneSkyClient.Anonymous);
         }
     }
 }
