@@ -48,6 +48,7 @@
     <Compile Include="Plain\PlatformTranslationExamples.cs" />
     <Compile Include="Plain\PluginItemExample.cs" />
     <Compile Include="Plain\PluginLocaleExample.cs" />
+    <Compile Include="Plain\PluginOrderExample.cs" />
     <Compile Include="Plain\PluginProjectExample.cs" />
     <Compile Include="Plain\PluginQuotationsExample.cs" />
     <Compile Include="Plain\PluginSpecializationExplain.cs" />

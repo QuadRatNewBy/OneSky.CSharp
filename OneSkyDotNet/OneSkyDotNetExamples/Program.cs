@@ -51,6 +51,9 @@
             // Plain.PluginItemExample.ItemsPlainGet();
 
             // Plain.PluginQuotationsExample.QuotationPlainPost();
+
+            // Plain.PluginOrderExample.OrdersPlainGet();
+            Plain.PluginOrderExample.OrderPlainPost();
         }
     }
 }
