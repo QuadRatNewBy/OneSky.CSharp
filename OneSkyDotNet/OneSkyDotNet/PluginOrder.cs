@@ -1,6 +1,6 @@
 ﻿namespace OneSkyDotNet
 {
-    public class PluginOrder : IPluginOrder
+    internal class PluginOrder : IPluginOrder
     {
         private const string GetOrdersAddress = "https://plugin.api.onesky.io/1/projects/{project_id}/orders";
         private const string GetOrderAddress = "https://plugin.api.onesky.io/1/projects/{project_id}/orders/{order_id}";

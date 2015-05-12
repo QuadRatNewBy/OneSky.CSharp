@@ -1,6 +1,6 @@
 ﻿namespace OneSkyDotNet
 {
-    public class PluginQuotation : IPluginQuotation
+    internal class PluginQuotation : IPluginQuotation
     {
         private const string PostQuotationsAddress = "https://plugin.api.onesky.io/1/projects/{project_id}/quotations";
 

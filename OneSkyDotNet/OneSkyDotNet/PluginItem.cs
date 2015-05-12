@@ -1,6 +1,6 @@
 ﻿namespace OneSkyDotNet
 {
-    public class PluginItem : IPluginItem
+    internal class PluginItem : IPluginItem
     {
         private const string GetItemsAddress = "https://plugin.api.onesky.io/1/projects/{project_id}/items";
         private const string GetItemAddress = "https://api.plugin.onesky.io/1/projects/{project_id}/items/{item_id}";

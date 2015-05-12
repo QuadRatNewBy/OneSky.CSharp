@@ -1,6 +1,6 @@
 ﻿namespace OneSkyDotNet
 {
-    public class PluginAccount : IPluginAccount
+    internal class PluginAccount : IPluginAccount
     {
         private const string GetCreditAddress = "https://plugin.api.onesky.io/1/accounts/credit";
 

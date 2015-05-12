@@ -1,6 +1,6 @@
 ﻿namespace OneSkyDotNet
 {
-    public class PluginLanguagePair : IPluginLanguagePair
+    internal class PluginLanguagePair : IPluginLanguagePair
     {
         private const string GetAddress = "https://platform.api.onesky.io/1/locales";
 

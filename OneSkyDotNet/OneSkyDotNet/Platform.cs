@@ -1,6 +1,6 @@
 ﻿namespace OneSkyDotNet
 {
-    public class Platform : IPlatform
+    internal class Platform : IPlatform
     {
         public IPlatformProjectGroup ProjectGroup { get; private set; }
 

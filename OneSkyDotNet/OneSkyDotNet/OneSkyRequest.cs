@@ -8,7 +8,7 @@
     using System.Net;
     using System.Text;
 
-    public class OneSkyRequest
+    internal class OneSkyRequest
     {
         private bool hasParams;
 

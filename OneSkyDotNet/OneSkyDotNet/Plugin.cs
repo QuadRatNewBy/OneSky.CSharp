@@ -1,6 +1,6 @@
 ﻿namespace OneSkyDotNet
 {
-    public class Plugin : IPlugin
+    internal class Plugin : IPlugin
     {
         public IPluginAccount Account { get; private set; }
 

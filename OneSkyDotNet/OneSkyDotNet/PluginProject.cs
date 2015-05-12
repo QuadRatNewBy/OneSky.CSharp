@@ -1,6 +1,6 @@
 ﻿namespace OneSkyDotNet
 {
-    public class PluginProject : IPluginProject
+    internal class PluginProject : IPluginProject
     {
         private const string GetProjectsAddress = "https://plugin.api.onesky.io/1/projects";
         private const string PostProjectAddress = "https://plugin.api.onesky.io/1/projects";

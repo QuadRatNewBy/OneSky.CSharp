@@ -1,6 +1,6 @@
 ﻿namespace OneSkyDotNet
 {
-    public class PluginSpecialization : IPluginSpecialization
+    internal class PluginSpecialization : IPluginSpecialization
     {
         private const string GetSpecializationsAddress = "https://plugin.api.onesky.io/1/specializations";
 

@@ -1,6 +1,6 @@
 ﻿namespace OneSkyDotNet
 {
-    public class PluginAnonymous : IPluginAnonymous
+    internal class PluginAnonymous : IPluginAnonymous
     {
         private const string SingUpAddress = "https://plugin.api.onesky.io/1/accounts/sign-up";
         private const string SingInAddress = "https://plugin.api.onesky.io/1/accounts/sign-in";
