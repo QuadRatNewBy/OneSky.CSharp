@@ -16,6 +16,8 @@
 
         public IPluginQuotation Quotation { get; private set; }
 
+        public IPluginLanguagePair LanguagePair { get; private set; }
+
         internal Plugin(OneSky oneSky)
         {
             this.Locale = new PluginLocale(oneSky);
@@ -25,6 +27,7 @@
             this.Quotation = new PluginQuotation(oneSky);
             this.Order = new PluginOrder(oneSky);
             this.Account = new PluginAccount(oneSky, OneSkyClient.Anonymous);
+            this.LanguagePair = new PluginLanguagePair(oneSky);
         }
     }
 }

@@ -15,5 +15,7 @@
         IPluginOrder Order { get; }
 
         IPluginQuotation Quotation { get; }
+
+        IPluginLanguagePair LanguagePair { get; }
     }
 }
