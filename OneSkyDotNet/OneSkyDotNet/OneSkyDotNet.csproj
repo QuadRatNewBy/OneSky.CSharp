@@ -63,6 +63,7 @@
     <Compile Include="Json\IOneSkyClient.cs" />
     <Compile Include="Json\IPlatform.cs" />
     <Compile Include="Json\IPlugin.cs" />
+    <Compile Include="Json\OneSkyClient.cs" />
     <Compile Include="OneSky.cs" />
     <Compile Include="OneSkyClient.cs" />
     <Compile Include="OneSkyRequest.cs" />
