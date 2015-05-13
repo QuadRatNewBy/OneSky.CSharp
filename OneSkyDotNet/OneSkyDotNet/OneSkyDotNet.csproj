@@ -39,6 +39,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IOneSkyClient.cs" />
+    <Compile Include="IOneSkyResponse.cs" />
     <Compile Include="IPlatform.cs" />
     <Compile Include="IPlatformFile.cs" />
     <Compile Include="IPlatformImportTask.cs" />
@@ -67,6 +68,7 @@
     <Compile Include="OneSky.cs" />
     <Compile Include="OneSkyClient.cs" />
     <Compile Include="OneSkyRequest.cs" />
+    <Compile Include="OneSkyResponse.cs" />
     <Compile Include="Platform.cs" />
     <Compile Include="PlatformFile.cs" />
     <Compile Include="PlatformImportTask.cs" />
