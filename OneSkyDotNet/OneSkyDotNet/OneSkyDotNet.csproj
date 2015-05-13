@@ -54,11 +54,15 @@
     <Compile Include="IPluginAccount.cs" />
     <Compile Include="IPluginAnonymous.cs" />
     <Compile Include="IPluginItem.cs" />
+    <Compile Include="IPluginLanguagePair.cs" />
     <Compile Include="IPluginLocale.cs" />
     <Compile Include="IPluginOrder.cs" />
     <Compile Include="IPluginProject.cs" />
     <Compile Include="IPluginQuotation.cs" />
     <Compile Include="IPluginSpecialization.cs" />
+    <Compile Include="Json\IOneSkyClient.cs" />
+    <Compile Include="Json\IPlatform.cs" />
+    <Compile Include="Json\IPlugin.cs" />
     <Compile Include="OneSky.cs" />
     <Compile Include="OneSkyClient.cs" />
     <Compile Include="OneSkyRequest.cs" />
@@ -77,6 +81,7 @@
     <Compile Include="PluginAccount.cs" />
     <Compile Include="PluginAnonymous.cs" />
     <Compile Include="PluginItem.cs" />
+    <Compile Include="PluginLanguagePair.cs" />
     <Compile Include="PluginLocale.cs" />
     <Compile Include="PluginOrder.cs" />
     <Compile Include="PluginProject.cs" />
@@ -87,6 +92,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
