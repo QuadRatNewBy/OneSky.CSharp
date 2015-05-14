@@ -6,6 +6,7 @@
         {
             var client = new OneSkyClient();
             client.Plain = OneSkyDotNet.OneSkyClient.CreateClient(publicKey, secretKey);
+            client.Platform = new Platform(client.Plain.Platform);
             return client;
         }
 

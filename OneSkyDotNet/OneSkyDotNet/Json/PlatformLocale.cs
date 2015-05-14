@@ -4,7 +4,7 @@
 
     using Newtonsoft.Json;
 
-    public class PlatformLocale : IPlatformLocale
+    internal class PlatformLocale : IPlatformLocale
     {
         private OneSkyDotNet.IPlatformLocale locale;
 

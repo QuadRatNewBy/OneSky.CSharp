@@ -19,7 +19,7 @@
             // Plain.PlatformProjectExample.ProjectPlainCreate();
             // Plain.PlatformProjectExample.ProjectPlainUpdate();
             // Plain.PlatformProjectExample.ProjectPlainDelete();
-            Plain.PlatformProjectExample.ProjectPlainLanguages();
+            // Plain.PlatformProjectExample.ProjectPlainLanguages();
             // Plain.PlatformProjectExample.ProjectPlainShowMultiple();
 
             // Plain.PlatformQuotationExample.QuotationPlainShow();
