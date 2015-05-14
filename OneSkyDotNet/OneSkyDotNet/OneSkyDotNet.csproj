@@ -50,6 +50,7 @@
     <Compile Include="IPluginAccount.cs" />
     <Compile Include="IPluginAnonymous.cs" />
     <Compile Include="IPluginItem.cs" />
+    <Compile Include="IPluginLanguagePair.cs" />
     <Compile Include="IPluginLocale.cs" />
     <Compile Include="IPluginOrder.cs" />
     <Compile Include="IPluginProject.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="PluginAccount.cs" />
     <Compile Include="PluginAnonymous.cs" />
     <Compile Include="PluginItem.cs" />
+    <Compile Include="PluginLanguagePair.cs" />
     <Compile Include="PluginLocale.cs" />
     <Compile Include="PluginOrder.cs" />
     <Compile Include="PluginProject.cs" />
