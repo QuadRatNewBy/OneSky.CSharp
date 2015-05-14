@@ -7,6 +7,7 @@
             var client = new OneSkyClient();
             client.Plain = OneSkyDotNet.OneSkyClient.CreateClient(publicKey, secretKey);
             client.Platform = new Platform(client.Plain.Platform);
+            client.Plugin = new Plugin(client.Plain.Plugin);
             return client;
         }
 

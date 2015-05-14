@@ -2,6 +2,6 @@
 {
     public interface IPlugin
     {
-        
+        IPluginLocale Locale { get; }
     }
 }
