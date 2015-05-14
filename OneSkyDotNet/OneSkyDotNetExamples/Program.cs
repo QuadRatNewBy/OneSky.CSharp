@@ -6,7 +6,7 @@
         {
             // Plain.PlatformLocaleExample.LocalePlainList();
 
-            Plain.PlatformProjectTypeExample.ProjectTypePlainList();
+            // Plain.PlatformProjectTypeExample.ProjectTypePlainList();
 
             // Plain.PlatformProjectGroupExample.ProjectGroupPlainList();
             // Plain.PlatformProjectGroupExample.ProjectGroupPlainShow();
@@ -19,7 +19,7 @@
             // Plain.PlatformProjectExample.ProjectPlainCreate();
             // Plain.PlatformProjectExample.ProjectPlainUpdate();
             // Plain.PlatformProjectExample.ProjectPlainDelete();
-            // Plain.PlatformProjectExample.ProjectPlainLanguages();
+            Plain.PlatformProjectExample.ProjectPlainLanguages();
             // Plain.PlatformProjectExample.ProjectPlainShowMultiple();
 
             // Plain.PlatformQuotationExample.QuotationPlainShow();

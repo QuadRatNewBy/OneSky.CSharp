@@ -64,7 +64,7 @@
 
         public static void ProjectPlainLanguages()
         {
-            var projectId = 56704;
+            var projectId = 65659;
             var oneSky = OneSkyDotNet.OneSkyClient.CreateClient(Settings.PublicKey, Settings.PrivateKey);
             var projectlangs = oneSky.Platform.Project.Languages(projectId);
             Console.WriteLine(projectlangs);
