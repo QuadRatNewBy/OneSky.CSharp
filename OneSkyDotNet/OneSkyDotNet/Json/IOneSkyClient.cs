@@ -5,5 +5,7 @@
         IPlatform Platform { get; }
 
         IPlugin Plugin { get; }
+
+        OneSkyDotNet.IOneSkyClient Plain { get; }
     }
 }

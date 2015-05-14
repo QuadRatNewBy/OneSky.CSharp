@@ -4,11 +4,15 @@
     {
         public static IOneSkyClient CreateClient(string publicKey, string secretKey)
         {
-            return new OneSkyClient();
+            var client = new OneSkyClient();
+            client.Plain = OneSkyDotNet.OneSkyClient.CreateClient(publicKey, secretKey);
+            return client;
         }
 
         public IPlatform Platform { get; private set; }
 
         public IPlugin Plugin { get; private set; }
+
+        public OneSkyDotNet.IOneSkyClient Plain { get; private set; }
     }
 }
