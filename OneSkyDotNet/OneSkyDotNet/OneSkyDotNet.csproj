@@ -62,6 +62,7 @@
     <Compile Include="IPluginQuotation.cs" />
     <Compile Include="IPluginSpecialization.cs" />
     <Compile Include="Json\IOneSkyClient.cs" />
+    <Compile Include="Json\IOneSkyResponse.cs" />
     <Compile Include="Json\IPlatform.cs" />
     <Compile Include="Json\IPlugin.cs" />
     <Compile Include="Json\OneSkyClient.cs" />
