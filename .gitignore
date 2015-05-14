@@ -6,3 +6,6 @@ OneSkyDotNet/OneSkyDotNet/obj/
 OneSkyDotNet/OneSkyDotNetExamples/obj/
 OneSkyDotNet/OneSkyDotNetExamples/bin/
 /OneSkyDotNet/OneSkyDotNet/*.DotSettings
+OneSkyDotNet/OneSkyDotNetTests/obj/
+OneSkyDotNet/OneSkyDotNetTests/bin/
+OneSkyDotNet/packages/

@@ -153,7 +153,7 @@
             return this.GenerateFileBody();
         }
 
-        private string Send(string method, byte[] data = null)
+        private IOneSkyResponse Send(string method, byte[] data = null)
         {
             var request = (HttpWebRequest)WebRequest.Create(this.url);
             request.Accept = "Accept=application/json";
@@ -169,6 +169,7 @@
                 }
             }
 
+            var oneSkyResponse = new OneSkyResponse();
             var result = new StringBuilder();
 
             try
@@ -191,6 +192,8 @@
                         }
                     }
                 }
+
+                this.GetResponseStatus(oneSkyResponse, response);
             }
             catch (WebException ex)
             {
@@ -211,9 +214,23 @@
                         }
                     }
                 }
+
+                this.GetResponseStatus(oneSkyResponse, ex.Response);
             }
 
-            return result.ToString();
+            oneSkyResponse.Data = result.ToString();
+
+            return oneSkyResponse;
+        }
+
+        private void GetResponseStatus(OneSkyResponse oneSkyResponse, WebResponse response)
+        {
+            var httpResponse = (HttpWebResponse)response;
+            if (httpResponse != null)
+            {
+                oneSkyResponse.StatusCode = (int)httpResponse.StatusCode;
+                oneSkyResponse.StatusDescription = httpResponse.StatusDescription;                
+            }            
         }
 
         public OneSkyRequest Placeholder(string placeholder, object value, bool condition = true)
@@ -271,27 +288,27 @@
         public string Get()
         {
             var response = this.Send("GET");
-            return response;
+            return response.Data;
         }
 
         public string Post()
         {
             var data = this.GenerateBody();
             var response = this.Send("POST", data);
-            return response;
+            return response.Data;
         }
 
         public string Put()
         {
             var data = this.GenerateBody();
             var response = this.Send("PUT", data);
-            return response;
+            return response.Data;
         }
 
         public string Delete()
         {
             var response = this.Send("DELETE");
-            return response;
+            return response.Data;
         }
     }
 }
