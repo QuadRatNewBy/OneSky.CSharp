@@ -14,17 +14,17 @@
             this.oneSky = oneSky;
         }
 
-        public string SingUp(string email)
+        public IOneSkyResponse SingUp(string email)
         {
             return this.anonymous.SingUp(email);
         }
 
-        public string SingIn(string email, string password)
+        public IOneSkyResponse SingIn(string email, string password)
         {
             return this.anonymous.SingIn(email, password);
         }
 
-        public string GetCredit()
+        public IOneSkyResponse GetCredit()
         {
             return this.oneSky.CreateRequest(GetCreditAddress).Get();
         }

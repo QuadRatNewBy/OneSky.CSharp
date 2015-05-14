@@ -2,6 +2,6 @@ namespace OneSkyDotNet
 {
     public interface IPluginSpecialization
     {
-        string GetSpecializations();
+        IOneSkyResponse GetSpecializations();
     }
 }

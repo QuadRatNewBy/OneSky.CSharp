@@ -4,6 +4,6 @@
 
     public interface IPlatformScreenshot
     {
-        string Upload(int projectId, IEnumerable<string> screenshots);
+        IOneSkyResponse Upload(int projectId, IEnumerable<string> screenshots);
     }
 }

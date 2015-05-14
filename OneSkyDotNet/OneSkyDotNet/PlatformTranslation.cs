@@ -29,7 +29,7 @@
             this.oneSky = oneSky;
         }
 
-        public string Export(int projectId, string locale, string sourceFileName, string exportFileName = null)
+        public IOneSkyResponse Export(int projectId, string locale, string sourceFileName, string exportFileName = null)
         {
             return this.oneSky.CreateRequest(TranslationExportAddress)
                 .Placeholder(ProjectIdPlacehoder, projectId)
@@ -39,7 +39,7 @@
                 .Get();
         }
 
-        public string ExportMultilingualFile(
+        public IOneSkyResponse ExportMultilingualFile(
             int projectId,
             string sourceFileName,
             string exportFileName = null,
@@ -53,7 +53,7 @@
                 .Get();
         }
 
-        public string AppDescription(int projectId, string locale)
+        public IOneSkyResponse AppDescription(int projectId, string locale)
         {
             return
                 this.oneSky.CreateRequest(TranslationAppDescriptionAddress)
@@ -62,7 +62,7 @@
                     .Get();
         }
 
-        public string Status(int projectId, string fileName, string locale)
+        public IOneSkyResponse Status(int projectId, string fileName, string locale)
         {
             return
                 this.oneSky.CreateRequest(TranslationStatusAddress)

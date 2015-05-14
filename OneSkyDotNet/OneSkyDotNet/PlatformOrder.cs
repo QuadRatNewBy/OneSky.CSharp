@@ -33,7 +33,7 @@
             this.oneSky = oneSky;
         }
 
-        public string List(int projectId, int page = 1, int perPage = 50, string fileName = null)
+        public IOneSkyResponse List(int projectId, int page = 1, int perPage = 50, string fileName = null)
         {
             return
                 this.oneSky.CreateRequest(OrderListAddress)
@@ -44,7 +44,7 @@
                     .Get();
         }
 
-        public string Show(int projectId, int orderId)
+        public IOneSkyResponse Show(int projectId, int orderId)
         {
             return
                 this.oneSky.CreateRequest(OrderShowAddress)
@@ -53,7 +53,7 @@
                     .Get();
         }
 
-        public string Create(
+        public IOneSkyResponse Create(
             int projectId,
             IEnumerable<string> files,
             string toLocale,

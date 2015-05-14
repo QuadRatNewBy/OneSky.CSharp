@@ -2,6 +2,6 @@
 {
     public interface IPluginLocale
     {
-        string GetLocales();
+        IOneSkyResponse GetLocales();
     }
 }

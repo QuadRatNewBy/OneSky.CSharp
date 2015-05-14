@@ -17,7 +17,7 @@
             this.oneSky = oneSky;
         }
 
-        public string Upload(int projectId, IEnumerable<string> screenshots)
+        public IOneSkyResponse Upload(int projectId, IEnumerable<string> screenshots)
         {
             return
                 this.oneSky.CreateRequest(ScreenshotUploadAddress)

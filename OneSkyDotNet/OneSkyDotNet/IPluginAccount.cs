@@ -2,6 +2,6 @@
 {
     public interface IPluginAccount : IPluginAnonymous
     {
-        string GetCredit();
+        IOneSkyResponse GetCredit();
     }
 }

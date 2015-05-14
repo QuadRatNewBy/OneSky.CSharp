@@ -4,6 +4,6 @@
     {
         int StatusCode { get; }
         string StatusDescription { get; }
-        string Data { get; }
+        string Content { get; }
     }
 }

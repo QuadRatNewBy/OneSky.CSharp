@@ -2,6 +2,6 @@
 {
     public interface IPluginLanguagePair
     {
-        string GetLanguagePairs(string fromLocale);
+        IOneSkyResponse GetLanguagePairs(string fromLocale);
     }
 }

@@ -2,14 +2,14 @@
 {
     public interface IPlatformProjectGroup
     {
-        string List(int page = 1, int perPage = 50);
+        IOneSkyResponse List(int page = 1, int perPage = 50);
 
-        string Show(int projectGroupId);
+        IOneSkyResponse Show(int projectGroupId);
 
-        string Create(string name, string locale = "en");
+        IOneSkyResponse Create(string name, string locale = "en");
 
-        string Delete(int projectGroupId);
+        IOneSkyResponse Delete(int projectGroupId);
 
-        string Languages(int projectGroupId);
+        IOneSkyResponse Languages(int projectGroupId);
     }
 }

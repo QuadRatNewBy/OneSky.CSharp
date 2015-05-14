@@ -9,12 +9,12 @@
         private const string SingInEmailBody = "email";
         private const string SingInPasswordBody = "password";
 
-        public string SingUp(string email)
+        public IOneSkyResponse SingUp(string email)
         {
             return OneSky.CreateAnonymousRequest(SingUpAddress).Body(SingUpEmailBody, email).Post();
         }
 
-        public string SingIn(string email, string password)
+        public IOneSkyResponse SingIn(string email, string password)
         {
             return
                 OneSky.CreateAnonymousRequest(SingInAddress)

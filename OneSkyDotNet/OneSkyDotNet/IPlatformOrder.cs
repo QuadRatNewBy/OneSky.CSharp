@@ -5,11 +5,11 @@
     public interface IPlatformOrder
     {
 
-        string List(int projectId, int page = 1, int perPage = 50, string fileName = null);
+        IOneSkyResponse List(int projectId, int page = 1, int perPage = 50, string fileName = null);
 
-        string Show(int projectId, int orderId);
+        IOneSkyResponse Show(int projectId, int orderId);
 
-        string Create(
+        IOneSkyResponse Create(
             int projectId,
             IEnumerable<string> files,
             string toLocale,

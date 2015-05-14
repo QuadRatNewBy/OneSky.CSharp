@@ -32,7 +32,7 @@
             this.oneSky = oneSky;
         }
 
-        public string GetOrders(int projectId, int page = 1, int perPage = 15)
+        public IOneSkyResponse GetOrders(int projectId, int page = 1, int perPage = 15)
         {
             return
                 this.oneSky.CreateRequest(GetOrdersAddress)
@@ -42,7 +42,7 @@
                     .Get();
         }
 
-        public string GetOrder(int projectId, int orderId)
+        public IOneSkyResponse GetOrder(int projectId, int orderId)
         {
             return
                 this.oneSky.CreateRequest(GetOrderAddress)
@@ -51,7 +51,7 @@
                     .Get();
         }
 
-        public string GetOrderItems(int projectId, int orderId)
+        public IOneSkyResponse GetOrderItems(int projectId, int orderId)
         {
             return
                 this.oneSky.CreateRequest(GetOrderItemsAddress)
@@ -60,7 +60,7 @@
                     .Get();
         }
 
-        public string GetOrderMessages(int projectId, int orderId, int page = 1, int perPage = 15)
+        public IOneSkyResponse GetOrderMessages(int projectId, int orderId, int page = 1, int perPage = 15)
         {
             return
                 this.oneSky.CreateRequest(GetOrderMessagesAddress)
@@ -71,7 +71,7 @@
                     .Get();
         }
 
-        public string PostOrders(
+        public IOneSkyResponse PostOrders(
             int projectId,
             string fromLocale,
             string toLocales,

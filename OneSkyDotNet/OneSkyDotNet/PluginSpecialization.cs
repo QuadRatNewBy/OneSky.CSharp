@@ -11,7 +11,7 @@
             this.oneSky = oneSky;
         }
 
-        public string GetSpecializations()
+        public IOneSkyResponse GetSpecializations()
         {
             return this.oneSky.CreateRequest(GetSpecializationsAddress).Get();
         }

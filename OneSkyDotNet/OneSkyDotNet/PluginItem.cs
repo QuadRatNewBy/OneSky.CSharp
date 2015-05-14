@@ -20,7 +20,7 @@
             this.oneSky = oneSky;
         }
 
-        public string GetItems(int projectId, string locale = null, int page = 1, int perPage = 15)
+        public IOneSkyResponse GetItems(int projectId, string locale = null, int page = 1, int perPage = 15)
         {
             return
                 this.oneSky.CreateRequest(GetItemsAddress)
@@ -31,7 +31,7 @@
                     .Get();
         }
 
-        public string GetItem(int projectId, int itemId)
+        public IOneSkyResponse GetItem(int projectId, int itemId)
         {
             return
                 this.oneSky.CreateRequest(GetItemAddress)
@@ -40,7 +40,7 @@
                     .Get();
         }
 
-        public string DeleteItem(int projectId, int itemId)
+        public IOneSkyResponse DeleteItem(int projectId, int itemId)
         {
             return
                 this.oneSky.CreateRequest(DeleteItemAddress)

@@ -2,6 +2,6 @@
 {
     public interface IPlatformLocale
     {
-        string List();
+        IOneSkyResponse List();
     }
 }

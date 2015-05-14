@@ -23,7 +23,7 @@
             this.oneSky = oneSky;
         }
 
-        public string List(int page = 1, int perPage = 50)
+        public IOneSkyResponse List(int page = 1, int perPage = 50)
         {
             return
                 this.oneSky.CreateRequest(ProjectGroupListAddress)
@@ -32,7 +32,7 @@
                     .Get();
         }
 
-        public string Show(int projectGroupId)
+        public IOneSkyResponse Show(int projectGroupId)
         {
             return
                 this.oneSky.CreateRequest(ProjectGroupShowAddress)
@@ -40,7 +40,7 @@
                     .Get();
         }
 
-        public string Create(string name, string locale = "en")
+        public IOneSkyResponse Create(string name, string locale = "en")
         {
             return
                 this.oneSky.CreateRequest(ProjectGroupCreateAddress)
@@ -49,7 +49,7 @@
                     .Post();
         }
 
-        public string Delete(int projectGroupId)
+        public IOneSkyResponse Delete(int projectGroupId)
         {
             return
                 this.oneSky.CreateRequest(ProjectGroupDeleteAddress)
@@ -57,7 +57,7 @@
                     .Delete();
         }
 
-        public string Languages(int projectGroupId)
+        public IOneSkyResponse Languages(int projectGroupId)
         {
             return
                 this.oneSky.CreateRequest(ProjectGroupLanguagesAddress)

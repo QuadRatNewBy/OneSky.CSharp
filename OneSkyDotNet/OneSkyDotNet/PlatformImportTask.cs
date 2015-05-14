@@ -19,7 +19,7 @@
             this.oneSky = oneSky;
         }
 
-        public string List(int projectId, int page = 1, int perPage = 50, string status = "all")
+        public IOneSkyResponse List(int projectId, int page = 1, int perPage = 50, string status = "all")
         {
             return this.oneSky.CreateRequest(ImportTaskListAddress)
                 .Placeholder(ProjectIdPlacehoder, projectId)
@@ -29,7 +29,7 @@
                 .Get();
         }
 
-        public string Show(int projectId, int importTaskId)
+        public IOneSkyResponse Show(int projectId, int importTaskId)
         {
             return
                 this.oneSky.CreateRequest(ImportTaskShowAddress)

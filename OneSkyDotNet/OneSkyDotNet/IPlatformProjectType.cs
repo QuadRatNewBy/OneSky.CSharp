@@ -2,6 +2,6 @@
 {
     public interface IPlatformProjectType
     {
-        string List();
+        IOneSkyResponse List();
     }
 }

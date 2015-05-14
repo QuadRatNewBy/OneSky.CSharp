@@ -25,7 +25,7 @@
             this.oneSky = oneSky;
         }
 
-        public string List(int projectId, int page = 1, int perPage = 50)
+        public IOneSkyResponse List(int projectId, int page = 1, int perPage = 50)
         {
             return
                 this.oneSky.CreateRequest(FileListAddress)
@@ -35,7 +35,7 @@
                     .Get();
         }
 
-        public string Upload(int projectId, string file, string fileFormat, string locale = null, bool isKeepingAllStrings = true)
+        public IOneSkyResponse Upload(int projectId, string file, string fileFormat, string locale = null, bool isKeepingAllStrings = true)
         {
             return
                 this.oneSky.CreateRequest(FileUploadAddress)
@@ -47,7 +47,7 @@
                     .Post();
         }
 
-        public string Delete(int projectId, string fileName)
+        public IOneSkyResponse Delete(int projectId, string fileName)
         {
             return
                 this.oneSky.CreateRequest(FileDeleteAddress)

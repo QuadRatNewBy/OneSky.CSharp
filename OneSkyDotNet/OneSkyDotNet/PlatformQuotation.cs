@@ -22,7 +22,7 @@
             this.oneSky = oneSky;
         }
 
-        public string Show(
+        public IOneSkyResponse Show(
             int projectId,
             IEnumerable<string> files,
             string toLocale,

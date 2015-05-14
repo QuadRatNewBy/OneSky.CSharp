@@ -11,7 +11,7 @@
             this.oneSky = oneSky;
         }
 
-        public string GetLocales()
+        public IOneSkyResponse GetLocales()
         {
             return this.oneSky.CreateRequest(GetLocaleAddress).Get();
         }

@@ -11,7 +11,7 @@
             this.oneSky = oneSky;
         }
 
-        public string List()
+        public IOneSkyResponse List()
         {
             return this.oneSky.CreateRequest(ProjectTypeListAddress).Get();
         }

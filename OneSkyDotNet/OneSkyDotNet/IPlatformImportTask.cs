@@ -3,8 +3,8 @@
     public interface IPlatformImportTask
     {
 
-        string List(int projectId, int page = 1, int perPage = 50, string status = "all");
+        IOneSkyResponse List(int projectId, int page = 1, int perPage = 50, string status = "all");
 
-        string Show(int projectId, int importTaskId);
+        IOneSkyResponse Show(int projectId, int importTaskId);
     }
 }

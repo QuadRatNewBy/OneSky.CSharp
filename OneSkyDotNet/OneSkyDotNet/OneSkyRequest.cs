@@ -218,7 +218,7 @@
                 this.GetResponseStatus(oneSkyResponse, ex.Response);
             }
 
-            oneSkyResponse.Data = result.ToString();
+            oneSkyResponse.Content = result.ToString();
 
             return oneSkyResponse;
         }
@@ -285,30 +285,30 @@
             return this;
         }
 
-        public string Get()
+        public IOneSkyResponse Get()
         {
             var response = this.Send("GET");
-            return response.Data;
+            return response;
         }
 
-        public string Post()
+        public IOneSkyResponse Post()
         {
             var data = this.GenerateBody();
             var response = this.Send("POST", data);
-            return response.Data;
+            return response;
         }
 
-        public string Put()
+        public IOneSkyResponse Put()
         {
             var data = this.GenerateBody();
             var response = this.Send("PUT", data);
-            return response.Data;
+            return response;
         }
 
-        public string Delete()
+        public IOneSkyResponse Delete()
         {
             var response = this.Send("DELETE");
-            return response.Data;
+            return response;
         }
     }
 }

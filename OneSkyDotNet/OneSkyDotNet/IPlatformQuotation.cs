@@ -4,7 +4,7 @@
 
     public interface IPlatformQuotation
     {
-        string Show(
+        IOneSkyResponse Show(
             int projectId,
             IEnumerable<string> files,
             string toLocale,

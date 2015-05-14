@@ -2,8 +2,8 @@
 {
     public interface IPluginAnonymous
     {
-        string SingUp(string email);
+        IOneSkyResponse SingUp(string email);
 
-        string SingIn(string email, string password);
+        IOneSkyResponse SingIn(string email, string password);
     }
 }

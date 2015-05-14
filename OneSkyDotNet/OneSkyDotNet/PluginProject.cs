@@ -17,12 +17,12 @@
             this.oneSky = oneSky;
         }
 
-        public string GetProjects(string platform = "magento")
+        public IOneSkyResponse GetProjects(string platform = "magento")
         {
             return this.oneSky.CreateRequest(GetProjectsAddress).Parameter(GetProjectsPlatformParam, platform).Get();
         }
 
-        public string PostProject(string name, string platform = "magento", string locale = null)
+        public IOneSkyResponse PostProject(string name, string platform = "magento", string locale = null)
         {
             return
                 this.oneSky.CreateRequest(PostProjectAddress)

@@ -2,15 +2,15 @@ namespace OneSkyDotNet
 {
     public interface IPluginOrder
     {
-        string GetOrders(int projectId, int page = 1, int perPage = 15);
+        IOneSkyResponse GetOrders(int projectId, int page = 1, int perPage = 15);
 
-        string GetOrder(int projectId, int orderId);
+        IOneSkyResponse GetOrder(int projectId, int orderId);
 
-        string GetOrderItems(int projectId, int orderId);
+        IOneSkyResponse GetOrderItems(int projectId, int orderId);
 
-        string GetOrderMessages(int projectId, int orderId, int page = 1, int perPage = 15);
+        IOneSkyResponse GetOrderMessages(int projectId, int orderId, int page = 1, int perPage = 15);
 
-        string PostOrders(
+        IOneSkyResponse PostOrders(
             int projectId,
             string fromLocale,
             string toLocales,

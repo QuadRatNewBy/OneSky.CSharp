@@ -18,7 +18,7 @@
             this.oneSky = oneSky;
         }
 
-        public string PostQuotations(int projectId, string fromLocale, string toLocales, string items, string specialization = "general")
+        public IOneSkyResponse PostQuotations(int projectId, string fromLocale, string toLocales, string items, string specialization = "general")
         {
             return
                 this.oneSky.CreateRequest(PostQuotationsAddress)

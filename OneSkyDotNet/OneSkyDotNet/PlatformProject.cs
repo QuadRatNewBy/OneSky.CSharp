@@ -26,7 +26,7 @@
             this.oneSky = oneSky;
         }
 
-        public string List(int projectGroupId)
+        public IOneSkyResponse List(int projectGroupId)
         {
             return
                 this.oneSky.CreateRequest(ProjectListAddress)
@@ -34,12 +34,12 @@
                     .Get();
         }
 
-        public string Show(int projectId)
+        public IOneSkyResponse Show(int projectId)
         {
             return this.oneSky.CreateRequest(ProjectShowAddress).Placeholder(ProjectIdPlacehoder, projectId).Get();
         }
 
-        public string Create(int projectGroupId, string projectType, string name = null, string description = null)
+        public IOneSkyResponse Create(int projectGroupId, string projectType, string name = null, string description = null)
         {
             return
                 this.oneSky.CreateRequest(ProjectCreateAddress)
@@ -50,7 +50,7 @@
                     .Post();
         }
 
-        public string Update(int projectId, string name = null, string description = null)
+        public IOneSkyResponse Update(int projectId, string name = null, string description = null)
         {
             return
                 this.oneSky.CreateRequest(ProjectUpdateAddress)
@@ -60,12 +60,12 @@
                     .Put();
         }
 
-        public string Delete(int projectId)
+        public IOneSkyResponse Delete(int projectId)
         {
             return this.oneSky.CreateRequest(ProjectDeleteAddress).Placeholder(ProjectIdPlacehoder, projectId).Delete();
         }
 
-        public string Languages(int projectId)
+        public IOneSkyResponse Languages(int projectId)
         {
             return this.oneSky.CreateRequest(ProjectLanguagesAddress).Placeholder(ProjectIdPlacehoder, projectId).Get();
         }
