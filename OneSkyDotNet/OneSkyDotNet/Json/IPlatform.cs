@@ -3,5 +3,7 @@
     public interface IPlatform
     {
         IPlatformLocale Locale { get; }
+
+        IPlatformProjectType ProjectType { get; }
     }
 }

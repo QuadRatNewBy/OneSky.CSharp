@@ -5,19 +5,19 @@
     internal class MetaPagedList : MetaList, IMetaPagedList
     {
         [JsonProperty("page_count")]
-        protected int pageCount;
+        private int pageCount;
 
         [JsonProperty("next_page")]
-        protected string nextPage;
+        private string nextPage;
 
         [JsonProperty("prev_page")]
-        protected string previousPage;
+        private string previousPage;
 
         [JsonProperty("first_page")]
-        protected string firstPage;
+        private string firstPage;
 
         [JsonProperty("last_page")]
-        protected string lastPage;
+        private string lastPage;
 
         public int PageCount
         {

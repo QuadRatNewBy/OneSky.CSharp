@@ -66,6 +66,7 @@
     <Compile Include="Json\IOneSkyResponse.cs" />
     <Compile Include="Json\IPlatform.cs" />
     <Compile Include="Json\IPlatformLocale.cs" />
+    <Compile Include="Json\IPlatformProjectType.cs" />
     <Compile Include="Json\IPlugin.cs" />
     <Compile Include="Json\IPluginLocale.cs" />
     <Compile Include="Json\Objects\ILocale.cs" />
@@ -74,14 +75,17 @@
     <Compile Include="Json\Objects\IMetaList.cs" />
     <Compile Include="Json\Objects\IMetaPagedList.cs" />
     <Compile Include="Json\Objects\ILocaleGroup.cs" />
+    <Compile Include="Json\Objects\IProjectType.cs" />
     <Compile Include="Json\Objects\Locale.cs" />
     <Compile Include="Json\Objects\Meta.cs" />
     <Compile Include="Json\Objects\MetaList.cs" />
     <Compile Include="Json\Objects\MetaPagedList.cs" />
+    <Compile Include="Json\Objects\ProjectType.cs" />
     <Compile Include="Json\OneSkyClient.cs" />
     <Compile Include="Json\OneSkyResponse.cs" />
     <Compile Include="Json\Platform.cs" />
     <Compile Include="Json\PlatformLocale.cs" />
+    <Compile Include="Json\PlatformProjectType.cs" />
     <Compile Include="Json\Plugin.cs" />
     <Compile Include="Json\PluginLocale.cs" />
     <Compile Include="OneSky.cs" />

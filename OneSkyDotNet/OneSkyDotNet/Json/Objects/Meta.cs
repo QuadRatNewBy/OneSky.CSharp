@@ -5,13 +5,13 @@
     internal class Meta : IMeta
     {
         [JsonProperty("code")]
-        protected int? code;
+        private int? code;
 
         [JsonProperty("status")]
-        protected int? status;
+        private int? status;
 
         [JsonProperty("message")]
-        protected string message;
+        private string message;
 
         public int Status
         {

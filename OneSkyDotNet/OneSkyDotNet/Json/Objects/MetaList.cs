@@ -5,7 +5,7 @@
     internal class MetaList : Meta, IMetaList
     {
         [JsonProperty("record_count")]
-        protected int recordCount;
+        private int recordCount;
 
         public int RecordCount
         {

@@ -9,3 +9,4 @@ OneSkyDotNet/OneSkyDotNetExamples/bin/
 OneSkyDotNet/OneSkyDotNetTests/obj/
 OneSkyDotNet/OneSkyDotNetTests/bin/
 OneSkyDotNet/packages/
+*.coverage
