@@ -58,6 +58,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions\PriorityOrderer.cs" />
+    <Compile Include="Extensions\PriorityOrderTest.cs" />
+    <Compile Include="Extensions\TestPriorityAttribute.cs" />
+    <Compile Include="Platform.cs" />
     <Compile Include="PlatformLocale.cs" />
     <Compile Include="PlatformProjectType.cs" />
     <Compile Include="PluginLocales.cs" />
