@@ -15,27 +15,8 @@
 
         public IOneSkyResponse<IMetaList, IEnumerable<ILocale>> List()
         {
-            var plainResponse = this.locale.List();
-            var jsonResponseMeta = JsonConvert.DeserializeAnonymousType(
-                plainResponse.Content,
-                new { meta = new MetaList() });
-
-            var data = new List<Localeo>();
-
-            if (jsonResponseMeta.meta.Status >= 200 && jsonResponseMeta.meta.Status < 300)
-            {
-                var jsonResponseData = JsonConvert.DeserializeAnonymousType(
-                    plainResponse.Content,
-                    new { data = new List<Localeo>() });
-
-                data = jsonResponseData.data;
-            }
-
-            return new OneSkyResponse<IMetaList, IEnumerable<ILocale>>(
-                plainResponse.StatusCode,
-                plainResponse.StatusDescription,
-                jsonResponseMeta.meta,
-                data);
+            var plain = this.locale.List();
+            return JsonHelper.PlatformCompose<IMetaList, IEnumerable<ILocale>, MetaList, List<Localeo>>(plain);
         }
     }
 }
