@@ -5,5 +5,7 @@
         IPlatformLocale Locale { get; }
 
         IPlatformProjectType ProjectType { get; }
+
+        IPlatformProjectGroup ProjectGroup { get; }
     }
 }
