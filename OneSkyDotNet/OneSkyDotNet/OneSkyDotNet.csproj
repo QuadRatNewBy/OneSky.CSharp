@@ -71,6 +71,7 @@
     <Compile Include="Json\IPlatformProjectGroup.cs" />
     <Compile Include="Json\IPlugin.cs" />
     <Compile Include="Json\IPluginLocale.cs" />
+    <Compile Include="Json\IPluginProject.cs" />
     <Compile Include="Json\JsonHelper.cs" />
     <Compile Include="Json\Objects\ILocale.cs" />
     <Compile Include="Json\Objects\ILocaleProject.cs" />
@@ -114,6 +115,7 @@
     <Compile Include="Json\PlatformProjectGroup.cs" />
     <Compile Include="Json\Plugin.cs" />
     <Compile Include="Json\PluginLocale.cs" />
+    <Compile Include="Json\PluginProject.cs" />
     <Compile Include="Json\PluginSpecialization.cs" />
     <Compile Include="OneSky.cs" />
     <Compile Include="OneSkyClient.cs" />

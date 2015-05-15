@@ -18,7 +18,7 @@
         }
 
         public IOneSkyResponse GetProjects(string platform = "magento")
-        {
+        {            
             return this.oneSky.CreateRequest(GetProjectsAddress).Parameter(GetProjectsPlatformParam, platform).Get();
         }
 

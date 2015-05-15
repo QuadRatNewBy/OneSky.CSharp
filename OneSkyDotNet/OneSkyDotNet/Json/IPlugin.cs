@@ -5,5 +5,7 @@
         IPluginLocale Locale { get; }
 
         IPluginSpecialization Specialization { get; }
+
+        IPluginProject Project { get; }
     }
 }
