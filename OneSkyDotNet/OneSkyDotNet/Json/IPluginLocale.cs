@@ -4,6 +4,6 @@
 
     public interface IPluginLocale
     {
-        IOneSkyResponse<string, IEnumerable<ILocale>> GetLocales();
+        IOneSkyResponse<IMeta, IEnumerable<ILocale>> GetLocales();
     }
 }

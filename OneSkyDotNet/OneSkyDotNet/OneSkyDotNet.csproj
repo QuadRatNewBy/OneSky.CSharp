@@ -77,6 +77,7 @@
     <Compile Include="Json\Objects\IMetaList.cs" />
     <Compile Include="Json\Objects\IMetaPagedList.cs" />
     <Compile Include="Json\Objects\ILocaleGroup.cs" />
+    <Compile Include="Json\Objects\INull.cs" />
     <Compile Include="Json\Objects\IProjectGroupNew.cs" />
     <Compile Include="Json\Objects\IProjectGroup.cs" />
     <Compile Include="Json\Objects\IProjectGroupDetails.cs" />
@@ -86,6 +87,7 @@
     <Compile Include="Json\Objects\Meta.cs" />
     <Compile Include="Json\Objects\MetaList.cs" />
     <Compile Include="Json\Objects\MetaPagedList.cs" />
+    <Compile Include="Json\Objects\Null.cs" />
     <Compile Include="Json\Objects\ProjectGroup.cs" />
     <Compile Include="Json\Objects\ProjectGroupDetails.cs" />
     <Compile Include="Json\Objects\ProjectGroupNew.cs" />

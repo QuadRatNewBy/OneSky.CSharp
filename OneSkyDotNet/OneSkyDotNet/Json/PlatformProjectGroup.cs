@@ -1,5 +1,6 @@
 ﻿namespace OneSkyDotNet.Json
 {
+    using System;
     using System.Collections.Generic;
 
     using Newtonsoft.Json;
@@ -31,14 +32,10 @@
             return JsonHelper.PlatformCompose<IMeta, IProjectGroupNew, Meta, ProjectGroupNew>(plain);
         }
 
-        public IOneSkyResponse<string, string> Delete(int projectGroupId)
+        public IOneSkyResponse<IMeta, INull> Delete(int projectGroupId)
         {
             var plain = this.projectGroup.Delete(projectGroupId);
-            return new OneSkyResponse<string, string>(
-                plain.StatusCode,
-                plain.StatusDescription,
-                string.Empty,
-                string.Empty);
+            return JsonHelper.PlatformCompose<IMeta, INull, Meta, Null>(plain);
         }
 
         public IOneSkyResponse<IMetaList, IEnumerable<ILocaleGroup>> Languages(int projectGroupId)

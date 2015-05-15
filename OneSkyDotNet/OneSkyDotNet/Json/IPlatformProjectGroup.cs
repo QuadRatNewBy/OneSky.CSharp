@@ -10,7 +10,7 @@
 
         IOneSkyResponse<IMeta, IProjectGroupNew> Create(string name, string locale = "en");
 
-        IOneSkyResponse<string, string> Delete(int projectGroupId);
+        IOneSkyResponse<IMeta, INull> Delete(int projectGroupId);
 
         IOneSkyResponse<IMetaList, IEnumerable<ILocaleGroup>> Languages(int projectGroupId); 
     }

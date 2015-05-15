@@ -154,8 +154,6 @@
         {
             var response = this.platform.ProjectGroup.Delete(this.projectGroupId2);
             response.StatusCode.Should().Be(200);
-            response.DataContent.Should().BeNullOrWhiteSpace("Null data from API");
-            response.MetaContent.Should().BeNullOrWhiteSpace("Null meta from API");
         }
 
 
@@ -164,8 +162,6 @@
         {
             var response = this.platform.ProjectGroup.Delete(this.projectGroupId);
             response.StatusCode.Should().Be(200);
-            response.DataContent.Should().BeNullOrWhiteSpace("Null data from API");
-            response.MetaContent.Should().BeNullOrWhiteSpace("Null meta from API");
         }
     }
 }

@@ -19,8 +19,6 @@
 
             response.StatusCode.Should().BeGreaterOrEqualTo(200).And.BeLessThan(300);
 
-            response.MetaContent.Should().BeNullOrWhiteSpace(". [Plugin].[Locale].[GetLocales] should response with string meta whis is null or empty (or whitespace).");
-
             response.DataContent.Should()
                 .NotBeNullOrEmpty(". Expecting non-null and non-empty list")
                 .And.Contain(x => x.Locale == "be", "because I care for my language")

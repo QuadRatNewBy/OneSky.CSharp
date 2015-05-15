@@ -1,6 +1,8 @@
 ﻿namespace OneSkyDotNet.Json
 {
+    using System;
     using System.Collections.Generic;
+    using System.Linq;
 
     using Newtonsoft.Json;
 
@@ -13,18 +15,15 @@
             this.locale = locale;
         }
 
-        public IOneSkyResponse<string, IEnumerable<ILocale>> GetLocales()
+        public IOneSkyResponse<IMeta, IEnumerable<ILocale>> GetLocales()
         {
-            var plainResponse = this.locale.GetLocales();
-            var jsonResponse = JsonConvert.DeserializeAnonymousType(
-                plainResponse.Content,
-                new { locales = new List<Localeo>() });
-
-            return new OneSkyResponse<string, IEnumerable<ILocale>>(
-                plainResponse.StatusCode,
-                plainResponse.StatusDescription,
-                string.Empty,
-                jsonResponse.locales);
+            var plain = this.locale.GetLocales();
+            var tuple = JsonHelper.PluginDeserialize(plain, new { locales = new List<Localeo>() }, x => x.locales);
+            return new OneSkyResponse<IMeta, IEnumerable<ILocale>>(
+                plain.StatusCode,
+                plain.StatusDescription,
+                tuple.Item1,
+                tuple.Item2);
         }
     }
 }
