@@ -8,11 +8,14 @@
 
         public IPlatformProjectGroup ProjectGroup { get; private set; }
 
+        public IPlatformProject Project { get; private set; }
+
         internal Platform(OneSkyDotNet.IPlatform platform)
         {
             this.Locale = new PlatformLocale(platform.Locale);
             this.ProjectType = new PlatformProjectType(platform.ProjectType);
             this.ProjectGroup = new PlatformProjectGroup(platform.ProjectGroup);
+            this.Project = new PlatformProject(platform.Project);
         }
     }
 }

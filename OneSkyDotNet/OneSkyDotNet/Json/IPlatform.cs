@@ -7,5 +7,7 @@
         IPlatformProjectType ProjectType { get; }
 
         IPlatformProjectGroup ProjectGroup { get; }
+
+        IPlatformProject Project { get; }
     }
 }

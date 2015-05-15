@@ -2,7 +2,6 @@
 {
     public interface IPlatformProject
     {
-
         IOneSkyResponse List(int projectGroupId);
 
         IOneSkyResponse Show(int projectId);
