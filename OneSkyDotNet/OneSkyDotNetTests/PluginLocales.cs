@@ -11,7 +11,7 @@
         private static OneSkyDotNet.Json.IPluginLocale locale = OneSkyDotNet.Json.OneSkyClient.CreateClient(Settings.PublicKey, Settings.PrivateKey).Plugin.Locale;
 
         [Fact]
-        public void List()
+        public void GetLocales()
         {
             var response = locale.GetLocales();
 

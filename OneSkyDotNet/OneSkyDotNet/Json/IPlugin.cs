@@ -3,5 +3,7 @@
     public interface IPlugin
     {
         IPluginLocale Locale { get; }
+
+        IPluginSpecialization Specialization { get; }
     }
 }
