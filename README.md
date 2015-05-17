@@ -54,11 +54,11 @@ After release there will be NuGet package available.
 
 1. Cover *Platform* endpoints
 2. Cover *Plugin* endpoints
+3. Unit Tests for all endpoints.
 
 View full list on [Wiki](https://github.com/QuadRatNewBy/OneSky-DotNet/wiki/Roadmap#release-phase).  
 
 ### Further Improvements ###
-* Unit Tests for all endpoints.
 * XML documentation.
 * Asynchronous methods (`async`/`await`).
 * F# version.
