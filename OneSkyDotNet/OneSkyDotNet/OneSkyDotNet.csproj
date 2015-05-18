@@ -73,6 +73,7 @@
     <Compile Include="Json\IPluginLocale.cs" />
     <Compile Include="Json\IPluginProject.cs" />
     <Compile Include="Json\JsonHelper.cs" />
+    <Compile Include="Json\Objects\IFile.cs" />
     <Compile Include="Json\Objects\ILocale.cs" />
     <Compile Include="Json\Objects\ILocaleProject.cs" />
     <Compile Include="Json\Objects\IMeta.cs" />
@@ -89,7 +90,13 @@
     <Compile Include="Json\Objects\IProjectNew.cs" />
     <Compile Include="Json\Objects\IProjectPlugin.cs" />
     <Compile Include="Json\Objects\IProjectType.cs" />
+    <Compile Include="Json\Objects\IQuotation.cs" />
+    <Compile Include="Json\Objects\IQuotationDetails.cs" />
+    <Compile Include="Json\Objects\IQuotationDetailsFull.cs" />
+    <Compile Include="Json\Objects\IQuotationPlatform.cs" />
+    <Compile Include="Json\Objects\IQuotationPlugin.cs" />
     <Compile Include="Json\Objects\ISpecialization.cs" />
+    <Compile Include="Json\Objects\ITranslator.cs" />
     <Compile Include="Json\Objects\Locale.cs" />
     <Compile Include="Json\Objects\LocaleGroup.cs" />
     <Compile Include="Json\Objects\LocaleProject.cs" />
