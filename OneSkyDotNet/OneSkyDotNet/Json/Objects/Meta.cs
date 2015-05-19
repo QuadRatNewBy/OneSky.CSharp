@@ -17,7 +17,7 @@
         {
             get
             {
-                return this.status ?? this.code ?? -1;
+                return this.status ?? this.code ?? default(int);
             }
         }
 

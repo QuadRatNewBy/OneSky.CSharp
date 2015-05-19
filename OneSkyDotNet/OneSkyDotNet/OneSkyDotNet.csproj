@@ -73,7 +73,9 @@
     <Compile Include="Json\IPluginLocale.cs" />
     <Compile Include="Json\IPluginProject.cs" />
     <Compile Include="Json\JsonHelper.cs" />
+    <Compile Include="Json\Objects\File.cs" />
     <Compile Include="Json\Objects\IFile.cs" />
+    <Compile Include="Json\Objects\IItem.cs" />
     <Compile Include="Json\Objects\ILocale.cs" />
     <Compile Include="Json\Objects\ILocaleProject.cs" />
     <Compile Include="Json\Objects\IMeta.cs" />
@@ -96,6 +98,7 @@
     <Compile Include="Json\Objects\IQuotationPlatform.cs" />
     <Compile Include="Json\Objects\IQuotationPlugin.cs" />
     <Compile Include="Json\Objects\ISpecialization.cs" />
+    <Compile Include="Json\Objects\Item.cs" />
     <Compile Include="Json\Objects\ITranslator.cs" />
     <Compile Include="Json\Objects\Locale.cs" />
     <Compile Include="Json\Objects\LocaleGroup.cs" />
@@ -112,7 +115,13 @@
     <Compile Include="Json\Objects\ProjectNew.cs" />
     <Compile Include="Json\Objects\ProjectPlugin.cs" />
     <Compile Include="Json\Objects\ProjectType.cs" />
+    <Compile Include="Json\Objects\Quotation.cs" />
+    <Compile Include="Json\Objects\QuotationDetails.cs" />
+    <Compile Include="Json\Objects\QuotationDetailsFull.cs" />
+    <Compile Include="Json\Objects\QuotationPlatform.cs" />
+    <Compile Include="Json\Objects\QuotationPlugin.cs" />
     <Compile Include="Json\Objects\Specialization.cs" />
+    <Compile Include="Json\Objects\Translator.cs" />
     <Compile Include="Json\OneSkyClient.cs" />
     <Compile Include="Json\OneSkyResponse.cs" />
     <Compile Include="Json\Platform.cs" />
