@@ -8,11 +8,14 @@
 
         public IPluginProject Project { get; private set; }
 
+        public IPluginQuotation Quotation { get; private set; }
+
         internal Plugin(OneSkyDotNet.IPlugin plugin)
         {
             this.Locale = new PluginLocale(plugin.Locale);
             this.Specialization = new PluginSpecialization(plugin.Specialization);
             this.Project = new PluginProject(plugin.Project);
+            this.Quotation = new PluginQuotation(plugin.Quotation);
         }
     }
 }

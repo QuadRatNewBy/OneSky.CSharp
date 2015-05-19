@@ -1,10 +1,13 @@
 ﻿namespace OneSkyDotNetTests
 {
     using System;
+    using System.Collections.Generic;
     using System.Linq;
     using System.Text;
 
     using FluentAssertions;
+
+    using OneSkyDotNet.Json;
 
     using Xunit;
 
@@ -35,12 +38,21 @@
 
         private int projectId2;
 
+        private IDictionary<string, IItem> items;
+
         [Fact]
         public void GrandTest()
         {
+            this.items = new Dictionary<string, IItem>();
+            this.items.Add("item1", new Item { Content = this.RandomString(16), Title = this.RandomString(5) });
+            this.items.Add("item2", new Item { Content = this.RandomString(16), Title = this.RandomString(5) });
+            this.items.Add("item3", new Item { Content = this.RandomString(16), Title = this.RandomString(5) });
+            this.items.Add("also_an_item", new Item { Content = this.RandomString(16), Title = this.RandomString(5) });
+            this.items.Add("or_not", new Item { Content = this.RandomString(16), Title = this.RandomString(5) });
             this.ProjectCreate();
             this.ProjectCreateFake();
             this.ProjectList();
+            this.PostQuotation();
         }
 
         public void ProjectCreate() 
@@ -72,6 +84,23 @@
 
             response.DataContent.Should().Contain(x => x.Id == this.projectId2)
                 .And.Contain(x => x.Name.StartsWith(this.projectName));
+        }
+
+        public void PostQuotation()
+        {
+            var response = this.plugin.Quotation.PostQuotations(
+                this.projectId,
+                "en",
+                new List<string> { "de", "fr" },
+                this.items,
+                "game");
+
+            response.DataContent.Should()
+                .NotBeEmpty()
+                .And.HaveCount(2)
+                .And.Contain(x => x.FromLanguage.Locale == "en")
+                .And.Contain(x => x.ToLanguage.Locale == "de")
+                .And.Contain(x => x.ToLanguage.Locale == "fr");
         }
     }
 }

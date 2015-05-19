@@ -72,6 +72,7 @@
     <Compile Include="Json\IPlugin.cs" />
     <Compile Include="Json\IPluginLocale.cs" />
     <Compile Include="Json\IPluginProject.cs" />
+    <Compile Include="Json\IPluginQuotation.cs" />
     <Compile Include="Json\JsonHelper.cs" />
     <Compile Include="Json\Objects\File.cs" />
     <Compile Include="Json\Objects\IFile.cs" />
@@ -132,6 +133,7 @@
     <Compile Include="Json\Plugin.cs" />
     <Compile Include="Json\PluginLocale.cs" />
     <Compile Include="Json\PluginProject.cs" />
+    <Compile Include="Json\PluginQuotation.cs" />
     <Compile Include="Json\PluginSpecialization.cs" />
     <Compile Include="OneSky.cs" />
     <Compile Include="OneSkyClient.cs" />

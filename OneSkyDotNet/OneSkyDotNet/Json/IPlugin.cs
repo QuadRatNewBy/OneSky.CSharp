@@ -7,5 +7,7 @@
         IPluginSpecialization Specialization { get; }
 
         IPluginProject Project { get; }
+
+        IPluginQuotation Quotation { get; }
     }
 }

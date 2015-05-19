@@ -2,7 +2,7 @@
 {
     using Newtonsoft.Json;
 
-    internal class Item : IItem
+    public class Item : IItem
     {
         [JsonProperty("title")]
         private string title;
@@ -10,6 +10,7 @@
         [JsonProperty("content")]
         private string content;
 
+        [JsonIgnore]
         public string Title
         {
             get
@@ -22,6 +23,7 @@
             }
         }
 
+        [JsonIgnore]
         public string Content
         {
             get
