@@ -76,6 +76,14 @@
     <Compile Include="Json\JsonHelper.cs" />
     <Compile Include="Json\Objects\File.cs" />
     <Compile Include="Json\Objects\IFile.cs" />
+    <Compile Include="Json\Objects\IFileDetails.cs" />
+    <Compile Include="Json\Objects\IFileInfo.cs" />
+    <Compile Include="Json\Objects\IFileInfoFull.cs" />
+    <Compile Include="Json\Objects\IImportTask.cs" />
+    <Compile Include="Json\Objects\IImportTaskCreated.cs" />
+    <Compile Include="Json\Objects\IImportTaskFile.cs" />
+    <Compile Include="Json\Objects\IImportTaskFileInfo.cs" />
+    <Compile Include="Json\Objects\IImportTaskStatus.cs" />
     <Compile Include="Json\Objects\IItem.cs" />
     <Compile Include="Json\Objects\ILocale.cs" />
     <Compile Include="Json\Objects\ILocaleProject.cs" />
