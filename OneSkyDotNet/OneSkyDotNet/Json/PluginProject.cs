@@ -15,7 +15,10 @@
         public IOneSkyResponse<IMeta, IEnumerable<IProjectPlugin>> GetProjects(string platform = "magento")
         {
             var plain = this.project.GetProjects(platform);
-            var tuple = JsonHelper.PluginDeserialize(plain, new { projects = new Dictionary<int, ProjectPlugin>() }, d => d.projects.Select(x=>x.Value).ToList());
+            var tuple = JsonHelper.PluginDeserialize(
+                plain,
+                new { projects = new List<ProjectPlugin>() },
+                d => d.projects);
             return new OneSkyResponse<IMeta, IEnumerable<IProjectPlugin>>(
                 plain.StatusCode,
                 plain.StatusDescription,

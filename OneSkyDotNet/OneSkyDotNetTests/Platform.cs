@@ -108,8 +108,6 @@
             var response1 = this.platform.ProjectGroup.List(1, perPage);
             var response2 = this.platform.ProjectGroup.List(2, perPage);
 
-            response1.MetaContent.PageCount.Should().Be(response2.MetaContent.PageCount, "pretty similar requests");
-
             response1.MetaContent.FirstPage.Should()
                 .NotBeNullOrWhiteSpace("First page always exists")
                 .And.Be(response2.MetaContent.FirstPage);
