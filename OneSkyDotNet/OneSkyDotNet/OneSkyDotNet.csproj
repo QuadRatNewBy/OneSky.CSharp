@@ -75,6 +75,9 @@
     <Compile Include="Json\IPluginQuotation.cs" />
     <Compile Include="Json\JsonHelper.cs" />
     <Compile Include="Json\Objects\File.cs" />
+    <Compile Include="Json\Objects\FileDetails.cs" />
+    <Compile Include="Json\Objects\FileInfo.cs" />
+    <Compile Include="Json\Objects\FileInfoFull.cs" />
     <Compile Include="Json\Objects\IFile.cs" />
     <Compile Include="Json\Objects\IFileDetails.cs" />
     <Compile Include="Json\Objects\IFileInfo.cs" />
@@ -91,6 +94,11 @@
     <Compile Include="Json\Objects\IMetaList.cs" />
     <Compile Include="Json\Objects\IMetaPagedList.cs" />
     <Compile Include="Json\Objects\ILocaleGroup.cs" />
+    <Compile Include="Json\Objects\ImportTask.cs" />
+    <Compile Include="Json\Objects\ImportTaskCreated.cs" />
+    <Compile Include="Json\Objects\ImportTaskFile.cs" />
+    <Compile Include="Json\Objects\ImportTaskFileInfo.cs" />
+    <Compile Include="Json\Objects\ImportTaskStatus.cs" />
     <Compile Include="Json\Objects\INull.cs" />
     <Compile Include="Json\Objects\IPluginSpecialization.cs" />
     <Compile Include="Json\Objects\IProject.cs" />

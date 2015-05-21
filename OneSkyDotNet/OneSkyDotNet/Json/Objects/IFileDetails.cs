@@ -6,7 +6,7 @@
     {
         int StringCount { get; }
 
-        object LastImport { get; }
+        IImportTaskStatus LastImport { get; }
 
         DateTime UploadedAt { get; }
 
