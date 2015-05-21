@@ -100,6 +100,7 @@
     <Compile Include="Json\Objects\ImportTaskFileInfo.cs" />
     <Compile Include="Json\Objects\ImportTaskStatus.cs" />
     <Compile Include="Json\Objects\INull.cs" />
+    <Compile Include="Json\Objects\IPlatformFile.cs" />
     <Compile Include="Json\Objects\IPluginSpecialization.cs" />
     <Compile Include="Json\Objects\IProject.cs" />
     <Compile Include="Json\Objects\IProjectDetails.cs" />
@@ -142,6 +143,7 @@
     <Compile Include="Json\OneSkyClient.cs" />
     <Compile Include="Json\OneSkyResponse.cs" />
     <Compile Include="Json\Platform.cs" />
+    <Compile Include="Json\PlatformFile.cs" />
     <Compile Include="Json\PlatformLocale.cs" />
     <Compile Include="Json\PlatformProject.cs" />
     <Compile Include="Json\PlatformProjectType.cs" />

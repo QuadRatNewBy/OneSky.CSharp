@@ -2,7 +2,6 @@
 {
     public interface IPlatformFile
     {
-
         IOneSkyResponse List(int projectId, int page = 1, int perPage = 50);
 
         IOneSkyResponse Upload(

@@ -9,5 +9,7 @@
         IPlatformProjectGroup ProjectGroup { get; }
 
         IPlatformProject Project { get; }
+
+        IPlatformFile File { get; }
     }
 }
