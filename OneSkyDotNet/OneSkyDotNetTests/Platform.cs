@@ -1,6 +1,7 @@
 ﻿namespace OneSkyDotNetTests
 {
     using System;
+    using System.Collections.Generic;
     using System.Linq;
     using System.Text;
     using System.Threading;
@@ -28,16 +29,16 @@
         private OneSkyDotNet.Json.IPlatform platform =
             OneSkyDotNet.Json.OneSkyClient.CreateClient(Settings.PublicKey, Settings.PrivateKey).Platform;
 
-        private string projectGroupLocale = "be";
+        private string projectGroupLocale = "en";
 
+        private string fileNameDe = "File.de.txt";
         private string fileNameEn = "File.en.txt";
-        private string fileNameBe = "File.be.txt";
 
         private string filePathEn
         {
             get
             {
-                return string.Format("Data\\{0}", this.fileNameEn);
+                return string.Format("Data\\{0}", this.fileNameDe);
             }
         }
 
@@ -45,7 +46,7 @@
         {
             get
             {
-                return string.Format("Data\\{0}", this.fileNameBe);
+                return string.Format("Data\\{0}", this.fileNameEn);
             }
         }
 
@@ -238,7 +239,7 @@
         {
             var response = this.platform.File.Upload(this.projectId, this.filePathBe, "INI");
             response.MetaContent.Status.Should().Be(201);
-            response.DataContent.Name.Should().Be(this.fileNameBe, "as uploaded");
+            response.DataContent.Name.Should().Be(this.fileNameEn, "as uploaded");
             response.DataContent.Locale.Locale.Should().Be(this.projectGroupLocale, "as base lunguage");
             response.DataContent.Format.Should().Be("INI");
             this.fileImportIdA = response.DataContent.Import.Id;
@@ -246,10 +247,10 @@
 
         public void FileUploadNonBaseLanguage()
         {
-            var response = this.platform.File.Upload(this.projectId, this.filePathEn, "INI", "en");
+            var response = this.platform.File.Upload(this.projectId, this.filePathEn, "INI", "de");
             response.MetaContent.Status.Should().Be(201);
-            response.DataContent.Name.Should().Be(this.fileNameEn, "as uploaded");
-            response.DataContent.Locale.Locale.Should().Be("en", "as specified");
+            response.DataContent.Name.Should().Be(this.fileNameDe, "as uploaded");
+            response.DataContent.Locale.Locale.Should().Be("de", "as specified");
             response.DataContent.Format.Should().Be("INI");
             this.fileImportIdB = response.DataContent.Import.Id;
         }
@@ -261,7 +262,7 @@
             response.DataContent.Should()
                 .HaveCount(response.MetaContent.RecordCount)
                 .And.HaveCount(2, "Only one non-base language added")
-                .And.Contain(x => x.Locale == "en", "International de-facto")
+                .And.Contain(x => x.Locale == "de", "added one")
                 .And.ContainSingle(x => x.IsBaseLanguage, "Still only one base language");
         }
         public void FileList()
@@ -274,23 +275,33 @@
             response.MetaContent.Status.Should().Be(200);
             response.DataContent.Should()
                 .HaveCount(response.MetaContent.RecordCount)
-                .And.Contain(x => x.Name == this.fileNameBe, "We have created one")
+                .And.Contain(x => x.Name == this.fileNameEn, "We have created one")
                 .And.NotContain(
-                    x => x.Name == this.fileNameEn,
+                    x => x.Name == this.fileNameDe,
                     "this file contains same keys, so it SHOULD be added as translation, not as new file")
                 .And.Contain(x => x.LastImport != null && x.LastImport.Id == this.fileImportIdA, "As one of imported files");
         }
 
         public void QuotationShow()
         {
+            var responseDe = this.platform.Quotation.Show(this.projectId, new List<string> { this.fileNameEn }, "de");
+            var responseFr = this.platform.Quotation.Show(this.projectId, new List<string> { this.fileNameEn }, "fr");
+
+            responseDe.DataContent.Files.Should().Contain(x => x.Name == this.fileNameEn);
+            responseDe.DataContent.FromLanguage.Locale.Should().Be(this.projectGroupLocale);
+            responseFr.DataContent.FromLanguage.Locale.Should().Be(this.projectGroupLocale);
+            responseDe.DataContent.ToLanguage.Locale.Should().Be("de");
+            responseFr.DataContent.ToLanguage.Locale.Should().Be("fr");
+            responseFr.DataContent.TranslationAndReview.TotalCost.Should()
+                .BeGreaterThan(responseDe.DataContent.TranslationAndReview.TotalCost);
         }
 
         // Cleaning up
         public void FileDelete()
         {
-            var response = this.platform.File.Delete(this.projectId, this.fileNameBe);
+            var response = this.platform.File.Delete(this.projectId, this.fileNameEn);
             response.MetaContent.Status.Should().Be(200);
-            response.DataContent.Name.Should().StartWith(this.fileNameBe);
+            response.DataContent.Name.Should().StartWith(this.fileNameEn);
         }
         
         public void ProjectDelete()

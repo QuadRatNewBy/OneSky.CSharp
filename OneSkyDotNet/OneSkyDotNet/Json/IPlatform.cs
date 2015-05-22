@@ -11,5 +11,7 @@
         IPlatformProject Project { get; }
 
         IPlatformFile File { get; }
+
+        IPlatformQuotation Quotation { get; }
     }
 }

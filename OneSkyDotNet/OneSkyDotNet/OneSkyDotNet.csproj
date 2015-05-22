@@ -69,6 +69,7 @@
     <Compile Include="Json\IPlatformProject.cs" />
     <Compile Include="Json\IPlatformProjectType.cs" />
     <Compile Include="Json\IPlatformProjectGroup.cs" />
+    <Compile Include="Json\IPlatformQuotation.cs" />
     <Compile Include="Json\IPlugin.cs" />
     <Compile Include="Json\IPluginLocale.cs" />
     <Compile Include="Json\IPluginProject.cs" />
@@ -148,6 +149,7 @@
     <Compile Include="Json\PlatformProject.cs" />
     <Compile Include="Json\PlatformProjectType.cs" />
     <Compile Include="Json\PlatformProjectGroup.cs" />
+    <Compile Include="Json\PlatformQuotation.cs" />
     <Compile Include="Json\Plugin.cs" />
     <Compile Include="Json\PluginLocale.cs" />
     <Compile Include="Json\PluginProject.cs" />
