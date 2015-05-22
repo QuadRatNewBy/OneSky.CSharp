@@ -3,6 +3,7 @@
     using System;
     using System.Linq;
     using System.Text;
+    using System.Threading;
 
     using FluentAssertions;
 
@@ -29,6 +30,25 @@
 
         private string projectGroupLocale = "be";
 
+        private string fileNameEn = "File.en.txt";
+        private string fileNameBe = "File.be.txt";
+
+        private string filePathEn
+        {
+            get
+            {
+                return string.Format("Data\\{0}", this.fileNameEn);
+            }
+        }
+
+        private string filePathBe
+        {
+            get
+            {
+                return string.Format("Data\\{0}", this.fileNameBe);
+            }
+        }
+
         private string projectGroupName;
 
         private int projectGroupId;
@@ -39,9 +59,15 @@
 
         private string projectName;
 
+        private int fileImportIdA;
+
+        private int fileImportIdB;
+
         [Fact]
         public void GrandTest()
         {
+            this.Nuke();
+            
             this.ProjectGroupCreate();
             this.ProjectGroupCreateFake();
             this.ProjectGroupList();
@@ -55,7 +81,15 @@
             this.ProjectShowFresh();
             this.ProjectLanguageFresh();
 
+            this.FileUploadBaseLanguage();
+            this.FileUploadNonBaseLanguage();
+            this.ProjectLanguage();
+            this.FileList();
+
+            this.QuotationShow();
+
             // Cleanup
+            this.FileDelete();
             this.ProjectDelete();
             this.ProjectGroupDeleteFake();
             this.ProjectGroupDelete();
@@ -63,7 +97,7 @@
 
         public void ProjectGroupCreate()
         {
-            this.projectGroupName = this.RandomString(32);
+            this.projectGroupName = this.RandomString(8);
 
             var response = this.platform.ProjectGroup.Create(this.projectGroupName, this.projectGroupLocale);
 
@@ -78,7 +112,7 @@
 
         public void ProjectGroupCreateFake()
         {
-            var response = this.platform.ProjectGroup.Create(this.RandomString(16));
+            var response = this.platform.ProjectGroup.Create(this.RandomString(4));
 
             response.MetaContent.Status.Should().Be(201, "[Documentation]").And.Be(response.StatusCode);
             
@@ -149,9 +183,9 @@
 
         public void ProjectCreate() 
         {
-            this.projectName = RandomString(32);
+            this.projectName = RandomString(8);
 
-            var projectType = this.platform.ProjectType.List().DataContent.First(x=>x.Code.EndsWith("-others"));
+            var projectType = this.platform.ProjectType.List().DataContent.First(x => x.Code.EndsWith("-others"));
 
             var response = this.platform.Project.Create(this.projectGroupId, projectType.Code, this.projectName);
 
@@ -200,7 +234,65 @@
                 .And.ContainSingle(x => x.IsBaseLanguage, "One base language");
         }
 
+        public void FileUploadBaseLanguage()
+        {
+            var response = this.platform.File.Upload(this.projectId, this.filePathBe, "INI");
+            response.MetaContent.Status.Should().Be(201);
+            response.DataContent.Name.Should().Be(this.fileNameBe, "as uploaded");
+            response.DataContent.Locale.Locale.Should().Be(this.projectGroupLocale, "as base lunguage");
+            response.DataContent.Format.Should().Be("INI");
+            this.fileImportIdA = response.DataContent.Import.Id;
+        }
+
+        public void FileUploadNonBaseLanguage()
+        {
+            var response = this.platform.File.Upload(this.projectId, this.filePathEn, "INI", "en");
+            response.MetaContent.Status.Should().Be(201);
+            response.DataContent.Name.Should().Be(this.fileNameEn, "as uploaded");
+            response.DataContent.Locale.Locale.Should().Be("en", "as specified");
+            response.DataContent.Format.Should().Be("INI");
+            this.fileImportIdB = response.DataContent.Import.Id;
+        }
+
+        public void ProjectLanguage()
+        {
+            var response = this.platform.Project.Languages(this.projectId);
+
+            response.DataContent.Should()
+                .HaveCount(response.MetaContent.RecordCount)
+                .And.HaveCount(2, "Only one non-base language added")
+                .And.Contain(x => x.Locale == "en", "International de-facto")
+                .And.ContainSingle(x => x.IsBaseLanguage, "Still only one base language");
+        }
+        public void FileList()
+        {
+            // Sleeping for 10 seconds. Just to be sure that file import is done.
+            Thread.Sleep(TimeSpan.FromSeconds(10));
+
+            var response = this.platform.File.List(this.projectId);
+
+            response.MetaContent.Status.Should().Be(200);
+            response.DataContent.Should()
+                .HaveCount(response.MetaContent.RecordCount)
+                .And.Contain(x => x.Name == this.fileNameBe, "We have created one")
+                .And.NotContain(
+                    x => x.Name == this.fileNameEn,
+                    "this file contains same keys, so it SHOULD be added as translation, not as new file")
+                .And.Contain(x => x.LastImport != null && x.LastImport.Id == this.fileImportIdA, "As one of imported files");
+        }
+
+        public void QuotationShow()
+        {
+        }
+
         // Cleaning up
+        public void FileDelete()
+        {
+            var response = this.platform.File.Delete(this.projectId, this.fileNameBe);
+            response.MetaContent.Status.Should().Be(200);
+            response.DataContent.Name.Should().StartWith(this.fileNameBe);
+        }
+        
         public void ProjectDelete()
         {
             var response = this.platform.Project.Delete(this.projectId);
@@ -217,6 +309,16 @@
         {
             var response = this.platform.ProjectGroup.Delete(this.projectGroupId);
             response.StatusCode.Should().Be(200);
+        }
+
+        public void Nuke()
+        {
+            // WARNING! This will remove everi bit from your account
+            var ids = this.platform.ProjectGroup.List(1, 100).DataContent.Select(x => x.Id);
+            foreach (var id in ids)
+            {
+                this.platform.ProjectGroup.Delete(id);
+            }
         }
     }
 }

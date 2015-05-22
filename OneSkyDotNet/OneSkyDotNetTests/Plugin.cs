@@ -57,7 +57,7 @@
 
         public void ProjectCreate() 
         {
-            this.projectName = RandomString(32);
+            this.projectName = RandomString(8);
 
             var response = this.plugin.Project.PostProject(this.projectName, locale: this.projectLocale);
 
@@ -69,7 +69,7 @@
 
         public void ProjectCreateFake() 
         {
-            var name = RandomString(16);
+            var name = RandomString(4);
             var response = this.plugin.Project.PostProject(name);
 
             response.DataContent.Name.Should().StartWith(name);

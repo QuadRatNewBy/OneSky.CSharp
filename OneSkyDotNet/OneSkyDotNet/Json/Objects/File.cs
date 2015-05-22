@@ -4,14 +4,17 @@
 
     internal class File : IFile
     {
-        [JsonProperty("file")]
+        [JsonProperty("name")]
         private string name;
+
+        [JsonProperty("file_name")]
+        private string fileName;
 
         public string Name
         {
             get
             {
-                return this.name;
+                return this.name ?? this.fileName;
             }
         }
     }

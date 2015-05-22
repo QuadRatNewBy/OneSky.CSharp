@@ -1,8 +1,10 @@
 ﻿namespace OneSkyDotNet.Json
 {
+    using System.Collections.Generic;
+
     public interface IPlatformFile
     {
-        IOneSkyResponse<IMetaList, IFileDetails> List(int projectId, int page = 1, int perPage = 50);
+        IOneSkyResponse<IMetaList, IEnumerable<IFileDetails>> List(int projectId, int page = 1, int perPage = 50);
 
         IOneSkyResponse<IMeta, IFileInfoFull> Upload(
             int projectId,

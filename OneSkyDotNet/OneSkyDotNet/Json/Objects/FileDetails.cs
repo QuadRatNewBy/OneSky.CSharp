@@ -13,10 +13,10 @@
         private ImportTaskStatus lastImport;
 
         [JsonProperty("uploaded_at")]
-        private DateTime uploadedAt;
+        private DateTime? uploadedAt;
 
         [JsonProperty("uploaded_at_timestamp")]
-        private long uploadedAtTimestamp;
+        private long? uploadedAtTimestamp;
 
         public int StringCount
         {
@@ -38,7 +38,7 @@
         {
             get
             {
-                return this.uploadedAt;
+                return this.uploadedAt ?? default(DateTime);
             }
         }
 
@@ -46,7 +46,7 @@
         {
             get
             {
-                return this.uploadedAtTimestamp;
+                return this.uploadedAtTimestamp ?? default(long);
             }
         }
     }
