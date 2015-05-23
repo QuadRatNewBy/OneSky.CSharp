@@ -24,7 +24,7 @@ For now it's only "pull-and-compile". After release there will be NuGet package 
 ### Credits ###
 [OneSkyApp](http://www.oneskyapp.com/) Team - Thanks for translation platform itself.  
 Felix Deimel ([lemonmojo](https://github.com/lemonmojo)) - Alternative implementation ([Here on GitHub](https://github.com/lemonmojo/OneSkyAppSharp))  
-Well and me - [QuadRatNewBy](https://github.com/QuadRatNewBy).
+Well and me - [QuadRatNewBy](https://github.com/QuadRatNewBy)
  
 ## Contribution ##
 
