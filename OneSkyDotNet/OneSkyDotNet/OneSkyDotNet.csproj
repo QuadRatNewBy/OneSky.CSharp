@@ -65,6 +65,7 @@
     <Compile Include="Json\IOneSkyClient.cs" />
     <Compile Include="Json\IOneSkyResponse.cs" />
     <Compile Include="Json\IPlatform.cs" />
+    <Compile Include="Json\IPlatformImportTask.cs" />
     <Compile Include="Json\IPlatformLocale.cs" />
     <Compile Include="Json\IPlatformProject.cs" />
     <Compile Include="Json\IPlatformProjectType.cs" />
