@@ -7,6 +7,12 @@
         [JsonProperty("status")]
         private string status;
 
+        [JsonProperty("string_count")]
+        private int stringCount;
+
+        [JsonProperty("word_count")]
+        private int wordCount;
+
         [JsonProperty("file")]
         private FileInfo file;
 
@@ -23,6 +29,22 @@
             get
             {
                 return this.file;
+            }
+        }
+
+        public int StringCount
+        {
+            get
+            {
+                return this.stringCount;
+            }
+        }
+
+        public int WordCount
+        {
+            get
+            {
+                return this.wordCount;
             }
         }
     }

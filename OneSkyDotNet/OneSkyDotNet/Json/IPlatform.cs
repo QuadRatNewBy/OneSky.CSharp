@@ -13,5 +13,7 @@
         IPlatformFile File { get; }
 
         IPlatformQuotation Quotation { get; }
+
+        IPlatformImportTask ImportTask { get; }
     }
 }

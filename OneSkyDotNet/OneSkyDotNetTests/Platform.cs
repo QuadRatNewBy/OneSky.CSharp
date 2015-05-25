@@ -89,6 +89,9 @@
 
             this.QuotationShow();
 
+            this.ImportTaskList();
+            this.ImportTaskShow();
+
             // Cleanup
             this.FileDelete();
             this.ProjectDelete();
@@ -294,6 +297,21 @@
             responseFr.DataContent.ToLanguage.Locale.Should().Be("fr");
             responseFr.DataContent.TranslationAndReview.TotalCost.Should()
                 .BeGreaterThan(responseDe.DataContent.TranslationAndReview.TotalCost);
+        }
+
+        public void ImportTaskList()
+        {
+            var response = this.platform.ImportTask.List(this.projectId);
+
+            response.DataContent.Should().Contain(x => x.Id == this.fileImportIdA);
+        }
+
+        public void ImportTaskShow()
+        {
+            var response = this.platform.ImportTask.Show(this.projectId, this.fileImportIdA);
+
+            response.DataContent.File.Name.Should().Be(this.fileNameEn);
+            response.DataContent.Id.Should().Be(this.fileImportIdA);
         }
 
         // Cleaning up

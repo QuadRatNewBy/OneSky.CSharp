@@ -146,6 +146,7 @@
     <Compile Include="Json\OneSkyResponse.cs" />
     <Compile Include="Json\Platform.cs" />
     <Compile Include="Json\PlatformFile.cs" />
+    <Compile Include="Json\PlatformImportTask.cs" />
     <Compile Include="Json\PlatformLocale.cs" />
     <Compile Include="Json\PlatformProject.cs" />
     <Compile Include="Json\PlatformProjectType.cs" />
