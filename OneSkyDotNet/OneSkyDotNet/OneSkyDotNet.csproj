@@ -119,6 +119,7 @@
     <Compile Include="Json\Objects\IQuotationPlugin.cs" />
     <Compile Include="Json\Objects\ISpecialization.cs" />
     <Compile Include="Json\Objects\Item.cs" />
+    <Compile Include="Json\Objects\ITranslationStatus.cs" />
     <Compile Include="Json\Objects\ITranslator.cs" />
     <Compile Include="Json\Objects\Locale.cs" />
     <Compile Include="Json\Objects\LocaleGroup.cs" />
