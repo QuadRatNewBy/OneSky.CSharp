@@ -2,7 +2,7 @@
 {
     using System.Collections.Generic;
 
-    public class PlatformImportTask : IPlatformImportTask
+    internal class PlatformImportTask : IPlatformImportTask
     {
         private OneSkyDotNet.IPlatformImportTask importTask;
 

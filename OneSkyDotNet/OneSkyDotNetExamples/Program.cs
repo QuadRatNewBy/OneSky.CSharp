@@ -58,6 +58,8 @@
             // Plain.PluginAccountExample.CreditPlainGet();
             // Plain.PluginAccountExample.PlainSingUp();
             // Plain.PluginAccountExample.PlainSingIn();
+
+            Json.AppDescription.Demo();
         }
     }
 }

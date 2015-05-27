@@ -343,7 +343,7 @@
         public void Nuke()
         {
             // WARNING! This will remove everi bit from your account
-            var ids = this.platform.ProjectGroup.List(1, 100).DataContent.Select(x => x.Id);
+            var ids = this.platform.ProjectGroup.List(1, 100).DataContent.Select(x => x.Id).Where(id => id != 32182);
             foreach (var id in ids)
             {
                 this.platform.ProjectGroup.Delete(id);

@@ -37,6 +37,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Json\AppDescription.cs" />
     <Compile Include="Plain\PlatformFileExample.cs" />
     <Compile Include="Plain\PlatformImportTaskExample.cs" />
     <Compile Include="Plain\PlatformLocaleExample.cs" />
