@@ -76,10 +76,12 @@
     <Compile Include="Json\IPluginProject.cs" />
     <Compile Include="Json\IPluginQuotation.cs" />
     <Compile Include="Json\JsonHelper.cs" />
+    <Compile Include="Json\Objects\AppDescription.cs" />
     <Compile Include="Json\Objects\File.cs" />
     <Compile Include="Json\Objects\FileDetails.cs" />
     <Compile Include="Json\Objects\FileInfo.cs" />
     <Compile Include="Json\Objects\FileInfoFull.cs" />
+    <Compile Include="Json\Objects\IAppDescription.cs" />
     <Compile Include="Json\Objects\IFile.cs" />
     <Compile Include="Json\Objects\IFileDetails.cs" />
     <Compile Include="Json\Objects\IFileInfo.cs" />
