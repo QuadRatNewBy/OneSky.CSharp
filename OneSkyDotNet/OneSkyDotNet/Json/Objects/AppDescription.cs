@@ -28,7 +28,7 @@
         private string shortDescription;
 
         [JsonProperty("AMAZON_APPSTORE_SHORT_DESCRIPTION")]
-        private string amazonShortDescription;        
+        private string amazonShortDescription;
 
         [JsonProperty("DETAILED_DESCRIPTION")]
         private string detailedDescription;
@@ -47,21 +47,21 @@
 
         [JsonProperty("TAGLINE")]
         private string tagline;
-                
+
         [JsonProperty("APP_KEYWORD")]
-        Dictionary<string, string> appKeywords;
+        private Dictionary<string, string> appKeywords;
 
         [JsonProperty("KEYWORDS")]
-        Dictionary<string, string> keywords;
+        private Dictionary<string, string> keywords;
 
         [JsonProperty("AMAZON_APPSTORE_KEYWORDS")]
-        Dictionary<string, string> amazonKeywords;
+        private Dictionary<string, string> amazonKeywords;
 
         [JsonProperty("APP_IAP_NAME")]
-        Dictionary<string, string> iapName;
+        private Dictionary<string, string> iapName;
 
         [JsonProperty("APP_IAP_DESCRIPTION")]
-        Dictionary<string, string> iapDescription;
+        private Dictionary<string, string> iapDescription;
 
         public string Name
         {
@@ -79,20 +79,68 @@
             }
         }
 
-        public string ShortDescription { get { return this.shortDescription ?? this.amazonShortDescription; } }
+        public string ShortDescription
+        {
+            get
+            {
+                return this.shortDescription ?? this.amazonShortDescription;
+            }
+        }
 
-        public string DetailedDescription { get { return this.detailedDescription ?? this.amazonDetailedDescription; } }
+        public string DetailedDescription
+        {
+            get
+            {
+                return this.detailedDescription ?? this.amazonDetailedDescription;
+            }
+        }
 
-        public string RecentChanges { get { return this.recentChanges ?? this.appVersionDescription; } }
+        public string RecentChanges
+        {
+            get
+            {
+                return this.recentChanges ?? this.appVersionDescription;
+            }
+        }
 
-        public string Features { get { return this.features; } }
+        public string Features
+        {
+            get
+            {
+                return this.features;
+            }
+        }
 
-        public string Tagline { get { return this.tagline; } }
+        public string Tagline
+        {
+            get
+            {
+                return this.tagline;
+            }
+        }
 
-        public IDictionary<string, string> Keywords { get { return this.appKeywords ?? this.keywords ?? this.amazonKeywords; } }
+        public IDictionary<string, string> Keywords
+        {
+            get
+            {
+                return this.appKeywords ?? this.keywords ?? this.amazonKeywords;
+            }
+        }
 
-        public IDictionary<string, string> IapName { get { return this.iapName; } }
+        public IDictionary<string, string> IapName
+        {
+            get
+            {
+                return this.iapName;
+            }
+        }
 
-        public IDictionary<string, string> IapDescription { get { return this.iapDescription; } }
+        public IDictionary<string, string> IapDescription
+        {
+            get
+            {
+                return this.iapDescription;
+            }
+        }
     }
 }

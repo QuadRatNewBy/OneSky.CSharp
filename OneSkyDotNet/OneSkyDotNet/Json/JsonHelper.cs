@@ -13,16 +13,23 @@
             var data = new TData();
             var meta = new TMeta();
 
-            var json = JsonConvert.DeserializeAnonymousType(plain, new { meta = new TMeta() });
-
-            if (json != null)
+            try
             {
-                meta = json.meta;
+                var json = JsonConvert.DeserializeAnonymousType(plain, new { meta = new TMeta() });
 
-                if (meta.Status >= 200 && meta.Status < 300)
+                if (json != null && !ReferenceEquals(json.meta, null))
                 {
-                    data = JsonConvert.DeserializeAnonymousType(plain, new { data = new TData() }).data;
+                    meta = json.meta;
+
+                    if (meta.Status >= 200 && meta.Status < 300)
+                    {
+                        data = JsonConvert.DeserializeAnonymousType(plain, new { data = new TData() }).data;
+                    }
                 }
+            }
+            catch (JsonReaderException)
+            {
+                // Silencning. Meta.Status will be 0 for user to check.
             }
 
             return new Tuple<TMeta, TData>(meta, data);

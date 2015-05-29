@@ -16,6 +16,8 @@
 
         public IPlatformImportTask ImportTask { get; private set; }
 
+        public IPlatformTranslation Translation { get; private set; }
+
         internal Platform(OneSkyDotNet.IPlatform platform)
         {
             this.Locale = new PlatformLocale(platform.Locale);
@@ -25,6 +27,7 @@
             this.File = new PlatformFile(platform.File);
             this.Quotation = new PlatformQuotation(platform.Quotation);
             this.ImportTask = new PlatformImportTask(platform.ImportTask);
+            this.Translation = new PlatformTranslation(platform.Translation);
         }
     }
 }

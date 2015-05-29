@@ -15,5 +15,7 @@
         IPlatformQuotation Quotation { get; }
 
         IPlatformImportTask ImportTask { get; }
+
+        IPlatformTranslation Translation { get; }
     }
 }

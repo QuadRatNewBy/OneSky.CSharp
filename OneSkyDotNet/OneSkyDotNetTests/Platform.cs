@@ -34,7 +34,7 @@
         private string fileNameDe = "File.de.txt";
         private string fileNameEn = "File.en.txt";
 
-        private string filePathEn
+        private string filePathDe
         {
             get
             {
@@ -42,7 +42,7 @@
             }
         }
 
-        private string filePathBe
+        private string filePathEn
         {
             get
             {
@@ -91,6 +91,11 @@
 
             this.ImportTaskList();
             this.ImportTaskShow();
+
+            this.TranslationExport();
+            this.TranslationExportFail();
+            this.TranslationExportMultilingualFile();
+            this.TranslationExportMultilingualFileFail();
 
             // Cleanup
             this.FileDelete();
@@ -240,7 +245,7 @@
 
         public void FileUploadBaseLanguage()
         {
-            var response = this.platform.File.Upload(this.projectId, this.filePathBe, "INI");
+            var response = this.platform.File.Upload(this.projectId, this.filePathEn, "INI");
             response.MetaContent.Status.Should().Be(201);
             response.DataContent.Name.Should().Be(this.fileNameEn, "as uploaded");
             response.DataContent.Locale.Locale.Should().Be(this.projectGroupLocale, "as base lunguage");
@@ -250,7 +255,7 @@
 
         public void FileUploadNonBaseLanguage()
         {
-            var response = this.platform.File.Upload(this.projectId, this.filePathEn, "INI", "de");
+            var response = this.platform.File.Upload(this.projectId, this.filePathDe, "INI", "de");
             response.MetaContent.Status.Should().Be(201);
             response.DataContent.Name.Should().Be(this.fileNameDe, "as uploaded");
             response.DataContent.Locale.Locale.Should().Be("de", "as specified");
@@ -312,6 +317,34 @@
 
             response.DataContent.File.Name.Should().Be(this.fileNameEn);
             response.DataContent.Id.Should().Be(this.fileImportIdA);
+        }
+
+        public void TranslationExport()
+        {
+            var response = this.platform.Translation.Export(this.projectId, this.projectGroupLocale, this.fileNameEn);
+            response.MetaContent.Status.Should().NotBe(response.StatusCode).And.Be(0);
+            response.DataContent.Should().NotBeNullOrEmpty();
+        }
+
+        public void TranslationExportFail()
+        {
+            var response = this.platform.Translation.Export(this.projectId, this.projectGroupLocale, this.fileNameEn + "z");
+            response.MetaContent.Status.Should().Be(response.StatusCode).And.Be(400);
+            response.DataContent.Should().BeNullOrEmpty();
+        }
+
+        public void TranslationExportMultilingualFile()
+        {
+            var response = this.platform.Translation.ExportMultilingualFile(this.projectId, this.fileNameEn, fileFormat: "I18NEXT_MULTILINGUAL_JSON");
+            response.MetaContent.Status.Should().NotBe(response.StatusCode).And.Be(0);
+            response.DataContent.Should().NotBeNullOrEmpty();
+        }
+
+        public void TranslationExportMultilingualFileFail()
+        {
+            var response = this.platform.Translation.ExportMultilingualFile(this.projectId, this.fileNameEn + "z", fileFormat: "I18NEXT_MULTILINGUAL_JSON");
+            response.MetaContent.Status.Should().Be(response.StatusCode).And.Be(400);
+            response.DataContent.Should().BeNullOrEmpty();
         }
 
         // Cleaning up

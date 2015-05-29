@@ -1,6 +1,6 @@
 ﻿namespace OneSkyDotNet.Json
 {
-    interface ITranslationStatus
+    public interface ITranslationStatus
     {
         string FileName { get; }
 
