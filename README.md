@@ -43,8 +43,8 @@ Only guideline here is to mark issue with appropriate label (i.e. `bug`, `enhanc
 Aims to cover OneSky *Platform* and *Plugin* API to return strings as responses.  
 (*JSON parsing will be done during release phase*)
 
-1. Cover *Platform* endpoints
-2. Cover *Plugin* endpoints
+1. Cover *Platform* endpoints.
+2. Cover *Plugin* endpoints.
 
 View full list on [Wiki](https://github.com/QuadRatNewBy/OneSky-DotNet/wiki/Roadmap#prerelease-phase).
 
@@ -52,9 +52,10 @@ View full list on [Wiki](https://github.com/QuadRatNewBy/OneSky-DotNet/wiki/Road
 Aims to cover OneSky *Platform* and *Plugin* APIs and parse its JSON response to C# classes.  
 After release there will be NuGet package available.
 
-1. Cover *Platform* endpoints
-2. Cover *Plugin* endpoints
+1. Cover *Platform* endpoints.
+2. Cover *Plugin* endpoints.
 3. Unit Tests for all endpoints.
+4. Custom JSON parser (to avoid dependencies).
 
 View full list on [Wiki](https://github.com/QuadRatNewBy/OneSky-DotNet/wiki/Roadmap#release-phase).  
 
