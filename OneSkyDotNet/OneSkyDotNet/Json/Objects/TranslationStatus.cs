@@ -8,7 +8,7 @@
         private string fileName;
 
         [JsonProperty("locale")]
-        private ILocale locale;
+        private Localeo locale;
 
         [JsonProperty("progress")]
         private string progress;

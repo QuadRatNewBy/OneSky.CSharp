@@ -96,6 +96,7 @@
             this.TranslationExportFail();
             this.TranslationExportMultilingualFile();
             this.TranslationExportMultilingualFileFail();
+            this.TranslationStatus();
 
             // Cleanup
             this.FileDelete();
@@ -251,6 +252,9 @@
             response.DataContent.Locale.Locale.Should().Be(this.projectGroupLocale, "as base lunguage");
             response.DataContent.Format.Should().Be("INI");
             this.fileImportIdA = response.DataContent.Import.Id;
+
+            // Sleeping for 10 seconds. Just to be sure that file import is done.
+            Thread.Sleep(TimeSpan.FromSeconds(20));
         }
 
         public void FileUploadNonBaseLanguage()
@@ -261,6 +265,9 @@
             response.DataContent.Locale.Locale.Should().Be("de", "as specified");
             response.DataContent.Format.Should().Be("INI");
             this.fileImportIdB = response.DataContent.Import.Id;
+
+            // Sleeping for 10 seconds. Just to be sure that file import is done.
+            Thread.Sleep(TimeSpan.FromSeconds(20));
         }
 
         public void ProjectLanguage()
@@ -273,6 +280,7 @@
                 .And.Contain(x => x.Locale == "de", "added one")
                 .And.ContainSingle(x => x.IsBaseLanguage, "Still only one base language");
         }
+
         public void FileList()
         {
             // Sleeping for 10 seconds. Just to be sure that file import is done.
@@ -301,7 +309,7 @@
             responseDe.DataContent.ToLanguage.Locale.Should().Be("de");
             responseFr.DataContent.ToLanguage.Locale.Should().Be("fr");
             responseFr.DataContent.TranslationAndReview.TotalCost.Should()
-                .BeGreaterThan(responseDe.DataContent.TranslationAndReview.TotalCost);
+                .BeGreaterOrEqualTo(responseDe.DataContent.TranslationAndReview.TotalCost);
         }
 
         public void ImportTaskList()
@@ -345,6 +353,19 @@
             var response = this.platform.Translation.ExportMultilingualFile(this.projectId, this.fileNameEn + "z", fileFormat: "I18NEXT_MULTILINGUAL_JSON");
             response.MetaContent.Status.Should().Be(response.StatusCode).And.Be(400);
             response.DataContent.Should().BeNullOrEmpty();
+        }
+
+        public void TranslationStatus()
+        {
+            // In case import runs toooo slooooow (unfortunately happened to me couple of times)
+            Thread.Sleep(TimeSpan.FromSeconds(20));
+
+            var responseDe = this.platform.Translation.Status(this.projectId, this.fileNameEn, "de");
+            var responseEn = this.platform.Translation.Status(this.projectId, this.fileNameEn, "en");
+            var responseFr = this.platform.Translation.Status(this.projectId, this.fileNameEn, "fr");
+            responseDe.DataContent.Progress.Should().StartWith("75", "because 'de' test file contains 3 of 4 strings");
+            responseEn.DataContent.Progress.Should().StartWith("100", "because 'en' test file contains all strings");
+            responseFr.DataContent.Progress.Should().Be("0%", "because we dont have 'fr' file uploaded or translated");
         }
 
         // Cleaning up

@@ -37,12 +37,14 @@
 
         public IOneSkyResponse<IMeta, IAppDescription> AppDescription(int projectId, string locale)
         {
-            throw new System.NotImplementedException();
+            var plain = this.translation.AppDescription(projectId, locale);
+            return JsonHelper.PlatformCompose<IMeta, IAppDescription, Meta, AppDescription>(plain);
         }
 
         public IOneSkyResponse<IMeta, ITranslationStatus> Status(int projectId, string fileName, string locale)
         {
-            throw new System.NotImplementedException();
+            var plain = this.translation.Status(projectId, fileName, locale);
+            return JsonHelper.PlatformCompose<IMeta, ITranslationStatus, Meta, TranslationStatus>(plain);
         }
     }
 }
