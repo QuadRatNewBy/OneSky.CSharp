@@ -145,6 +145,7 @@
     <Compile Include="Json\Objects\QuotationPlatform.cs" />
     <Compile Include="Json\Objects\QuotationPlugin.cs" />
     <Compile Include="Json\Objects\Specialization.cs" />
+    <Compile Include="Json\Objects\TranslationStatus.cs" />
     <Compile Include="Json\Objects\Translator.cs" />
     <Compile Include="Json\OneSkyClient.cs" />
     <Compile Include="Json\OneSkyResponse.cs" />
