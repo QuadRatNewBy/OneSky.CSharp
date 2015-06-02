@@ -19,14 +19,44 @@
         [JsonProperty("word_count")]
         private int wordCount;
 
-        public string FileName { get { return this.fileName; } }
+        public string FileName
+        {
+            get
+            {
+                return this.fileName;
+            }
+        }
 
-        public ILocale Locale { get { return this.locale; } }
+        public ILocale Locale
+        {
+            get
+            {
+                return this.locale;
+            }
+        }
 
-        public string Progress { get { return this.progress; } }
+        public string Progress
+        {
+            get
+            {
+                return this.progress;
+            }
+        }
 
-        public int StringCount { get { return this.stringCount; } }
+        public int StringCount
+        {
+            get
+            {
+                return this.stringCount;
+            }
+        }
 
-        public int WordCount { get { return this.wordCount; } }
+        public int WordCount
+        {
+            get
+            {
+                return this.wordCount;
+            }
+        }
     }
 }
