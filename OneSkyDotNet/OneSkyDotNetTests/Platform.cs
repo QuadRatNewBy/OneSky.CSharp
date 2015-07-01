@@ -358,11 +358,12 @@
         public void TranslationStatus()
         {
             // In case import runs toooo slooooow (unfortunately happened to me couple of times)
-            Thread.Sleep(TimeSpan.FromSeconds(20));
+            // Some times it's really annoying.
+            Thread.Sleep(TimeSpan.FromSeconds(30));
 
-            var responseDe = this.platform.Translation.Status(this.projectId, this.fileNameEn, "de");
-            var responseEn = this.platform.Translation.Status(this.projectId, this.fileNameEn, "en");
             var responseFr = this.platform.Translation.Status(this.projectId, this.fileNameEn, "fr");
+            var responseEn = this.platform.Translation.Status(this.projectId, this.fileNameEn, "en");
+            var responseDe = this.platform.Translation.Status(this.projectId, this.fileNameEn, "de");
             responseDe.DataContent.Progress.Should().StartWith("75", "because 'de' test file contains 3 of 4 strings");
             responseEn.DataContent.Progress.Should().StartWith("100", "because 'en' test file contains all strings");
             responseFr.DataContent.Progress.Should().Be("0%", "because we dont have 'fr' file uploaded or translated");
