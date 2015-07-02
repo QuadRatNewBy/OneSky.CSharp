@@ -55,13 +55,14 @@ After release there will be NuGet package available.
 1. Cover *Platform* endpoints.
 2. Cover *Plugin* endpoints.
 3. Unit Tests for all endpoints.
-4. Custom JSON parser (to avoid dependencies).
+4. Code review.
 
 View full list on [Wiki](https://github.com/QuadRatNewBy/OneSky-DotNet/wiki/Roadmap#release-phase).  
 
 ### Further Improvements ###
+* Standard .NET or custom JSON parser (to minimize dependencies).
 * XML documentation.
-* Asynchronous methods (`async`/`await`).
+* Asynchronous methods.
 * F# version.
 * Caching, Repository and and other fancy stuff.
 
