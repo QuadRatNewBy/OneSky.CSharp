@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Platform.cs" />
+    <Compile Include="PlatformAppDescription.cs" />
     <Compile Include="PlatformLocale.cs" />
     <Compile Include="PlatformProjectType.cs" />
     <Compile Include="Plugin.cs" />
