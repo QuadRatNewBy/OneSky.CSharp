@@ -63,6 +63,9 @@
         [JsonProperty("APP_IAP_DESCRIPTION")]
         private Dictionary<string, string> iapDescription;
 
+        [JsonProperty("APP_TAG")]
+        private IDictionary<string, string> tags;
+
         public string Name
         {
             get
@@ -124,6 +127,14 @@
             get
             {
                 return this.appKeywords ?? this.keywords ?? this.amazonKeywords;
+            }
+        }
+
+        public IDictionary<string, string> Tags
+        {
+            get
+            {
+                return this.tags;
             }
         }
 

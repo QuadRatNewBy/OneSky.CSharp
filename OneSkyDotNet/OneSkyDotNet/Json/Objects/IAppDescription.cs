@@ -20,6 +20,8 @@
 
         IDictionary<string, string> Keywords { get; }
 
+        IDictionary<string, string> Tags { get; }
+
         IDictionary<string, string> IapName { get; }
 
         IDictionary<string, string> IapDescription { get; }

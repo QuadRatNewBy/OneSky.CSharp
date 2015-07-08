@@ -110,7 +110,7 @@
 
             appDescription.Name.Should().NotBeNullOrWhiteSpace("I guess you have filled all fields");
             appDescription.Description.Should().NotBeNullOrWhiteSpace("I guess you have filled all fields");
-            appDescription.Keywords.Should().NotBeEmpty("Some keywords for teting");
+            appDescription.Tags.Should().NotBeEmpty("Some keywords for teting");
         }
 
         private void FacebookAppDescription(int id)
