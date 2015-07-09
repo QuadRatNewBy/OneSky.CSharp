@@ -119,9 +119,13 @@
     <Compile Include="Json\Objects\ImportTaskFileInfo.cs" />
     <Compile Include="Json\Objects\ImportTaskStatus.cs" />
     <Compile Include="Json\Objects\INull.cs" />
+    <Compile Include="Json\Objects\IOrder.cs" />
+    <Compile Include="Json\Objects\IOrderPlatform.cs" />
+    <Compile Include="Json\Objects\IOrderPlatformEntry.cs" />
     <Compile Include="Json\Objects\IOrderTask.cs" />
     <Compile Include="Json\Objects\IOrderTaskBase.cs" />
     <Compile Include="Json\Objects\IOrderTaskDetails.cs" />
+    <Compile Include="Json\Objects\IOrderTaskFullDetails.cs" />
     <Compile Include="Json\Objects\IPerson.cs" />
     <Compile Include="Json\Objects\IProject.cs" />
     <Compile Include="Json\Objects\IProjectDetails.cs" />
@@ -152,9 +156,12 @@
     <Compile Include="Json\Objects\MetaList.cs" />
     <Compile Include="Json\Objects\MetaPagedList.cs" />
     <Compile Include="Json\Objects\Null.cs" />
+    <Compile Include="Json\Objects\Order.cs" />
+    <Compile Include="Json\Objects\OrderPlatformEntry.cs" />
     <Compile Include="Json\Objects\OrderTask.cs" />
     <Compile Include="Json\Objects\OrderTaskBase.cs" />
     <Compile Include="Json\Objects\OrderTaskDetails.cs" />
+    <Compile Include="Json\Objects\OrderTaskFullDetails.cs" />
     <Compile Include="Json\Objects\Person.cs" />
     <Compile Include="Json\Objects\Project.cs" />
     <Compile Include="Json\Objects\ProjectDetails.cs" />
