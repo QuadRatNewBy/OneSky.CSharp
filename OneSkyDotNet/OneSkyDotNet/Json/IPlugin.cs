@@ -13,5 +13,7 @@
         IPluginAccount Account { get; }
 
         IPluginLanguagePair LanguagePair { get; }
+
+        IPluginItem Item { get; }
     }
 }

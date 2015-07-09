@@ -76,6 +76,7 @@
     <Compile Include="Json\IPlugin.cs" />
     <Compile Include="Json\IPluginAccount.cs" />
     <Compile Include="Json\IPluginAnonymous.cs" />
+    <Compile Include="Json\IPluginItem.cs" />
     <Compile Include="Json\IPluginLanguagePair.cs" />
     <Compile Include="Json\IPluginLocale.cs" />
     <Compile Include="Json\IPluginProject.cs" />
@@ -102,6 +103,10 @@
     <Compile Include="Json\Objects\IImportTaskFileInfo.cs" />
     <Compile Include="Json\Objects\IImportTaskStatus.cs" />
     <Compile Include="Json\Objects\IItem.cs" />
+    <Compile Include="Json\Objects\IItemContainer.cs" />
+    <Compile Include="Json\Objects\IItemDetails.cs" />
+    <Compile Include="Json\Objects\IItemEntry.cs" />
+    <Compile Include="Json\Objects\IItemTranslateables.cs" />
     <Compile Include="Json\Objects\ILocale.cs" />
     <Compile Include="Json\Objects\ILocaleProject.cs" />
     <Compile Include="Json\Objects\IMeta.cs" />
@@ -129,6 +134,11 @@
     <Compile Include="Json\Objects\IQuotationPlugin.cs" />
     <Compile Include="Json\Objects\ISpecialization.cs" />
     <Compile Include="Json\Objects\Item.cs" />
+    <Compile Include="Json\Objects\ItemContainer.cs" />
+    <Compile Include="Json\Objects\ItemDetails.cs" />
+    <Compile Include="Json\Objects\ItemEntry.cs" />
+    <Compile Include="Json\Objects\ItemTranslateables.cs" />
+    <Compile Include="Json\Objects\ItemTranslateablesTranslations.cs" />
     <Compile Include="Json\Objects\ITranslationStatus.cs" />
     <Compile Include="Json\Objects\ITranslator.cs" />
     <Compile Include="Json\Objects\Locale.cs" />
@@ -168,6 +178,7 @@
     <Compile Include="Json\Plugin.cs" />
     <Compile Include="Json\PluginAccount.cs" />
     <Compile Include="Json\PluginAnonymous.cs" />
+    <Compile Include="Json\PluginItem.cs" />
     <Compile Include="Json\PluginLanguagePair.cs" />
     <Compile Include="Json\PluginLocale.cs" />
     <Compile Include="Json\PluginProject.cs" />
