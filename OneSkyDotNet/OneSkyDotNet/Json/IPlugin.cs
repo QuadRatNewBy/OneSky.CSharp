@@ -9,5 +9,7 @@
         IPluginProject Project { get; }
 
         IPluginQuotation Quotation { get; }
+
+        IPluginAccount Account { get; }
     }
 }
