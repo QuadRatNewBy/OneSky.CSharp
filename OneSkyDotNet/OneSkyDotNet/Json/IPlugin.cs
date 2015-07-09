@@ -11,5 +11,7 @@
         IPluginQuotation Quotation { get; }
 
         IPluginAccount Account { get; }
+
+        IPluginLanguagePair LanguagePair { get; }
     }
 }

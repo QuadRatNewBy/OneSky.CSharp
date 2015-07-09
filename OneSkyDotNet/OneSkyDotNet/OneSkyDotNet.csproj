@@ -76,6 +76,7 @@
     <Compile Include="Json\IPlugin.cs" />
     <Compile Include="Json\IPluginAccount.cs" />
     <Compile Include="Json\IPluginAnonymous.cs" />
+    <Compile Include="Json\IPluginLanguagePair.cs" />
     <Compile Include="Json\IPluginLocale.cs" />
     <Compile Include="Json\IPluginProject.cs" />
     <Compile Include="Json\IPluginQuotation.cs" />
@@ -167,6 +168,7 @@
     <Compile Include="Json\Plugin.cs" />
     <Compile Include="Json\PluginAccount.cs" />
     <Compile Include="Json\PluginAnonymous.cs" />
+    <Compile Include="Json\PluginLanguagePair.cs" />
     <Compile Include="Json\PluginLocale.cs" />
     <Compile Include="Json\PluginProject.cs" />
     <Compile Include="Json\PluginQuotation.cs" />
