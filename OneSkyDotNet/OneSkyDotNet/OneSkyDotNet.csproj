@@ -79,6 +79,7 @@
     <Compile Include="Json\IPluginItem.cs" />
     <Compile Include="Json\IPluginLanguagePair.cs" />
     <Compile Include="Json\IPluginLocale.cs" />
+    <Compile Include="Json\IPluginOrder.cs" />
     <Compile Include="Json\IPluginProject.cs" />
     <Compile Include="Json\IPluginQuotation.cs" />
     <Compile Include="Json\IPluginSpecialization.cs" />
@@ -109,6 +110,7 @@
     <Compile Include="Json\Objects\IItemTranslateables.cs" />
     <Compile Include="Json\Objects\ILocale.cs" />
     <Compile Include="Json\Objects\ILocaleProject.cs" />
+    <Compile Include="Json\Objects\IMessage.cs" />
     <Compile Include="Json\Objects\IMeta.cs" />
     <Compile Include="Json\Objects\IMetaList.cs" />
     <Compile Include="Json\Objects\IMetaPagedList.cs" />
@@ -157,6 +159,7 @@
     <Compile Include="Json\Objects\Locale.cs" />
     <Compile Include="Json\Objects\LocaleGroup.cs" />
     <Compile Include="Json\Objects\LocaleProject.cs" />
+    <Compile Include="Json\Objects\Message.cs" />
     <Compile Include="Json\Objects\Meta.cs" />
     <Compile Include="Json\Objects\MetaList.cs" />
     <Compile Include="Json\Objects\MetaPagedList.cs" />
@@ -207,6 +210,7 @@
     <Compile Include="Json\PluginItem.cs" />
     <Compile Include="Json\PluginLanguagePair.cs" />
     <Compile Include="Json\PluginLocale.cs" />
+    <Compile Include="Json\PluginOrder.cs" />
     <Compile Include="Json\PluginProject.cs" />
     <Compile Include="Json\PluginQuotation.cs" />
     <Compile Include="Json\PluginSpecialization.cs" />
