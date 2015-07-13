@@ -121,7 +121,12 @@
     <Compile Include="Json\Objects\INull.cs" />
     <Compile Include="Json\Objects\IOrder.cs" />
     <Compile Include="Json\Objects\IOrderPlatform.cs" />
+    <Compile Include="Json\Objects\IOrderPlatformDetails.cs" />
     <Compile Include="Json\Objects\IOrderPlatformEntry.cs" />
+    <Compile Include="Json\Objects\IOrderPlatformNew.cs" />
+    <Compile Include="Json\Objects\IOrderPlugin.cs" />
+    <Compile Include="Json\Objects\IOrderPluginDetails.cs" />
+    <Compile Include="Json\Objects\IOrderPluginNew.cs" />
     <Compile Include="Json\Objects\IOrderTask.cs" />
     <Compile Include="Json\Objects\IOrderTaskBase.cs" />
     <Compile Include="Json\Objects\IOrderTaskDetails.cs" />
@@ -157,7 +162,13 @@
     <Compile Include="Json\Objects\MetaPagedList.cs" />
     <Compile Include="Json\Objects\Null.cs" />
     <Compile Include="Json\Objects\Order.cs" />
+    <Compile Include="Json\Objects\OrderPlatform.cs" />
+    <Compile Include="Json\Objects\OrderPlatformDetails.cs" />
     <Compile Include="Json\Objects\OrderPlatformEntry.cs" />
+    <Compile Include="Json\Objects\OrderPlatformNew.cs" />
+    <Compile Include="Json\Objects\OrderPlugin.cs" />
+    <Compile Include="Json\Objects\OrderPluginDetails.cs" />
+    <Compile Include="Json\Objects\OrderPluginNew.cs" />
     <Compile Include="Json\Objects\OrderTask.cs" />
     <Compile Include="Json\Objects\OrderTaskBase.cs" />
     <Compile Include="Json\Objects\OrderTaskDetails.cs" />

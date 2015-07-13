@@ -4,7 +4,7 @@
 
     using Newtonsoft.Json;
 
-    public class OrderTask : IOrderTask
+    internal class OrderTask : IOrderTask
     {
         [JsonProperty("status")]
         private string status;

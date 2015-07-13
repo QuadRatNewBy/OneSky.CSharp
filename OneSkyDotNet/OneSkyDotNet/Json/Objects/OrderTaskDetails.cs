@@ -2,7 +2,7 @@
 {
     using Newtonsoft.Json;
 
-    public class OrderTaskDetails : OrderTask, IOrderTaskDetails
+    internal class OrderTaskDetails : OrderTask, IOrderTaskDetails
     {
         [JsonProperty("id")]
         private int id;

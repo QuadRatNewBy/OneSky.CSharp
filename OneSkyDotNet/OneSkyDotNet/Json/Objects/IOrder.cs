@@ -9,6 +9,5 @@
         DateTime OrderedAt { get; }
 
         long OrderedAtTimestamp { get; }
-
     }
 }
