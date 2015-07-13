@@ -16,6 +16,8 @@
 
         public IPluginItem Item { get; private set; }
 
+        public IPluginOrder Order { get; private set; }
+
         internal Plugin(OneSkyDotNet.IPlugin plugin)
         {
             this.Locale = new PluginLocale(plugin.Locale);
@@ -25,6 +27,7 @@
             this.Account = new PluginAccount(plugin.Account, OneSkyClient.Anonymous);
             this.LanguagePair = new PluginLanguagePair(plugin.LanguagePair);
             this.Item = new PluginItem(plugin.Item);
+            this.Order = new PluginOrder(plugin.Order);
         }
     }
 }

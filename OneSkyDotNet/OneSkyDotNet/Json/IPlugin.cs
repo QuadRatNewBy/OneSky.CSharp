@@ -15,5 +15,7 @@
         IPluginLanguagePair LanguagePair { get; }
 
         IPluginItem Item { get; }
+
+        IPluginOrder Order { get; }
     }
 }
