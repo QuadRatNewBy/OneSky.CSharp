@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneSkyDotNet", "OneSkyDotNet\OneSkyDotNet.csproj", "{88411FA0-2EAF-40A3-8F86-1254A950A612}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneSkyDotNetExamples", "OneSkyDotNetExamples\OneSkyDotNetExamples.csproj", "{3BA4F170-ED38-4DDF-A65C-83B1492241AB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneSkyDotNetTests", "OneSkyDotNetTests\OneSkyDotNetTests.csproj", "{4F6B624D-EBD9-4005-AD2A-E64AA1403E07}"
 EndProject
@@ -19,10 +17,6 @@ Global
 		{88411FA0-2EAF-40A3-8F86-1254A950A612}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88411FA0-2EAF-40A3-8F86-1254A950A612}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88411FA0-2EAF-40A3-8F86-1254A950A612}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3BA4F170-ED38-4DDF-A65C-83B1492241AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3BA4F170-ED38-4DDF-A65C-83B1492241AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3BA4F170-ED38-4DDF-A65C-83B1492241AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3BA4F170-ED38-4DDF-A65C-83B1492241AB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4F6B624D-EBD9-4005-AD2A-E64AA1403E07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4F6B624D-EBD9-4005-AD2A-E64AA1403E07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F6B624D-EBD9-4005-AD2A-E64AA1403E07}.Release|Any CPU.ActiveCfg = Release|Any CPU
