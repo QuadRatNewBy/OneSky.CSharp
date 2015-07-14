@@ -148,6 +148,8 @@
     <Compile Include="Json\Objects\IQuotationDetailsFull.cs" />
     <Compile Include="Json\Objects\IQuotationPlatform.cs" />
     <Compile Include="Json\Objects\IQuotationPlugin.cs" />
+    <Compile Include="Json\Objects\IScreenshot.cs" />
+    <Compile Include="Json\Objects\IScreenshotTag.cs" />
     <Compile Include="Json\Objects\ISpecialization.cs" />
     <Compile Include="Json\Objects\Item.cs" />
     <Compile Include="Json\Objects\ItemContainer.cs" />
@@ -191,6 +193,8 @@
     <Compile Include="Json\Objects\QuotationDetailsFull.cs" />
     <Compile Include="Json\Objects\QuotationPlatform.cs" />
     <Compile Include="Json\Objects\QuotationPlugin.cs" />
+    <Compile Include="Json\Objects\Screenshot.cs" />
+    <Compile Include="Json\Objects\ScreenshotTag.cs" />
     <Compile Include="Json\Objects\Specialization.cs" />
     <Compile Include="Json\Objects\TranslationStatus.cs" />
     <Compile Include="Json\Objects\Translator.cs" />
