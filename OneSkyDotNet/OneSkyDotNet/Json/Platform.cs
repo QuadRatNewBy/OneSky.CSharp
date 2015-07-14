@@ -18,6 +18,8 @@
 
         public IPlatformTranslation Translation { get; private set; }
 
+        public IPlatformOrder Order { get; private set; }
+
         internal Platform(OneSkyDotNet.IPlatform platform)
         {
             this.Locale = new PlatformLocale(platform.Locale);
@@ -28,6 +30,7 @@
             this.Quotation = new PlatformQuotation(platform.Quotation);
             this.ImportTask = new PlatformImportTask(platform.ImportTask);
             this.Translation = new PlatformTranslation(platform.Translation);
+            this.Order = new PlatformOrder(platform.Order);
         }
     }
 }

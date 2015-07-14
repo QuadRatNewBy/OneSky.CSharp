@@ -17,5 +17,7 @@
         IPlatformImportTask ImportTask { get; }
 
         IPlatformTranslation Translation { get; }
+
+        IPlatformOrder Order { get; }
     }
 }

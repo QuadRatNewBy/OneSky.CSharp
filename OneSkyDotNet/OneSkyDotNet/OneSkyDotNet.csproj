@@ -68,6 +68,7 @@
     <Compile Include="Json\IPlatformFile.cs" />
     <Compile Include="Json\IPlatformImportTask.cs" />
     <Compile Include="Json\IPlatformLocale.cs" />
+    <Compile Include="Json\IPlatformOrder.cs" />
     <Compile Include="Json\IPlatformProject.cs" />
     <Compile Include="Json\IPlatformProjectType.cs" />
     <Compile Include="Json\IPlatformProjectGroup.cs" />
@@ -199,6 +200,7 @@
     <Compile Include="Json\PlatformFile.cs" />
     <Compile Include="Json\PlatformImportTask.cs" />
     <Compile Include="Json\PlatformLocale.cs" />
+    <Compile Include="Json\PlatformOrder.cs" />
     <Compile Include="Json\PlatformProject.cs" />
     <Compile Include="Json\PlatformProjectType.cs" />
     <Compile Include="Json\PlatformProjectGroup.cs" />
