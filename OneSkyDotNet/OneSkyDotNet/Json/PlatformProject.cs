@@ -1,7 +1,5 @@
 ﻿namespace OneSkyDotNet.Json
 {
-    using System;
-
     using System.Collections.Generic;
 
     internal class PlatformProject : IPlatformProject

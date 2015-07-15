@@ -1,7 +1,5 @@
 ﻿namespace OneSkyDotNet
 {
-    using System.Text;
-
     internal class OneSkyResponse : IOneSkyResponse
     {
         public int StatusCode { get; internal set; }

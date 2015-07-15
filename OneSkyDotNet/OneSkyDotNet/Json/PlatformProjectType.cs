@@ -2,8 +2,6 @@
 {
     using System.Collections.Generic;
 
-    using Newtonsoft.Json;
-
     internal class PlatformProjectType : IPlatformProjectType
     {
         private OneSkyDotNet.IPlatformProjectType projectType;

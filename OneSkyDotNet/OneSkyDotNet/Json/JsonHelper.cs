@@ -36,7 +36,7 @@
         }
 
         internal static IOneSkyResponse<TMetaInterface, TDataInterface> PlatformCompose
-            <TMetaInterface, TDataInterface, TMetaObject, TDataObject>(OneSkyDotNet.IOneSkyResponse plain)
+            <TMetaInterface, TDataInterface, TMetaObject, TDataObject>(IOneSkyResponse plain)
             where TMetaObject : TMetaInterface, new()
             where TDataObject : TDataInterface, new()
             where TMetaInterface : IMeta
@@ -50,7 +50,7 @@
         }
 
         internal static Tuple<Meta, TData> PluginDeserialize<TData, TObject>(
-            OneSkyDotNet.IOneSkyResponse plain,
+            IOneSkyResponse plain,
             TObject container,
             Func<TObject, TData> extractor) where TData : new()
         {
@@ -71,7 +71,7 @@
         }
 
         internal static Tuple<Meta, TData> PluginDeserialize<TData>(
-            OneSkyDotNet.IOneSkyResponse plain) where TData : new()
+            IOneSkyResponse plain) where TData : new()
         {
             var data = new TData();
             var meta = new Meta();
