@@ -24,6 +24,8 @@
             }
         }
 
+        private static readonly string DataSchema = "data:image/{0};base64,{1}";
+
         [JsonProperty("name")]
         private string name;
 
@@ -89,7 +91,11 @@
             set
             {
                 this.imagePath = value;
-                this.image = ToBase64(value);
+                this.name = Path.GetFileName(value);
+                this.image = string.Format(
+                    DataSchema,
+                    (Path.GetExtension(value) ?? string.Empty).Replace(".", string.Empty),
+                    ToBase64(value));
             }
         }
 

@@ -8,6 +8,8 @@
 
     using FluentAssertions;
 
+    using OneSkyDotNet.Json;
+
     using Xunit;
 
     public class Platform
@@ -35,6 +37,8 @@
         private string fileNameDe = "File.de.txt";
         private string fileNameEn = "File.en.txt";
 
+        private string screenshotFileName = "Screenshot.png";
+
         private string filePathDe
         {
             get
@@ -48,6 +52,14 @@
             get
             {
                 return string.Format("Data\\{0}", this.fileNameEn);
+            }
+        }
+
+        private string screenshotPath
+        {
+            get
+            {
+                return string.Format("Data\\{0}", this.screenshotFileName);
             }
         }
 
@@ -98,6 +110,8 @@
             this.TranslationExportMultilingualFile();
             this.TranslationExportMultilingualFileFail();
             this.TranslationStatus();
+
+            this.Screenshot();
 
             // Cleanup
             this.FileDelete();
@@ -368,6 +382,23 @@
             responseDe.DataContent.Progress.Should().StartWith("75", "because 'de' test file contains 3 of 4 strings");
             responseEn.DataContent.Progress.Should().StartWith("100", "because 'en' test file contains all strings");
             responseFr.DataContent.Progress.Should().Be("0%", "because we dont have 'fr' file uploaded or translated");
+        }
+
+        public void Screenshot()
+        {
+            var tags = new List<IScreenshotTag>
+                           {
+                               new ScreenshotTag("File_Key2", 216, 130, 561, 95, this.fileNameEn),
+                               new ScreenshotTag("File_Key3", 394, 292, 209, 52),
+                               new ScreenshotTag("File_Key1", 24, 8, 138, 59, this.fileNameEn),
+                               new ScreenshotTag("File_Key9", 43, 393, 115, 57)
+                           };
+
+            var screenshot = new Screenshot(this.screenshotPath, tags);
+
+            var response = this.platform.Screenshot.Upload(this.projectId, new List<IScreenshot> { screenshot });
+
+            response.StatusCode.Should().BeOneOf(201);
         }
 
         // Cleaning up

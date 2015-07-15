@@ -4,7 +4,7 @@
 
     internal class PlatformScreenshot : IPlatformScreenshot
     {
-        private const string ScreenshotUploadAddress = "https://platform.api.onesky.io/1/projects/:project_id/screenshots";
+        private const string ScreenshotUploadAddress = "https://platform.api.onesky.io/1/projects/{project_id}/screenshots";
 
         private const string ScreenshotUploadScreenshotsBody = "screenshots";
 

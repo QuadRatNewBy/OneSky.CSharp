@@ -19,5 +19,7 @@
         IPlatformTranslation Translation { get; }
 
         IPlatformOrder Order { get; }
+
+        IPlatformScreenshot Screenshot { get; }
     }
 }
