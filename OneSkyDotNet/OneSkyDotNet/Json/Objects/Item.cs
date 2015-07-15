@@ -10,6 +10,18 @@
         [JsonProperty("content")]
         private string content;
 
+        public Item(string title = null, string content = null)
+        {
+            this.title = title;
+            this.content = content;
+        }
+
+        public Item(IItem item)
+        {
+            this.title = item.Title;
+            this.content = item.Content;
+        }
+
         [JsonIgnore]
         public string Title
         {

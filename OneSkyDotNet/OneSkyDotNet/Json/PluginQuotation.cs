@@ -21,9 +21,7 @@
             IDictionary<string, IItem> items,
             string specialization = "general")
         {
-            var plainItems =
-                JsonConvert.SerializeObject(
-                    items.ToDictionary(x => x.Key, x => new Item { Content = x.Value.Content, Title = x.Value.Title }));
+            var plainItems = JsonConvert.SerializeObject(items.ToDictionary(x => x.Key, x => new Item(x.Value)));
             var plainToLocales = string.Join(",", toLocales);
             var plain = this.quotation.PostQuotations(projectId, fromLocale, plainToLocales, plainItems, specialization);
             var tuple = JsonHelper.PluginDeserialize(plain, new { quotations = new List<QuotationPlugin>() }, x => x.quotations);
