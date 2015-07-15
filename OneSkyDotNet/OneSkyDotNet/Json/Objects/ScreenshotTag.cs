@@ -2,7 +2,7 @@
 {
     using Newtonsoft.Json;
 
-    internal class ScreenshotTag : IScreenshotTag
+    public class ScreenshotTag : IScreenshotTag
     {
         [JsonProperty("key")]
         private string key;
@@ -30,6 +30,11 @@
             this.width = width;
             this.height = height;
             this.file = file;
+        }
+
+        public ScreenshotTag(IScreenshotTag tag)
+            : this(tag.Key, tag.X, tag.Y, tag.Width, tag.Height, tag.File)
+        {
         }
 
         public string Key

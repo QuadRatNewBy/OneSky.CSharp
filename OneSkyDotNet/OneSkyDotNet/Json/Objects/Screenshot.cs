@@ -1,11 +1,13 @@
 ﻿namespace OneSkyDotNet.Json
 {
     using System;
+    using System.Collections;
     using System.Collections.Generic;
+    using System.Linq;
 
     using Newtonsoft.Json;
 
-    internal class Screenshot : IScreenshot
+    public class Screenshot : IScreenshot
     {
         [JsonProperty("name")]
         private string name;
@@ -16,7 +18,31 @@
         private string imagePath;
 
         [JsonProperty("tags")]
-        private IList<IScreenshotTag> tags;
+        private List<IScreenshotTag> tags;
+
+        private Screenshot(IList<IScreenshotTag> tags)
+        {
+            this.tags = new List<IScreenshotTag>();
+            this.tags.AddRange(tags.Select(x => new ScreenshotTag(x)));
+        }
+
+        public Screenshot(string name, string image, IList<IScreenshotTag> tags)
+            : this(tags)
+        {
+            this.name = name;
+            this.image = image;
+        }
+
+        public Screenshot(string path, IList<IScreenshotTag> tags)
+            : this(tags)
+        {
+            this.ImagePath = path;
+        }
+
+        public Screenshot(IScreenshot screenshot)
+            : this(screenshot.Name, screenshot.Image, screenshot.Tags)
+        {
+        }
 
         public string Name
         {

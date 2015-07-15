@@ -17,9 +17,8 @@
         }
 
         public Item(IItem item)
+            : this(item.Title, item.Content)
         {
-            this.title = item.Title;
-            this.content = item.Content;
         }
 
         [JsonIgnore]
