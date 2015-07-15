@@ -1,16 +1,32 @@
 ﻿namespace OneSkyDotNet.Json
 {
     using System;
-    using System.Collections;
     using System.Collections.Generic;
+    using System.IO;
     using System.Linq;
 
     using Newtonsoft.Json;
 
     public class Screenshot : IScreenshot
     {
+        private static string ToBase64(string path)
+        {
+            using (var image = System.Drawing.Image.FromFile(path))
+            {
+                using (var memoryStream = new MemoryStream())
+                {
+                    image.Save(memoryStream, image.RawFormat);
+                    var imageBytes = memoryStream.ToArray();
+
+                    var base64String = Convert.ToBase64String(imageBytes);
+                    return base64String;
+                }
+            }
+        }
+
         [JsonProperty("name")]
         private string name;
+
         [JsonProperty("image")]
         private string image;
 
@@ -73,7 +89,7 @@
             set
             {
                 this.imagePath = value;
-                throw new NotImplementedException("Recalcutation of Base64 required.");
+                this.image = ToBase64(value);
             }
         }
 
