@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneSkyDotNet", "OneSkyDotNet\OneSkyDotNet.csproj", "{88411FA0-2EAF-40A3-8F86-1254A950A612}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneSky.CSharp", "OneSky.CSharp\OneSky.CSharp.csproj", "{88411FA0-2EAF-40A3-8F86-1254A950A612}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneSkyDotNetTests", "OneSkyDotNetTests\OneSkyDotNetTests.csproj", "{4F6B624D-EBD9-4005-AD2A-E64AA1403E07}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneSky.CSharp.Tests", "OneSky.CSharp.Tests\OneSky.CSharp.Tests.csproj", "{4F6B624D-EBD9-4005-AD2A-E64AA1403E07}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

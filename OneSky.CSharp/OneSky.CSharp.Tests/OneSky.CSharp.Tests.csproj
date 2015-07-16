@@ -9,8 +9,8 @@
     <ProjectGuid>{4F6B624D-EBD9-4005-AD2A-E64AA1403E07}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OneSkyDotNetTests</RootNamespace>
-    <AssemblyName>OneSkyDotNetTests</AssemblyName>
+    <RootNamespace>OneSky.CSharp.Tests</RootNamespace>
+    <AssemblyName>OneSky.CSharp.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>0fbcc3cb</NuGetPackageImportStamp>
@@ -70,7 +70,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\OneSkyDotNet\OneSkyDotNet.csproj">
+    <ProjectReference Include="..\OneSky.CSharp\OneSky.CSharp.csproj">
       <Project>{88411fa0-2eaf-40a3-8f86-1254a950a612}</Project>
       <Name>OneSkyDotNet</Name>
     </ProjectReference>

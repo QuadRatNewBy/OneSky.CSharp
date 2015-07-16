@@ -7,8 +7,8 @@
     <ProjectGuid>{88411FA0-2EAF-40A3-8F86-1254A950A612}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OneSkyDotNet</RootNamespace>
-    <AssemblyName>OneSkyDotNet</AssemblyName>
+    <RootNamespace>OneSky.CSharp</RootNamespace>
+    <AssemblyName>OneSky.CSharp</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
