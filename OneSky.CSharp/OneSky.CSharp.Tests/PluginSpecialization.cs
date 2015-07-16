@@ -1,14 +1,14 @@
-﻿namespace OneSkyDotNetTests
+﻿namespace OneSky.CSharp.Tests
 {
-    using System.Collections.Generic;
-
     using FluentAssertions;
+
+    using OneSky.CSharp.Json;
 
     using Xunit;
 
     public class PluginSpecialization
     {
-        private static OneSkyDotNet.Json.IPluginSpecialization specialization = OneSkyDotNet.Json.OneSkyClient.CreateClient(Settings.PublicKey, Settings.PrivateKey).Plugin.Specialization;
+        private static IPluginSpecialization specialization = OneSkyClient.CreateClient(Settings.PublicKey, Settings.PrivateKey).Plugin.Specialization;
 
         [Fact]
         public void GetSpecializations()

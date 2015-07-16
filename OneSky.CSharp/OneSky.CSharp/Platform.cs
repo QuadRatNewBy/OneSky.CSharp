@@ -1,4 +1,4 @@
-﻿namespace OneSkyDotNet
+﻿namespace OneSky.CSharp
 {
     internal class Platform : IPlatform
     {

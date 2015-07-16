@@ -1,13 +1,12 @@
-﻿namespace OneSkyDotNetTests
+﻿namespace OneSky.CSharp.Tests
 {
     using System;
     using System.Collections.Generic;
-    using System.Linq;
     using System.Text;
 
     using FluentAssertions;
 
-    using OneSkyDotNet.Json;
+    using OneSky.CSharp.Json;
 
     using Xunit;
 
@@ -27,8 +26,8 @@
             return builder.ToString();
         }
 
-        private OneSkyDotNet.Json.IPlugin plugin =
-            OneSkyDotNet.Json.OneSkyClient.CreateClient(Settings.PublicKey, Settings.PrivateKey).Plugin;
+        private IPlugin plugin =
+            OneSkyClient.CreateClient(Settings.PublicKey, Settings.PrivateKey).Plugin;
 
         private string projectLocale = "be";
 
@@ -57,7 +56,7 @@
 
         public void ProjectCreate() 
         {
-            this.projectName = RandomString(8);
+            this.projectName = this.RandomString(8);
 
             var response = this.plugin.Project.PostProject(this.projectName, locale: this.projectLocale);
 
@@ -69,7 +68,7 @@
 
         public void ProjectCreateFake() 
         {
-            var name = RandomString(4);
+            var name = this.RandomString(4);
             var response = this.plugin.Project.PostProject(name);
 
             response.DataContent.Name.Should().StartWith(name);

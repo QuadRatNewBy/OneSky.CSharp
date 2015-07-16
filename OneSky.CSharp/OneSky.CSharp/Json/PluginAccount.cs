@@ -1,4 +1,4 @@
-﻿namespace OneSkyDotNet.Json
+﻿namespace OneSky.CSharp.Json
 {
     using System.Collections.Generic;
 
@@ -6,9 +6,9 @@
     {
         private IPluginAnonymous anonymous;
 
-        private OneSkyDotNet.IPluginAccount account;
+        private CSharp.IPluginAccount account;
 
-        public PluginAccount(OneSkyDotNet.IPluginAccount account, IPluginAnonymous anonymous)
+        public PluginAccount(CSharp.IPluginAccount account, IPluginAnonymous anonymous)
         {
             this.account = account;
             this.anonymous = anonymous;

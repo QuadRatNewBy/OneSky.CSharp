@@ -1,4 +1,4 @@
-﻿namespace OneSkyDotNet.Json
+﻿namespace OneSky.CSharp.Json
 {
     public interface IImportTaskFile : IImportTaskStatus, IImportTaskCreated
     {

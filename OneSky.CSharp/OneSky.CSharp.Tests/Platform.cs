@@ -1,4 +1,4 @@
-﻿namespace OneSkyDotNetTests
+﻿namespace OneSky.CSharp.Tests
 {
     using System;
     using System.Collections.Generic;
@@ -8,7 +8,7 @@
 
     using FluentAssertions;
 
-    using OneSkyDotNet.Json;
+    using OneSky.CSharp.Json;
 
     using Xunit;
 
@@ -29,8 +29,8 @@
             return builder.ToString();
         }
 
-        private OneSkyDotNet.Json.IPlatform platform =
-            OneSkyDotNet.Json.OneSkyClient.CreateClient(Settings.PublicKey, Settings.PrivateKey).Platform;
+        private IPlatform platform =
+            OneSkyClient.CreateClient(Settings.PublicKey, Settings.PrivateKey).Platform;
 
         private string projectGroupLocale = "en";
 
@@ -208,7 +208,7 @@
 
         public void ProjectCreate() 
         {
-            this.projectName = RandomString(8);
+            this.projectName = this.RandomString(8);
 
             var projectType = this.platform.ProjectType.List().DataContent.First(x => x.Code.EndsWith("-others"));
 

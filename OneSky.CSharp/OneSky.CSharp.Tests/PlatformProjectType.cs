@@ -1,14 +1,14 @@
-﻿namespace OneSkyDotNetTests
+﻿namespace OneSky.CSharp.Tests
 {
-    using System.Collections.Generic;
-
     using FluentAssertions;
+
+    using OneSky.CSharp.Json;
 
     using Xunit;
 
     public class PlatformProjectType
     {
-        private static OneSkyDotNet.Json.IPlatformProjectType projectType = OneSkyDotNet.Json.OneSkyClient.CreateClient(Settings.PublicKey, Settings.PrivateKey).Platform.ProjectType;
+        private static IPlatformProjectType projectType = OneSkyClient.CreateClient(Settings.PublicKey, Settings.PrivateKey).Platform.ProjectType;
 
         [Fact]
         public void List()

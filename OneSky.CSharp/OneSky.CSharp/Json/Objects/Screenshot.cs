@@ -1,4 +1,4 @@
-﻿namespace OneSkyDotNet.Json
+﻿namespace OneSky.CSharp.Json
 {
     using System;
     using System.Collections.Generic;

@@ -1,14 +1,16 @@
-﻿namespace OneSkyDotNetTests
+﻿namespace OneSky.CSharp.Tests
 {
     using System.Collections.Generic;
 
     using FluentAssertions;
 
+    using OneSky.CSharp.Json;
+
     using Xunit;
 
     public class PlatformLocale
     {
-        private static OneSkyDotNet.Json.IPlatformLocale locale = OneSkyDotNet.Json.OneSkyClient.CreateClient(Settings.PublicKey, Settings.PrivateKey).Platform.Locale;
+        private static IPlatformLocale locale = OneSkyClient.CreateClient(Settings.PublicKey, Settings.PrivateKey).Platform.Locale;
 
         [Fact]
         public void List()

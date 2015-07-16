@@ -1,12 +1,12 @@
-﻿namespace OneSkyDotNet.Json
+﻿namespace OneSky.CSharp.Json
 {
     using System.Collections.Generic;
 
     internal class PlatformProjectGroup : IPlatformProjectGroup
     {
-        private readonly OneSkyDotNet.IPlatformProjectGroup projectGroup;
+        private readonly CSharp.IPlatformProjectGroup projectGroup;
 
-        public PlatformProjectGroup(OneSkyDotNet.IPlatformProjectGroup projectGroup)
+        public PlatformProjectGroup(CSharp.IPlatformProjectGroup projectGroup)
         {
             this.projectGroup = projectGroup;
         }

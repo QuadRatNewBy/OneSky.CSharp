@@ -1,12 +1,12 @@
-﻿namespace OneSkyDotNet.Json
+﻿namespace OneSky.CSharp.Json
 {
     using System.Collections.Generic;
 
     internal class PluginItem : IPluginItem
     {
-        private OneSkyDotNet.IPluginItem item;
+        private CSharp.IPluginItem item;
 
-        public PluginItem(OneSkyDotNet.IPluginItem item)
+        public PluginItem(CSharp.IPluginItem item)
         {
             this.item = item;
         }

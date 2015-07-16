@@ -1,12 +1,12 @@
-﻿namespace OneSkyDotNet.Json
+﻿namespace OneSky.CSharp.Json
 {
     using System.Collections.Generic;
 
     internal class PluginLocale : IPluginLocale
     {
-        private OneSkyDotNet.IPluginLocale locale;
+        private CSharp.IPluginLocale locale;
 
-        internal PluginLocale(OneSkyDotNet.IPluginLocale locale)
+        internal PluginLocale(CSharp.IPluginLocale locale)
         {
             this.locale = locale;
         }

@@ -1,4 +1,4 @@
-﻿namespace OneSkyDotNet.Json
+﻿namespace OneSky.CSharp.Json
 {
     public interface IOneSkyClient
     {
@@ -6,6 +6,6 @@
 
         IPlugin Plugin { get; }
 
-        OneSkyDotNet.IOneSkyClient Plain { get; }
+        CSharp.IOneSkyClient Plain { get; }
     }
 }

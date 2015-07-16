@@ -1,12 +1,12 @@
-﻿namespace OneSkyDotNet.Json
+﻿namespace OneSky.CSharp.Json
 {
     using System.Collections.Generic;
 
     internal class PluginAnonymous : IPluginAnonymous
     {
-        private OneSkyDotNet.IPluginAnonymous anonymous;
+        private CSharp.IPluginAnonymous anonymous;
 
-        public PluginAnonymous(OneSkyDotNet.IPluginAnonymous anonymous)
+        public PluginAnonymous(CSharp.IPluginAnonymous anonymous)
         {
             this.anonymous = anonymous;
         }

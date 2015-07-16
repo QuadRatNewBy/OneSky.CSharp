@@ -1,12 +1,12 @@
-﻿namespace OneSkyDotNet.Json
+﻿namespace OneSky.CSharp.Json
 {
     using System.Collections.Generic;
 
     internal class PluginProject : IPluginProject
     {
-        private OneSkyDotNet.IPluginProject project;
+        private CSharp.IPluginProject project;
 
-        internal PluginProject(OneSkyDotNet.IPluginProject project)
+        internal PluginProject(CSharp.IPluginProject project)
         {
             this.project = project;
         }

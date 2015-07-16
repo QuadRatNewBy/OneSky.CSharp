@@ -1,12 +1,12 @@
-﻿namespace OneSkyDotNet.Json
+﻿namespace OneSky.CSharp.Json
 {
     using System.Collections.Generic;
 
     internal class PlatformFile : IPlatformFile
     {
-        private OneSkyDotNet.IPlatformFile platformFile;
+        private CSharp.IPlatformFile platformFile;
 
-        public PlatformFile(OneSkyDotNet.IPlatformFile file)
+        public PlatformFile(CSharp.IPlatformFile file)
         {
             this.platformFile = file;
         }

@@ -1,4 +1,4 @@
-﻿namespace OneSkyDotNet.Json
+﻿namespace OneSky.CSharp.Json
 {
     internal class OneSkyResponse<TMeta, TData> : IOneSkyResponse<TMeta, TData>
     {

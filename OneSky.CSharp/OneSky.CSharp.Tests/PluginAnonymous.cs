@@ -1,12 +1,14 @@
-﻿namespace OneSkyDotNetTests
+﻿namespace OneSky.CSharp.Tests
 {
     using FluentAssertions;
+
+    using OneSky.CSharp.Json;
 
     using Xunit;
 
     public class PluginAnonymous
     {
-        private OneSkyDotNet.Json.IPluginAnonymous anonymous = OneSkyDotNet.Json.OneSkyClient.Anonymous;
+        private IPluginAnonymous anonymous = OneSkyClient.Anonymous;
 
         [Fact]
         public void Login()

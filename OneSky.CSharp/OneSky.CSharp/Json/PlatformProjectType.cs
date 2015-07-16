@@ -1,12 +1,12 @@
-﻿namespace OneSkyDotNet.Json
+﻿namespace OneSky.CSharp.Json
 {
     using System.Collections.Generic;
 
     internal class PlatformProjectType : IPlatformProjectType
     {
-        private OneSkyDotNet.IPlatformProjectType projectType;
+        private CSharp.IPlatformProjectType projectType;
 
-        public PlatformProjectType(OneSkyDotNet.IPlatformProjectType projectType)
+        public PlatformProjectType(CSharp.IPlatformProjectType projectType)
         {
             this.projectType = projectType;
         }

@@ -1,12 +1,14 @@
-﻿namespace OneSkyDotNetTests
+﻿namespace OneSky.CSharp.Tests
 {
     using FluentAssertions;
+
+    using OneSky.CSharp.Json;
 
     using Xunit;
 
     public class PluginLanguagePair
     {
-        private static OneSkyDotNet.Json.IPluginLanguagePair languagePair = OneSkyDotNet.Json.OneSkyClient.CreateClient(Settings.PublicKey, Settings.PrivateKey).Plugin.LanguagePair;
+        private static IPluginLanguagePair languagePair = OneSkyClient.CreateClient(Settings.PublicKey, Settings.PrivateKey).Plugin.LanguagePair;
 
         [Fact]
         public void GetLanguagePairs()

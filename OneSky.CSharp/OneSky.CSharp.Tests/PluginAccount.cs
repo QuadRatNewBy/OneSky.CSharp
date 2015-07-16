@@ -1,13 +1,15 @@
-﻿namespace OneSkyDotNetTests
+﻿namespace OneSky.CSharp.Tests
 {
     using FluentAssertions;
+
+    using OneSky.CSharp.Json;
 
     using Xunit;
 
     public class PluginAccount
     {
-        private OneSkyDotNet.Json.IPluginAccount account =
-            OneSkyDotNet.Json.OneSkyClient.CreateClient(Settings.PublicKey, Settings.PrivateKey).Plugin.Account;
+        private IPluginAccount account =
+            OneSkyClient.CreateClient(Settings.PublicKey, Settings.PrivateKey).Plugin.Account;
 
         [Fact]
         public void Credits()

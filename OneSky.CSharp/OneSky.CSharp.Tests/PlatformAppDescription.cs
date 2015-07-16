@@ -1,15 +1,17 @@
-﻿namespace OneSkyDotNetTests
+﻿namespace OneSky.CSharp.Tests
 {
     using System.Linq;
 
     using FluentAssertions;
 
+    using OneSky.CSharp.Json;
+
     using Xunit;
 
     public class PlatformAppDescription
     {
-        private static OneSkyDotNet.Json.IPlatform platform =
-            OneSkyDotNet.Json.OneSkyClient.CreateClient(Settings.PublicKey, Settings.PrivateKey).Platform;
+        private static IPlatform platform =
+            OneSkyClient.CreateClient(Settings.PublicKey, Settings.PrivateKey).Platform;
 
         // Redefine, if you've created App Description projects with different locale.
         private static readonly string Locale = "en";

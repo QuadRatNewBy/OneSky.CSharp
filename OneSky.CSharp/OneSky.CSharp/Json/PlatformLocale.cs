@@ -1,12 +1,12 @@
-﻿namespace OneSkyDotNet.Json
+﻿namespace OneSky.CSharp.Json
 {
     using System.Collections.Generic;
 
     internal class PlatformLocale : IPlatformLocale
     {
-        private OneSkyDotNet.IPlatformLocale locale;
+        private CSharp.IPlatformLocale locale;
 
-        internal PlatformLocale(OneSkyDotNet.IPlatformLocale locale)
+        internal PlatformLocale(CSharp.IPlatformLocale locale)
         {
             this.locale = locale;
         }

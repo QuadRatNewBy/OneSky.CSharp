@@ -1,13 +1,13 @@
-﻿namespace OneSkyDotNet.Json
+﻿namespace OneSky.CSharp.Json
 {
     using System.Collections.Generic;
     using System.Linq;
 
     internal class PluginOrder : IPluginOrder
     {
-        private OneSkyDotNet.IPluginOrder order;
+        private CSharp.IPluginOrder order;
 
-        public PluginOrder(OneSkyDotNet.IPluginOrder order)
+        public PluginOrder(CSharp.IPluginOrder order)
         {
             this.order = order;
         }

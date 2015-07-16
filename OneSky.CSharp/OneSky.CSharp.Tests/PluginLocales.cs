@@ -1,14 +1,16 @@
-﻿namespace OneSkyDotNetTests
+﻿namespace OneSky.CSharp.Tests
 {
     using System.Collections.Generic;
 
     using FluentAssertions;
 
+    using OneSky.CSharp.Json;
+
     using Xunit;
 
     public class PluginLocales
     {
-        private static OneSkyDotNet.Json.IPluginLocale locale = OneSkyDotNet.Json.OneSkyClient.CreateClient(Settings.PublicKey, Settings.PrivateKey).Plugin.Locale;
+        private static IPluginLocale locale = OneSkyClient.CreateClient(Settings.PublicKey, Settings.PrivateKey).Plugin.Locale;
 
         [Fact]
         public void GetLocales()

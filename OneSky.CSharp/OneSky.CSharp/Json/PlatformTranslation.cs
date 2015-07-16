@@ -1,10 +1,10 @@
-﻿namespace OneSkyDotNet.Json
+﻿namespace OneSky.CSharp.Json
 {
     internal class PlatformTranslation : IPlatformTranslation
     {
-        private OneSkyDotNet.IPlatformTranslation translation;
+        private CSharp.IPlatformTranslation translation;
 
-        public PlatformTranslation(OneSkyDotNet.IPlatformTranslation translation)
+        public PlatformTranslation(CSharp.IPlatformTranslation translation)
         {
             this.translation = translation;
         }
