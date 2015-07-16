@@ -11,10 +11,15 @@
             this.languagePair = languagePair;
         }
 
-        public IOneSkyResponse<IMetaList, IEnumerable<ILocale>> GetLanguagePairs(string fromLocale)
+        public IOneSkyResponse<IMeta, IEnumerable<ILocale>> GetLanguagePairs(string fromLocale)
         {
             var plain = this.languagePair.GetLanguagePairs(fromLocale);
-            return JsonHelper.PlatformCompose<IMetaList, IEnumerable<ILocale>, MetaList, List<Localeo>>(plain);
+            var tuple = JsonHelper.PluginDeserialize(plain, new { locales = new List<Localeo>() }, x => x.locales);
+            return new OneSkyResponse<IMeta, IEnumerable<ILocale>>(
+                plain.StatusCode,
+                plain.StatusDescription,
+                tuple.Item1,
+                tuple.Item2);
         }
     }
 }
