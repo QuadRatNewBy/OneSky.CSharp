@@ -57,6 +57,7 @@
     <Compile Include="PlatformLocale.cs" />
     <Compile Include="PlatformProjectType.cs" />
     <Compile Include="Plugin.cs" />
+    <Compile Include="PluginLanguagePair.cs" />
     <Compile Include="PluginLocales.cs" />
     <Compile Include="PluginSpecialization.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -4,6 +4,6 @@
 
     public interface IPluginLanguagePair
     {
-        IOneSkyResponse<IMeta, IEnumerable<ILocale>> GetLanguagePairs(string fromLocale);
+        IOneSkyResponse<IMetaList, IEnumerable<ILocale>> GetLanguagePairs(string fromLocale);
     }
 }
