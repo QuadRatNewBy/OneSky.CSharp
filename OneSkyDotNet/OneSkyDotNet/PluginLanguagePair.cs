@@ -2,7 +2,7 @@
 {
     internal class PluginLanguagePair : IPluginLanguagePair
     {
-        private const string GetAddress = "https://platform.api.onesky.io/1/locales";
+        private const string GetAddress = "https://plugin.api.onesky.io/1/language-pairs";
 
         private const string GetFromLocaleParam = "from_locale";
 
