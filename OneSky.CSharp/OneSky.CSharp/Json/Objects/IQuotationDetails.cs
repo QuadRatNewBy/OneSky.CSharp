@@ -4,9 +4,9 @@
 
     public interface IQuotationDetails
     {
-        float PerWordCost { get; }
+        decimal PerWordCost { get; }
 
-        float TotalCost { get; }
+        decimal TotalCost { get; }
 
         DateTime WillCompleteAt { get; }
 

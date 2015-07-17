@@ -7,10 +7,10 @@
     internal class QuotationDetails : IQuotationDetails
     {
         [JsonProperty("per_word_cost")]
-        private float perWordCost;
+        private decimal perWordCost;
 
         [JsonProperty("total_cost")]
-        private float totalCost;
+        private decimal totalCost;
 
         [JsonProperty("will_complete_at")]
         private DateTime? willCompleteAt;
@@ -30,7 +30,7 @@
         [JsonProperty("estimated_seconds_from_now")]
         private int? estimatedSecondsFromNow;
 
-        public float PerWordCost
+        public decimal PerWordCost
         {
             get
             {
@@ -38,7 +38,7 @@
             }
         }
 
-        public float TotalCost
+        public decimal TotalCost
         {
             get
             {
