@@ -1,4 +1,4 @@
-# OneSky-CSharp #
+# OneSky.CSharp #
 C# client for OneSkyApp API.
 
 Initially created for personal use. Since code has grown pretty big so I've decided to bundle everything up into separate lib.
