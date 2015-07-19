@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IOneSkyClient.cs" />
+    <Compile Include="IOneSkyRequest.cs" />
     <Compile Include="IOneSkyResponse.cs" />
     <Compile Include="IPlatform.cs" />
     <Compile Include="IPlatformFile.cs" />

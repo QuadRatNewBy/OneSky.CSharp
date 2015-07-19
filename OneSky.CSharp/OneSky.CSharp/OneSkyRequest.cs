@@ -8,7 +8,7 @@
     using System.Net;
     using System.Text;
 
-    internal class OneSkyRequest
+    internal class OneSkyRequest : IOneSkyRequest
     {
         private bool hasParams;
 
@@ -233,7 +233,7 @@
             }            
         }
 
-        public OneSkyRequest Placeholder(string placeholder, object value, bool condition = true)
+        public IOneSkyRequest Placeholder(string placeholder, object value, bool condition = true)
         {
             if (condition)
             {
@@ -242,7 +242,7 @@
             return this;
         }
 
-        public OneSkyRequest Parameter(string parameter, object value, bool condition = true)
+        public IOneSkyRequest Parameter(string parameter, object value, bool condition = true)
         {
             if (condition)
             {
@@ -267,7 +267,7 @@
             return this;
         }
 
-        public OneSkyRequest Body(string key, object value, bool condition = true)
+        public IOneSkyRequest Body(string key, object value, bool condition = true)
         {
             if (condition)
             {
@@ -276,7 +276,7 @@
             return this;
         }
 
-        public OneSkyRequest Files(string name, string path, bool condition = true)
+        public IOneSkyRequest Files(string name, string path, bool condition = true)
         {
             if (condition)
             {

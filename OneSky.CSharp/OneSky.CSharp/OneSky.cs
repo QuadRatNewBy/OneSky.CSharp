@@ -51,7 +51,7 @@
             return sb.ToString();
         }
 
-        internal OneSkyRequest CreateRequest(string url)
+        internal IOneSkyRequest CreateRequest(string url)
         {
             var timestamp = this.Timestamp;
             var devHash = this.GetDevHash(timestamp);

@@ -1,4 +1,4 @@
-﻿namespace OneSkyDotNetTests
+﻿namespace OneSky.CSharp.Tests
 {
     public static class Settings
     {
