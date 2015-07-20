@@ -19,9 +19,9 @@
         private const string ProjectGroupIdPlacehoder = "project_group_id";
         private const string ProjectIdPlacehoder = "project_id";
 
-        private OneSky oneSky;
+        private OneSkyHelper oneSky;
 
-        internal PlatformProject(OneSky oneSky)
+        internal PlatformProject(OneSkyHelper oneSky)
         {
             this.oneSky = oneSky;
         }

@@ -4,9 +4,9 @@
     {
         private const string GetLocaleAddress = "https://plugin.api.onesky.io/1/locales";
 
-        private OneSky oneSky;
+        private OneSkyHelper oneSky;
 
-        internal PluginLocale(OneSky oneSky)
+        internal PluginLocale(OneSkyHelper oneSky)
         {
             this.oneSky = oneSky;
         }

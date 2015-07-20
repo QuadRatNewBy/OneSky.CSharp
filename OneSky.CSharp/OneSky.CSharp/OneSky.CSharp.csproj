@@ -224,7 +224,7 @@
     <Compile Include="Json\PluginProject.cs" />
     <Compile Include="Json\PluginQuotation.cs" />
     <Compile Include="Json\PluginSpecialization.cs" />
-    <Compile Include="OneSky.cs" />
+    <Compile Include="OneSkyHelper.cs" />
     <Compile Include="OneSkyClient.cs" />
     <Compile Include="OneSkyRequest.cs" />
     <Compile Include="OneSkyResponse.cs" />

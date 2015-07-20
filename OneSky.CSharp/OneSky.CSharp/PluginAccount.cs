@@ -6,9 +6,9 @@
 
         private IPluginAnonymous anonymous;
 
-        private OneSky oneSky;
+        private OneSkyHelper oneSky;
 
-        internal PluginAccount(OneSky oneSky, IPluginAnonymous anonymous)
+        internal PluginAccount(OneSkyHelper oneSky, IPluginAnonymous anonymous)
         {
             this.anonymous = anonymous;
             this.oneSky = oneSky;

@@ -22,7 +22,7 @@
 
         public IPlatformOrder Order { get; private set; }
 
-        internal Platform(OneSky oneSky)
+        internal Platform(OneSkyHelper oneSky)
         {
             this.Locale = new PlatformLocale(oneSky);
             this.ProjectType = new PlatformProjectType(oneSky);

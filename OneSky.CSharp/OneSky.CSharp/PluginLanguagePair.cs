@@ -6,9 +6,9 @@
 
         private const string GetFromLocaleParam = "from_locale";
 
-        private OneSky oneSky;
+        private OneSkyHelper oneSky;
 
-        internal PluginLanguagePair(OneSky oneSky)
+        internal PluginLanguagePair(OneSkyHelper oneSky)
         {
             this.oneSky = oneSky;
         }

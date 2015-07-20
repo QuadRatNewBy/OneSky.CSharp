@@ -13,9 +13,9 @@
         private const string ProjectIdPlacehoder = "project_id";
         private const string ItemIdPlacehoder = "item_id";
 
-        private OneSky oneSky;
+        private OneSkyHelper oneSky;
 
-        internal PluginItem(OneSky oneSky)
+        internal PluginItem(OneSkyHelper oneSky)
         {
             this.oneSky = oneSky;
         }

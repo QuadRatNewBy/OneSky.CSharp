@@ -18,7 +18,7 @@
 
         public IPluginLanguagePair LanguagePair { get; private set; }
 
-        internal Plugin(OneSky oneSky)
+        internal Plugin(OneSkyHelper oneSky)
         {
             this.Locale = new PluginLocale(oneSky);
             this.Specialization = new PluginSpecialization(oneSky);

@@ -22,9 +22,9 @@
 
         private const string ProjectIdPlacehoder = "project_id";
 
-        private OneSky oneSky;
+        private OneSkyHelper oneSky;
 
-        internal PlatformTranslation(OneSky oneSky)
+        internal PlatformTranslation(OneSkyHelper oneSky)
         {
             this.oneSky = oneSky;
         }

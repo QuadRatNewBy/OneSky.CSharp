@@ -11,9 +11,9 @@
 
         private const string ProjectIdPlacehoder = "project_id";
 
-        private OneSky oneSky;
+        private OneSkyHelper oneSky;
 
-        internal PluginQuotation(OneSky oneSky)
+        internal PluginQuotation(OneSkyHelper oneSky)
         {
             this.oneSky = oneSky;
         }

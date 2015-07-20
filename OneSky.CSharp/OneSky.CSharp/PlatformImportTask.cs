@@ -12,9 +12,9 @@
         private const string ProjectIdPlacehoder = "project_id";
         private const string ImportTaskIdPlacehoder = "import_id";
 
-        private OneSky oneSky;
+        private OneSkyHelper oneSky;
 
-        internal PlatformImportTask(OneSky oneSky)
+        internal PlatformImportTask(OneSkyHelper oneSky)
         {
             this.oneSky = oneSky;
         }

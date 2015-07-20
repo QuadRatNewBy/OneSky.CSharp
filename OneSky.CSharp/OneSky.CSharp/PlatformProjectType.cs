@@ -4,9 +4,9 @@
     {
         private const string ProjectTypeListAddress = "https://platform.api.onesky.io/1/project-types";
 
-        private OneSky oneSky;
+        private OneSkyHelper oneSky;
 
-        internal PlatformProjectType(OneSky oneSky)
+        internal PlatformProjectType(OneSkyHelper oneSky)
         {
             this.oneSky = oneSky;
         }

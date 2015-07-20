@@ -15,9 +15,9 @@
         private const string QuotationShowIsIncludingOutdatedPrarm = "is_including_outdated";
         private const string QuotationShowSpecializationPrarm = "specialization";
 
-        private OneSky oneSky;
+        private OneSkyHelper oneSky;
 
-        internal PlatformQuotation(OneSky oneSky)
+        internal PlatformQuotation(OneSkyHelper oneSky)
         {
             this.oneSky = oneSky;
         }

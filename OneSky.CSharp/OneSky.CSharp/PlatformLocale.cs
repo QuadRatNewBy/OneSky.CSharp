@@ -4,9 +4,9 @@
     {
         private const string LocaleListAddress = "https://platform.api.onesky.io/1/locales";
 
-        private OneSky oneSky;
+        private OneSkyHelper oneSky;
 
-        internal PlatformLocale(OneSky oneSky)
+        internal PlatformLocale(OneSkyHelper oneSky)
         {
             this.oneSky = oneSky;
         }

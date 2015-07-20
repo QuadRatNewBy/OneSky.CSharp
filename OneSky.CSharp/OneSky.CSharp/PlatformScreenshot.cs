@@ -10,9 +10,9 @@
 
         private const string ProjectIdPlacehoder = "project_id";
 
-        private OneSky oneSky;
+        private OneSkyHelper oneSky;
 
-        internal PlatformScreenshot(OneSky oneSky)
+        internal PlatformScreenshot(OneSkyHelper oneSky)
         {
             this.oneSky = oneSky;
         }

@@ -4,9 +4,9 @@
     {
         private const string GetSpecializationsAddress = "https://plugin.api.onesky.io/1/specializations";
 
-        private OneSky oneSky;
+        private OneSkyHelper oneSky;
 
-        internal PluginSpecialization(OneSky oneSky)
+        internal PluginSpecialization(OneSkyHelper oneSky)
         {
             this.oneSky = oneSky;
         }

@@ -11,13 +11,13 @@
 
         public IOneSkyResponse SingUp(string email)
         {
-            return OneSky.CreateAnonymousRequest(SingUpAddress).Body(SingUpEmailBody, email).Post();
+            return OneSkyHelper.CreateAnonymousRequest(SingUpAddress).Body(SingUpEmailBody, email).Post();
         }
 
         public IOneSkyResponse SingIn(string email, string password)
         {
             return
-                OneSky.CreateAnonymousRequest(SingInAddress)
+                OneSkyHelper.CreateAnonymousRequest(SingInAddress)
                     .Body(SingInEmailBody, email)
                     .Body(SingInPasswordBody, password)
                     .Post();

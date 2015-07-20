@@ -10,9 +10,9 @@
         private const string PostProjectNameBody = "name";
         private const string PostProjectLocaleBody = "locale";
 
-        private OneSky oneSky;
+        private OneSkyHelper oneSky;
 
-        internal PluginProject(OneSky oneSky)
+        internal PluginProject(OneSkyHelper oneSky)
         {
             this.oneSky = oneSky;
         }

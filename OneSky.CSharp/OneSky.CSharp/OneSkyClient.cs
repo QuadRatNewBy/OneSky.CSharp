@@ -14,7 +14,7 @@
 
         public static IOneSkyClient CreateClient(string publicKey, string secretKey)
         {
-            var oneSky = new OneSky(publicKey, secretKey);
+            var oneSky = new OneSkyHelper(publicKey, secretKey);
             return new OneSkyClient(oneSky);
         }
 
@@ -22,7 +22,7 @@
 
         public IPlugin Plugin { get; private set; }
 
-        private OneSkyClient(OneSky oneSky)
+        private OneSkyClient(OneSkyHelper oneSky)
         {
             this.Platform = new Platform(oneSky);
             this.Plugin = new Plugin(oneSky);

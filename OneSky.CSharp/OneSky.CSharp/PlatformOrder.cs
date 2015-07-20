@@ -26,9 +26,9 @@
         private const string OrderIdPlacehoder = "order_id";
         private const string ProjectIdPlacehoder = "project_id";
 
-        private OneSky oneSky;
+        private OneSkyHelper oneSky;
 
-        internal PlatformOrder(OneSky oneSky)
+        internal PlatformOrder(OneSkyHelper oneSky)
         {
             this.oneSky = oneSky;
         }
