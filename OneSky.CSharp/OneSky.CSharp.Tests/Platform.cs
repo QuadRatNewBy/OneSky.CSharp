@@ -374,7 +374,8 @@
         {
             // In case import runs toooo slooooow (unfortunately happened to me couple of times)
             // Some times it's really annoying.
-            Thread.Sleep(TimeSpan.FromSeconds(30));
+            // ...
+            Thread.Sleep(TimeSpan.FromSeconds(90));
 
             var responseFr = this.platform.Translation.Status(this.projectId, this.fileNameEn, "fr");
             var responseEn = this.platform.Translation.Status(this.projectId, this.fileNameEn, "en");
