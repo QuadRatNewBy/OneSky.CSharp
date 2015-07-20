@@ -6,3 +6,4 @@ OneSky.CSharp/OneSky.CSharp.Tests/obj/
 OneSky.CSharp/OneSky.CSharp.Tests/bin/
 OneSky.CSharp/packages/
 *.coverage
+/OneSky.CSharp/*.user
