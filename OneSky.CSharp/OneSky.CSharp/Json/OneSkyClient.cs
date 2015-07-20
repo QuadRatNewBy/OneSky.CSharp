@@ -14,10 +14,13 @@
 
         public static IOneSkyClient CreateClient(string publicKey, string secretKey)
         {
-            var client = new OneSkyClient();
-            client.Plain = CSharp.OneSkyClient.CreateClient(publicKey, secretKey);
-            client.Platform = new Platform(client.Plain.Platform);
-            client.Plugin = new Plugin(client.Plain.Plugin);
+            var plainClient = CSharp.OneSkyClient.CreateClient(publicKey, secretKey);
+            var client = new OneSkyClient
+                             {
+                                 Platform = new Platform(plainClient.Platform),
+                                 Plugin = new Plugin(plainClient.Plugin),
+                                 Plain = plainClient
+                             };
             return client;
         }
 
