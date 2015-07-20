@@ -1,5 +1,5 @@
 # OneSky.CSharp #
-C# client for OneSkyApp API.
+C# client for OneSky API.
 
 ## Information ##
 
