@@ -97,10 +97,15 @@
 
             this.FileUploadBaseLanguage();
             this.FileUploadNonBaseLanguage();
+
+            // In case import runs toooo slooooow (unfortunately happened to me couple of times)
+            // Some times it's really annoying.
+            // ...
+            // For the love of god - it's only 7 lines!
+            Thread.Sleep(TimeSpan.FromSeconds(60));
+
             this.ProjectLanguage();
             this.FileList();
-
-            this.QuotationShow();
 
             this.ImportTaskList();
             this.ImportTaskShow();
@@ -110,6 +115,8 @@
             this.TranslationExportMultilingualFile();
             this.TranslationExportMultilingualFileFail();
             this.TranslationStatus();
+
+            this.QuotationShow();
 
             this.Screenshot();
 
@@ -269,7 +276,7 @@
             this.fileImportIdA = response.DataContent.Import.Id;
 
             // Sleeping for 10 seconds. Just to be sure that file import is done.
-            Thread.Sleep(TimeSpan.FromSeconds(20));
+            Thread.Sleep(TimeSpan.FromSeconds(90));
         }
 
         public void FileUploadNonBaseLanguage()
@@ -282,7 +289,7 @@
             this.fileImportIdB = response.DataContent.Import.Id;
 
             // Sleeping for 10 seconds. Just to be sure that file import is done.
-            Thread.Sleep(TimeSpan.FromSeconds(20));
+            Thread.Sleep(TimeSpan.FromSeconds(90));
         }
 
         public void ProjectLanguage()
@@ -372,11 +379,6 @@
 
         public void TranslationStatus()
         {
-            // In case import runs toooo slooooow (unfortunately happened to me couple of times)
-            // Some times it's really annoying.
-            // ...
-            Thread.Sleep(TimeSpan.FromSeconds(90));
-
             var responseFr = this.platform.Translation.Status(this.projectId, this.fileNameEn, "fr");
             var responseEn = this.platform.Translation.Status(this.projectId, this.fileNameEn, "en");
             var responseDe = this.platform.Translation.Status(this.projectId, this.fileNameEn, "de");
@@ -391,7 +393,7 @@
                            {
                                new ScreenshotTag("File_Key2", 216, 130, 561, 95, this.fileNameEn),
                                new ScreenshotTag("File_Key3", 394, 292, 209, 52),
-                               new ScreenshotTag("File_Key1", 24, 8, 138, 59, this.fileNameEn),
+                               new ScreenshotTag("File_Key1", 24, 8, 138, 59),
                                new ScreenshotTag("File_Key9", 43, 393, 115, 57)
                            };
 
