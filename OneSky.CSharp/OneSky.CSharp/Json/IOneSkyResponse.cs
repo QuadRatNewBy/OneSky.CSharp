@@ -1,6 +1,6 @@
 ﻿namespace OneSky.CSharp.Json
 {
-    public interface IOneSkyResponse<TMeta, TData>
+    public interface IOneSkyResponse<out TMeta, out TData>
     {
         int StatusCode { get; }
 
