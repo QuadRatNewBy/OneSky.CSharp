@@ -11,6 +11,7 @@
         <iconUrl>https://raw.githubusercontent.com/wiki/QuadRatNewBy/OneSky.CSharp/icon.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>C# client for OneSky API (oneskyapp.com)</description>
+        <tags>onesky oneskyapp</tags>
         <dependencies>
             <dependency id="Newtonsoft.Json" version="5.0.1" />
         </dependencies>
