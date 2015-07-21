@@ -19,13 +19,13 @@
 
             response.StatusCode.Should().BeGreaterOrEqualTo(200).And.BeLessThan(300);
 
-            response.MetaContent.Should().NotBeNull(". [Platform].[ProjectType].[List] should response with non-empty meta.");
-            response.MetaContent.Status.ShouldBeEquivalentTo(response.StatusCode, ". A assume that's just how it should be");
-            response.MetaContent.RecordCount.Should().BePositive(". Expecting non-empty list");
+            response.Meta.Should().NotBeNull(". [Platform].[ProjectType].[List] should response with non-empty meta.");
+            response.Meta.Status.ShouldBeEquivalentTo(response.StatusCode, ". A assume that's just how it should be");
+            response.Meta.RecordCount.Should().BePositive(". Expecting non-empty list");
 
-            response.DataContent.Should()
+            response.Data.Should()
                 .NotBeNullOrEmpty(". Expecting non-null and non-empty list")
-                .And.HaveCount(response.MetaContent.RecordCount, ". A assume that's just how it should be")
+                .And.HaveCount(response.Meta.RecordCount, ". A assume that's just how it should be")
                 .And.Contain(x => x.Code == "game-unity", "as my reason to use OneSky")
                 .And.Contain(
                     x => x.Code.EndsWith("-others"),

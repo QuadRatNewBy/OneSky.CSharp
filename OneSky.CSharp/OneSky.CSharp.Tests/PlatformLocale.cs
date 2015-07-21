@@ -21,13 +21,13 @@
 
             response.StatusCode.Should().BeGreaterOrEqualTo(200).And.BeLessThan(300);
 
-            response.MetaContent.Should().NotBeNull(". [Platform].[Locale].[List] should response with non-empty meta.");
-            response.MetaContent.Status.ShouldBeEquivalentTo(response.StatusCode, ". A assume that's just how it should be");
-            response.MetaContent.RecordCount.Should().BePositive(". Expecting non-empty list");
+            response.Meta.Should().NotBeNull(". [Platform].[Locale].[List] should response with non-empty meta.");
+            response.Meta.Status.ShouldBeEquivalentTo(response.StatusCode, ". A assume that's just how it should be");
+            response.Meta.RecordCount.Should().BePositive(". Expecting non-empty list");
 
-            response.DataContent.Should()
+            response.Data.Should()
                 .NotBeNullOrEmpty(". Expecting non-null and non-empty list")
-                .And.HaveCount(response.MetaContent.RecordCount, ". A assume that's just how it should be")
+                .And.HaveCount(response.Meta.RecordCount, ". A assume that's just how it should be")
                 .And.Contain(x => x.Locale == "be", "because I care for my language")
                 .And.Contain(
                     x => (new List<string> { "pl", "en", "de", "uk", "ga", "ru", "es", "fr" }).Contains(x.Locale),

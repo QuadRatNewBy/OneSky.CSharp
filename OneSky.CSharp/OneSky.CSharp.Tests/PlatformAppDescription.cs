@@ -26,7 +26,7 @@
             // *********************************************************************************
             var projectGroupId = 32182;
 
-            var projects = platform.Project.List(projectGroupId).DataContent.ToArray();
+            var projects = platform.Project.List(projectGroupId).Data.ToArray();
             projects.Should().NotBeEmpty();
 
             foreach (var project in projects)
@@ -37,7 +37,7 @@
 
         private void TestProject(int id)
         {
-            var project = platform.Project.Show(id).DataContent;
+            var project = platform.Project.Show(id).Data;
             switch (project.ProjectType.Code)
             {
                 case "itunes-metadata":
@@ -63,7 +63,7 @@
 
         private void ItunesAppDescription(int id)
         {
-            var appDescription = platform.Translation.AppDescription(id, Locale).DataContent;
+            var appDescription = platform.Translation.AppDescription(id, Locale).Data;
 
             appDescription.Name.Should().NotBeNullOrWhiteSpace("I guess you have filled all fields");
             appDescription.Description.Should().NotBeNullOrWhiteSpace("I guess you have filled all fields");
@@ -75,7 +75,7 @@
 
         private void AndroidAppDescription(int id)
         {
-            var appDescription = platform.Translation.AppDescription(id, Locale).DataContent;
+            var appDescription = platform.Translation.AppDescription(id, Locale).Data;
 
             appDescription.Name.Should().NotBeNullOrWhiteSpace("I guess you have filled all fields");
             appDescription.Description.Should().NotBeNullOrWhiteSpace("I guess you have filled all fields");
@@ -87,7 +87,7 @@
 
         private void WindowsAppDescription(int id)
         {
-            var appDescription = platform.Translation.AppDescription(id, Locale).DataContent;
+            var appDescription = platform.Translation.AppDescription(id, Locale).Data;
 
             appDescription.Name.Should().NotBeNullOrWhiteSpace("I guess you have filled all fields");
             appDescription.DetailedDescription.Should().NotBeNullOrWhiteSpace("I guess you have filled all fields");
@@ -97,7 +97,7 @@
 
         private void AmazonAppDescription(int id)
         {
-            var appDescription = platform.Translation.AppDescription(id, Locale).DataContent;
+            var appDescription = platform.Translation.AppDescription(id, Locale).Data;
 
             appDescription.Name.Should().NotBeNullOrWhiteSpace("I guess you have filled all fields");
             appDescription.DetailedDescription.Should().NotBeNullOrWhiteSpace("I guess you have filled all fields");
@@ -108,7 +108,7 @@
 
         private void SamsungAppDescription(int id)
         {
-            var appDescription = platform.Translation.AppDescription(id, Locale).DataContent;
+            var appDescription = platform.Translation.AppDescription(id, Locale).Data;
 
             appDescription.Name.Should().NotBeNullOrWhiteSpace("I guess you have filled all fields");
             appDescription.Description.Should().NotBeNullOrWhiteSpace("I guess you have filled all fields");
@@ -117,7 +117,7 @@
 
         private void FacebookAppDescription(int id)
         {
-            var appDescription = platform.Translation.AppDescription(id, Locale).DataContent;
+            var appDescription = platform.Translation.AppDescription(id, Locale).Data;
 
             appDescription.Name.Should().NotBeNullOrWhiteSpace("I guess you have filled all fields");
             appDescription.DetailedDescription.Should().NotBeNullOrWhiteSpace("I guess you have filled all fields");

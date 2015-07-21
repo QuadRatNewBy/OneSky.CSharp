@@ -16,8 +16,8 @@
             return new OneSkyResponse<IMeta, string>(
                 plain.StatusCode,
                 plain.StatusDescription,
-                meta.MetaContent,
-                meta.MetaContent.Status != 0 ? string.Empty : plain.Content);
+                meta.Meta,
+                meta.Meta.Status != 0 ? string.Empty : plain.Content);
         }
 
         public IOneSkyResponse<IMeta, string> ExportMultilingualFile(
@@ -31,8 +31,8 @@
             return new OneSkyResponse<IMeta, string>(
                 plain.StatusCode,
                 plain.StatusDescription,
-                meta.MetaContent,
-                meta.MetaContent.Status != 0 ? string.Empty : plain.Content);
+                meta.Meta,
+                meta.Meta.Status != 0 ? string.Empty : plain.Content);
         }
 
         public IOneSkyResponse<IMeta, IAppDescription> AppDescription(int projectId, string locale)

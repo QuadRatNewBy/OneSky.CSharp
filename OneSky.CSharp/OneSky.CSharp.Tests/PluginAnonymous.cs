@@ -17,7 +17,7 @@
 
             response.StatusCode.Should().BeGreaterOrEqualTo(200).And.BeLessThan(300);
 
-            response.DataContent.Should()
+            response.Data.Should()
                 .NotBeEmpty()
                 .And.Contain(x => x.ApiKey == Settings.PublicKey && x.ApiSecret == Settings.PrivateKey);
         }

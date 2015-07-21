@@ -18,7 +18,7 @@
 
             response.StatusCode.Should().BeInRange(200, 299);
 
-            response.DataContent.RemainingCredit.Should().BeGreaterOrEqualTo(0);
+            response.Data.RemainingCredit.Should().BeGreaterOrEqualTo(0);
         }
     }
 }

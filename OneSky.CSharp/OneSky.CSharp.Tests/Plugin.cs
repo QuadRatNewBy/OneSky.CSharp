@@ -60,10 +60,10 @@
 
             var response = this.plugin.Project.PostProject(this.projectName, locale: this.projectLocale);
 
-            response.DataContent.Name.Should().StartWith(this.projectName);
-            response.DataContent.BaseLanguage.Locale.Should().Be(this.projectLocale);
+            response.Data.Name.Should().StartWith(this.projectName);
+            response.Data.BaseLanguage.Locale.Should().Be(this.projectLocale);
 
-            this.projectId = response.DataContent.Id;
+            this.projectId = response.Data.Id;
         }
 
         public void ProjectCreateFake() 
@@ -71,17 +71,17 @@
             var name = this.RandomString(4);
             var response = this.plugin.Project.PostProject(name);
 
-            response.DataContent.Name.Should().StartWith(name);
-            response.DataContent.BaseLanguage.Locale.Should().Be("en");
+            response.Data.Name.Should().StartWith(name);
+            response.Data.BaseLanguage.Locale.Should().Be("en");
 
-            this.projectId2 = response.DataContent.Id;
+            this.projectId2 = response.Data.Id;
         }
 
         public void ProjectList()
         {
             var response = this.plugin.Project.GetProjects();
 
-            response.DataContent.Should().Contain(x => x.Id == this.projectId2)
+            response.Data.Should().Contain(x => x.Id == this.projectId2)
                 .And.Contain(x => x.Name.StartsWith(this.projectName));
         }
 
@@ -94,7 +94,7 @@
                 this.items,
                 "game");
 
-            response.DataContent.Should()
+            response.Data.Should()
                 .NotBeEmpty()
                 .And.HaveCount(2)
                 .And.Contain(x => x.FromLanguage.Locale == "en")

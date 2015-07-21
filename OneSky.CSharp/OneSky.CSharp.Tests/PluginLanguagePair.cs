@@ -17,7 +17,7 @@
 
             response.StatusCode.Should().BeGreaterOrEqualTo(200).And.BeLessThan(300);
 
-            response.DataContent.Should()
+            response.Data.Should()
                 .NotBeNullOrEmpty(". Expecting non-null and non-empty list")
                 .And.Contain(x => x.Code == "de");
         }

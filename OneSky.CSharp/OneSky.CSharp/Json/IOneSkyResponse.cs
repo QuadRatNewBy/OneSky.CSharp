@@ -6,8 +6,8 @@
 
         string StatusDescription { get; }
 
-        TMeta MetaContent { get; }
+        TMeta Meta { get; }
 
-        TData DataContent { get; }
+        TData Data { get; }
     }
 }
