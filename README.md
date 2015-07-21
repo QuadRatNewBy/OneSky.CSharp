@@ -10,6 +10,27 @@ C# client for OneSky API.
 ### Dependencies ###
 * **Newtonsoft.Json** [For JSON interaction]
 
+### Quick Start ###
+```csharp
+// Creating OneSky Client
+var oneskyClient = OneSky.CSharp.Json.OneSkyClient.CreateClient("Your public API key", "Your secret API key");
+
+// Creating 'Project Group' and 'Project'
+var projectGroup = oneskyClient.Platform.ProjectGroup.Create("QuickStart group", "by" /*your locale*/).DataContent;
+var project = oneskyClient.Platform.Project.Create(projectGroup.Id, "QuickStart project", "Project description").DataContent;
+
+// Uploading 2 files - for base locale and for 'en' locale
+oneskyClient.Platform.File.Upload(project.Id, "Path/To/Your/File.ext", "INI" /*or your file format*/);
+oneskyClient.Platform.File.Upload(project.Id, "Path/To/Your/File.InEn.ext", "INI" /*or your file format*/, "en" /*Different locale*/);
+
+// Downloading tranlsation for specific locale ('en') and saving it to file
+var translation = oneskyClient.Platform.Translation.Export(project.Id, "en", "File.ext" /*uploaded above*/).DataContent;
+System.IO.File.WriteAllBytes("Path/To/Save/Translation.ext", Encoding.UTF8.GetBytes(translation));
+```
+To find your API keys please go to [OneSky Support](http://support.oneskyapp.com/support/solutions/articles/89104-how-to-find-your-api-keys) page.
+
+For more information go to [Wiki](https://github.com/QuadRatNewBy/OneSky-DotNet/wiki/Home) *(Soon)*
+
 ### Documentation ###
 * [Wiki](https://github.com/QuadRatNewBy/OneSky-DotNet/wiki/Home) *(Soon)*
 * C# XML Documentation *(Soon)*
