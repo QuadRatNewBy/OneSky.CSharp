@@ -4,8 +4,12 @@ C# client for OneSky API.
 ## Information ##
 
 ### Installation ###
-* NuGet package *(Soon)*
-* Pull & Compile
+Install NuGet package:
+
+1. Run `Install-Package OneSky.CSharp` in the _Package Manager Console_
+2. Or find package in _NuGet Package Manager_
+
+Or just _Pull & Compile_
 
 ### Dependencies ###
 * **Newtonsoft.Json** [For JSON interaction]
