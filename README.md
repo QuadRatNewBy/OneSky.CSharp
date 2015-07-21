@@ -18,16 +18,23 @@ var oneskyClient = OneSky.CSharp.Json.OneSkyClient.CreateClient(
     "Your secret API key");
 
 // Creating 'Project Group' and 'Project'
-var projectGroup = oneskyClient.Platform.ProjectGroup.Create("QuickStart group", "by" /*your locale*/).Data;
-var project = oneskyClient.Platform.Project.Create(projectGroup.Id, "QuickStart project").Data;
+var projectGroup = oneskyClient.Platform.ProjectGroup
+    .Create("QuickStart group", "by" /*your locale*/).Data;
+var project = oneskyClient.Platform.Project
+    .Create(projectGroup.Id, "QuickStart project").Data;
 
 // Uploading 2 files - for base locale and for 'en' locale
-oneskyClient.Platform.File.Upload(project.Id, "Path/To/Your/File.ext", "INI" /*or your file format*/);
-oneskyClient.Platform.File.Upload(project.Id, "Path/To/Your/File.InEn.ext", "INI", "en");
+oneskyClient.Platform.File
+    .Upload(project.Id, "Path/To/Your/File.ext", "INI" /*or your file format*/);
+oneskyClient.Platform.File
+    .Upload(project.Id, "Path/To/Your/File.InEn.ext", "INI", "en");
 
 // Downloading tranlsation for specific locale ('en') and saving it to file
-var translation = oneskyClient.Platform.Translation.Export(project.Id, "en", "File.ext").Data;
-System.IO.File.WriteAllBytes("Path/To/Save/Translation.ext", Encoding.UTF8.GetBytes(translation));
+var translation = oneskyClient.Platform.Translation
+    .Export(project.Id, "en", "File.ext").Data;
+System.IO.File.WriteAllBytes(
+    "Path/To/Save/Translation.ext",
+    Encoding.UTF8.GetBytes(translation));
 ```
 To find your API keys please go to [OneSky Support](http://support.oneskyapp.com/support/solutions/articles/89104-how-to-find-your-api-keys) page.
 
