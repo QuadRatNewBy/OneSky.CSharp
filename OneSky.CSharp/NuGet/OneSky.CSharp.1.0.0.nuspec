@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>OneSky.CSharp</id>
+        <version>1.0.0</version>
+        <title>OneSky C#</title>
+        <authors>Uladzimir Herasimionak</authors>
+        <owners>Uladzimir Herasimionak</owners>
+        <licenseUrl>https://github.com/QuadRatNewBy/OneSky.CSharp/blob/master/LICENSE.md</licenseUrl>
+        <projectUrl>https://github.com/QuadRatNewBy/OneSky.CSharp</projectUrl>
+        <iconUrl>https://raw.githubusercontent.com/wiki/QuadRatNewBy/OneSky.CSharp/icon.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>C# client for OneSky API (oneskyapp.com)</description>
+        <dependencies>
+            <dependency id="Newtonsoft.Json" version="5.0.1" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="..\OneSky.CSharp\bin\Release\OneSky.CSharp.dll" target="lib\net40-client\OneSky.CSharp.dll" />
+    </files>
+</package>
