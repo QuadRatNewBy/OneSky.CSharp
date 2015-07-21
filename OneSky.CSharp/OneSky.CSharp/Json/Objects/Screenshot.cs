@@ -11,22 +11,74 @@ namespace OneSky.CSharp.Json
 
     public class Screenshot : IScreenshot
     {
-        private static string ToBase64(string path)
-        {
-            using (var image = System.Drawing.Image.FromFile(path))
-            {
-                using (var memoryStream = new MemoryStream())
-                {
-                    image.Save(memoryStream, image.RawFormat);
-                    var imageBytes = memoryStream.ToArray();
+        #region Static
 
-                    var base64String = Convert.ToBase64String(imageBytes);
-                    return base64String;
-                }
+        private static readonly Dictionary<string, string> MimeTypes;
+
+        private static readonly string DataSchema = "data:image/{0};base64,{1}";
+
+        private static Func<string, string> staticImagePathToBase64;
+
+        private static Func<string, string> staticImagePathToImageType;
+
+        static Screenshot()
+        {
+            MimeTypes = new Dictionary<string, string>
+                            {
+                                { ".gif", "gif" },
+                                { ".jpg", "jpeg" },
+                                { ".jpe", "jpeg" },
+                                { ".jpeg", "jpeg" },
+                                { ".png", "png" },
+                                { ".svg", "svg+xml" },
+                                { ".svgz", "svg+xml" },
+                                { ".tif", "tiff" },
+                                { ".tiff", "tiff" },
+                                { ".ico", "vnd.microsoft.icon" },
+                                { ".wbmp", "vnd.wap.wbmp" },
+                                { ".bmp", "bmp" },
+                                { ".dib", "bmp" },
+                                { ".rle", "bmp" }
+                            };
+        }
+
+        private static string DefaultImagePathToImageType(string path)
+        {
+            var ext = Path.GetExtension(path) ?? string.Empty;
+            string mime;
+            return MimeTypes.TryGetValue(ext, out mime) ? mime : ext.Substring(1);
+        }
+
+        private static string DefaultImagePathToBase64(string path)
+        {
+            var base64String = Convert.ToBase64String(System.IO.File.ReadAllBytes(path));
+            return base64String;
+        }
+
+        public static Func<string, string> ImagePathToBase64
+        {
+            get
+            {
+                return staticImagePathToBase64 ?? DefaultImagePathToBase64;
+            }
+            set
+            {
+                staticImagePathToBase64 = value;
             }
         }
 
-        private static readonly string DataSchema = "data:image/{0};base64,{1}";
+        public static Func<string, string> ImagePathToImageType
+        {
+            get
+            {
+                return staticImagePathToImageType ?? DefaultImagePathToImageType;
+            }
+            set
+            {
+                staticImagePathToImageType = value;
+            }
+        }
+        #endregion Static
 
         [JsonProperty("name")]
         private string name;
@@ -40,20 +92,20 @@ namespace OneSky.CSharp.Json
         [JsonProperty("tags")]
         private List<IScreenshotTag> tags;
 
-        private Screenshot(IList<IScreenshotTag> tags)
+        private Screenshot(IEnumerable<IScreenshotTag> tags)
         {
             this.tags = new List<IScreenshotTag>();
             this.tags.AddRange(tags.Select(x => new ScreenshotTag(x)));
         }
 
-        public Screenshot(string name, string image, IList<IScreenshotTag> tags)
+        public Screenshot(string name, string image, IEnumerable<IScreenshotTag> tags)
             : this(tags)
         {
             this.name = name;
             this.image = image;
         }
 
-        public Screenshot(string path, IList<IScreenshotTag> tags)
+        public Screenshot(string path, IEnumerable<IScreenshotTag> tags)
             : this(tags)
         {
             this.ImagePath = path;
@@ -94,10 +146,7 @@ namespace OneSky.CSharp.Json
             {
                 this.imagePath = value;
                 this.name = Path.GetFileName(value);
-                this.image = string.Format(
-                    DataSchema,
-                    (Path.GetExtension(value) ?? string.Empty).Replace(".", string.Empty),
-                    ToBase64(value));
+                this.image = string.Format(DataSchema, ImagePathToImageType(value), ImagePathToBase64(value));
             }
         }
 
