@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("OneSky.CSharp")]
-[assembly: AssemblyDescription("C# client for OneSkeApp API")]
+[assembly: AssemblyDescription("C# client for OneSky API")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("QuadRatNewBy")]
 [assembly: AssemblyProduct("OneSky .NET")]
