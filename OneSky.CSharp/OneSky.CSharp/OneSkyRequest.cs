@@ -8,18 +8,42 @@
     using System.Net;
     using System.Text;
 
+    /// <summary>
+    /// The OneSkyRequest helper. Hides details of HTTP requests.
+    /// </summary>
     internal class OneSkyRequest : IOneSkyRequest
     {
+        /// <summary>
+        /// Request body objects.
+        /// </summary>
+        private readonly IList<KeyValuePair<string, object>> body;
+
+        /// <summary>
+        /// Request files.
+        /// </summary>
+        private readonly IList<KeyValuePair<string, string>> files;
+
+        /// <summary>
+        /// Does request has parameters.
+        /// </summary>
         private bool hasParams;
 
+        /// <summary>
+        /// Request url.
+        /// </summary>
         private string url;
 
+        /// <summary>
+        /// Request content type.
+        /// </summary>
         private string contentType;
 
-        private IList<KeyValuePair<string, object>> body;
-
-        private IList<KeyValuePair<string, string>> files;
-
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OneSkyRequest"/> class.
+        /// </summary>
+        /// <param name="url">
+        /// Request url.
+        /// </param>
         internal OneSkyRequest(string url)
         {
             this.hasParams = false;
@@ -37,6 +61,194 @@
             }
         }
 
+        /// <summary>
+        /// Replaces placeholder like <c>{placeholder}</c> in request url.
+        /// </summary>
+        /// <param name="placeholder">
+        /// Placeholder to replace (without curly brackets).
+        /// </param>
+        /// <param name="value">
+        /// Value to insert.
+        /// </param>
+        /// <param name="condition">
+        /// Replacement condition (resolved).
+        /// </param>
+        /// <returns>
+        /// Same <see cref="IOneSkyRequest"/> instance.
+        /// </returns>
+        public IOneSkyRequest Placeholder(string placeholder, object value, bool condition = true)
+        {
+            if (condition)
+            {
+                this.url = this.url.Replace(string.Format("{{{0}}}", placeholder), value.ToString());
+            }
+
+            return this;
+        }
+
+        /// <summary>
+        /// Appends parameter to url (like parameter=value).
+        /// </summary>
+        /// <param name="parameter">
+        /// Parameter name.
+        /// </param>
+        /// <param name="value">
+        /// Parameter value.
+        /// </param>
+        /// <param name="condition">
+        /// Appending condition (resolved).
+        /// </param>
+        /// <returns>
+        /// Same <see cref="IOneSkyRequest"/> instance.
+        /// </returns>
+        public IOneSkyRequest Parameter(string parameter, object value, bool condition = true)
+        {
+            if (condition)
+            {
+                var prefix = this.hasParams ? '&' : '?';
+
+                var ienum = value as IEnumerable;
+
+                if (value.GetType() != typeof(string) && ienum != null)
+                {
+                    foreach (var c in ienum)
+                    {
+                        this.url += string.Format("{0}{1}[]={2}", prefix, parameter, c);
+                    }
+                }
+                else
+                {
+                    this.url += string.Format("{0}{1}={2}", prefix, parameter, value);
+                }
+
+                this.hasParams = true;
+            }
+
+            return this;
+        }
+
+        /// <summary>
+        /// Adds new object to request body.
+        /// </summary>
+        /// <param name="key">
+        /// Object key.
+        /// </param>
+        /// <param name="value">
+        /// Object value.
+        /// </param>
+        /// <param name="condition">
+        /// Adding condition (resolved).
+        /// </param>
+        /// <returns>
+        /// Same <see cref="IOneSkyRequest"/> instance.
+        /// </returns>
+        public IOneSkyRequest Body(string key, object value, bool condition = true)
+        {
+            if (condition)
+            {
+                this.body.Add(new KeyValuePair<string, object>(key, value));
+            }
+
+            return this;
+        }
+
+        /// <summary>
+        /// Adds file to request body.
+        /// </summary>
+        /// <param name="name">
+        /// File name.
+        /// </param>
+        /// <param name="path">
+        /// Path to file.
+        /// </param>
+        /// <param name="condition">
+        /// Adding condition (resolved).
+        /// </param>
+        /// <returns>
+        /// Same <see cref="IOneSkyRequest"/> instance.
+        /// </returns>
+        public IOneSkyRequest Files(string name, string path, bool condition = true)
+        {
+            if (condition)
+            {
+                this.files.Add(new KeyValuePair<string, string>(name, Path.GetFullPath(path)));
+            }
+
+            return this;
+        }
+
+        /// <summary>
+        /// Sends <c>GET</c> request.
+        /// </summary>
+        /// <returns>
+        /// The <see cref="IOneSkyResponse"/> response.
+        /// </returns>
+        public IOneSkyResponse Get()
+        {
+            var response = this.Send("GET");
+            return response;
+        }
+
+        /// <summary>
+        /// Sends <c>POST</c> request.
+        /// </summary>
+        /// <returns>
+        /// The <see cref="IOneSkyResponse"/> response.
+        /// </returns>
+        public IOneSkyResponse Post()
+        {
+            var data = this.GenerateBody();
+            var response = this.Send("POST", data);
+            return response;
+        }
+
+        /// <summary>
+        /// Sends <c>PUT</c> request.
+        /// </summary>
+        /// <returns>
+        /// The <see cref="IOneSkyResponse"/> response.
+        /// </returns>
+        public IOneSkyResponse Put()
+        {
+            var data = this.GenerateBody();
+            var response = this.Send("PUT", data);
+            return response;
+        }
+
+        /// <summary>
+        /// Sends <c>DELETE</c> request.
+        /// </summary>
+        /// <returns>
+        /// The <see cref="IOneSkyResponse"/> response.
+        /// </returns>
+        public IOneSkyResponse Delete()
+        {
+            var response = this.Send("DELETE");
+            return response;
+        }
+
+        /// <summary>
+        /// Generates request body.
+        /// </summary>
+        /// <returns>
+        /// Bytes of request body.
+        /// </returns>
+        private byte[] GenerateBody()
+        {
+            if (this.files.Count == 0)
+            {
+                return this.GenerateJsonBody();
+            }
+
+            return this.GenerateFileBody();
+        }
+
+        /// <summary>
+        /// Generates request body in JSON format.
+        /// </summary>
+        /// <returns>
+        /// Bytes of request body.
+        /// </returns>
         private byte[] GenerateJsonBody()
         {
             this.contentType = "application/json";
@@ -58,9 +270,11 @@
                         {
                             sb.Append(", ");
                         }
+
                         sb.Append(obj);
                         innerFirst = false;
                     }
+
                     sb.Append("]");
                 }
                 else if (keyValuePair.Value.ToString().StartsWith("{") && keyValuePair.Value.ToString().EndsWith("}"))
@@ -81,6 +295,7 @@
                             keyValuePair.Value,
                             notFirst ? "," : string.Empty));
                 }
+
                 notFirst = true;
             }
 
@@ -89,6 +304,12 @@
             return Encoding.UTF8.GetBytes(str);
         }
 
+        /// <summary>
+        /// Generates request body in 'file' (multipart/form-data) format.
+        /// </summary>
+        /// <returns>
+        /// Bytes of request body.
+        /// </returns>
         private byte[] GenerateFileBody()
         {
             byte[] result;
@@ -143,16 +364,18 @@
             return result;
         }
 
-        private byte[] GenerateBody()
-        {
-            if (this.files.Count == 0)
-            {
-                return this.GenerateJsonBody();
-            }
-
-            return this.GenerateFileBody();
-        }
-
+        /// <summary>
+        /// Sends request with specified verb.
+        /// </summary>
+        /// <param name="method">
+        /// HTTP verb/method.
+        /// </param>
+        /// <param name="data">
+        /// Request data.
+        /// </param>
+        /// <returns>
+        /// The <see cref="IOneSkyResponse"/>.
+        /// </returns>
         private IOneSkyResponse Send(string method, byte[] data = null)
         {
             var request = (HttpWebRequest)WebRequest.Create(this.url);
@@ -223,6 +446,15 @@
             return oneSkyResponse;
         }
 
+        /// <summary>
+        /// Sets response status code and description of <see cref="OneSkyResponse"/> object.
+        /// </summary>
+        /// <param name="oneSkyResponse">
+        /// The <see cref="OneSkyResponse"/> object.
+        /// </param>
+        /// <param name="response">
+        /// Actual HTTP response.
+        /// </param>
         private void GetResponseStatus(OneSkyResponse oneSkyResponse, WebResponse response)
         {
             var httpResponse = (HttpWebResponse)response;
@@ -231,84 +463,6 @@
                 oneSkyResponse.StatusCode = (int)httpResponse.StatusCode;
                 oneSkyResponse.StatusDescription = httpResponse.StatusDescription;                
             }            
-        }
-
-        public IOneSkyRequest Placeholder(string placeholder, object value, bool condition = true)
-        {
-            if (condition)
-            {
-                this.url = this.url.Replace(string.Format("{{{0}}}", placeholder), value.ToString());
-            }
-            return this;
-        }
-
-        public IOneSkyRequest Parameter(string parameter, object value, bool condition = true)
-        {
-            if (condition)
-            {
-                var prefix = this.hasParams ? '&' : '?';
-
-                var ienum = value as IEnumerable;
-
-                if (value.GetType() != typeof(string) && ienum != null)
-                {
-                    foreach (var c in ienum)
-                    {
-                        this.url += string.Format("{0}{1}[]={2}", prefix, parameter, c);
-                    }
-                }
-                else
-                {
-                    this.url += string.Format("{0}{1}={2}", prefix, parameter, value);
-                }
-
-                this.hasParams = true;
-            }
-            return this;
-        }
-
-        public IOneSkyRequest Body(string key, object value, bool condition = true)
-        {
-            if (condition)
-            {
-                this.body.Add(new KeyValuePair<string, object>(key, value));
-            }
-            return this;
-        }
-
-        public IOneSkyRequest Files(string name, string path, bool condition = true)
-        {
-            if (condition)
-            {
-                this.files.Add(new KeyValuePair<string, string>(name, Path.GetFullPath(path)));
-            }
-            return this;
-        }
-
-        public IOneSkyResponse Get()
-        {
-            var response = this.Send("GET");
-            return response;
-        }
-
-        public IOneSkyResponse Post()
-        {
-            var data = this.GenerateBody();
-            var response = this.Send("POST", data);
-            return response;
-        }
-
-        public IOneSkyResponse Put()
-        {
-            var data = this.GenerateBody();
-            var response = this.Send("PUT", data);
-            return response;
-        }
-
-        public IOneSkyResponse Delete()
-        {
-            var response = this.Send("DELETE");
-            return response;
         }
     }
 }
