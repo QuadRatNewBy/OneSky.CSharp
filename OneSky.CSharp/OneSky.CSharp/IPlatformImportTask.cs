@@ -16,7 +16,7 @@
         /// <para>(Min. value: 1)</para>
         /// </param>
         /// <param name="perPage">
-        /// <para>Files to retrieve for each page.</para>
+        /// <para>Import Tasks to retrieve for each page.</para>
         /// <para>(Min. value: 1; Max value: 100)</para>
         /// </param>
         /// <param name="status">
@@ -50,7 +50,7 @@
         IOneSkyResponse List(int projectId, int page = 1, int perPage = 50, string status = "all");
 
         /// <summary>
-        /// Shows certain import task from the project
+        /// Shows specific import task from the project
         /// </summary>
         /// <param name="projectId">
         /// Id of the project.
