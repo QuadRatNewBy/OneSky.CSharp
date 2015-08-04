@@ -4,59 +4,26 @@
     using System.Security.Cryptography;
     using System.Text;
 
-    /// <summary>
-    /// OneSky helper. Hides Authentication details. 
-    /// </summary>
     internal class OneSkyHelper
     {
-        /// <summary>
-        /// The authentication API key.
-        /// </summary>
         private const string AuthenticationApiKey = "api_key";
 
-        /// <summary>
-        /// The authentication timestamp.
-        /// </summary>
         private const string AuthenticationTimestamp = "timestamp";
 
-        /// <summary>
-        /// The authentication DEV hash.
-        /// </summary>
         private const string AuthenticationDevHash = "dev_hash";
 
-        /// <summary>
-        /// The public key.
-        /// </summary>
         private readonly string publicKey;
 
-        /// <summary>
-        /// The secret key.
-        /// </summary>
         private readonly string secretKey;
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="OneSkyHelper"/> class.
-        /// </summary>
-        /// <param name="publicKey">
-        /// The public key.
-        /// </param>
-        /// <param name="secretKey">
-        /// The secret key.
-        /// </param>
         internal OneSkyHelper(string publicKey, string secretKey)
         {
             this.publicKey = publicKey;
             this.secretKey = secretKey;
         }
 
-        /// <summary>
-        /// Gets the request count.
-        /// </summary>
         internal int RequestCount { get; private set; }
 
-        /// <summary>
-        /// Gets the timestamp in UNIX fashion.
-        /// </summary>
         private int Timestamp
         {
             get
@@ -67,29 +34,11 @@
             }
         }
 
-        /// <summary>
-        /// Creates <see cref="OneSkyRequest"/> without authentication data.
-        /// </summary>
-        /// <param name="url">
-        /// The url of request.
-        /// </param>
-        /// <returns>
-        /// The <see cref="IOneSkyRequest"/>.
-        /// </returns>
         internal static OneSkyRequest CreateAnonymousRequest(string url)
         {
             return new OneSkyRequest(url);
         }
 
-        /// <summary>
-        /// Creates <see cref="OneSkyRequest"/> with embedded authentication data.
-        /// </summary>
-        /// <param name="url">
-        /// The url of request.
-        /// </param>
-        /// <returns>
-        /// The <see cref="IOneSkyRequest"/>.
-        /// </returns>
         internal IOneSkyRequest CreateRequest(string url)
         {
             var timestamp = this.Timestamp;
@@ -103,15 +52,6 @@
                     .Parameter(AuthenticationDevHash, devHash);
         }
 
-        /// <summary>
-        /// The get DEV hash.
-        /// </summary>
-        /// <param name="timestamp">
-        /// Current UNIX timestamp.
-        /// </param>
-        /// <returns>
-        /// DEV hash for authentication.
-        /// </returns>
         private string GetDevHash(int timestamp)
         {
             var md5 = MD5.Create();

@@ -6,17 +6,8 @@
     /// </summary>
     public class OneSkyClient : IOneSkyClient
     {
-        /// <summary>
-        /// The 'anonymous' access object.
-        /// </summary>
         private static readonly IPluginAnonymous anonymous = new PluginAnonymous();
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="OneSkyClient"/> class.
-        /// </summary>
-        /// <param name="oneSky">
-        /// OneSky helper instance (see <see cref="OneSkyHelper"/>).
-        /// </param>
         private OneSkyClient(OneSkyHelper oneSky)
         {
             this.Platform = new Platform(oneSky);

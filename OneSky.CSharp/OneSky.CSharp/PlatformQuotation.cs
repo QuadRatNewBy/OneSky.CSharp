@@ -6,13 +6,18 @@
     {
         private const string QuotationShowAddress = "https://platform.api.onesky.io/1/projects/{project_id}/quotations";
 
-        private const string ProjectIdPlacehoder = "project_id";
+        private const string ProjectIdPlaceholder = "project_id";
 
         private const string QuotationShowFilesPrarm = "files";
+
         private const string QuotationShowToLocalePrarm = "to_locale";
+
         private const string QuotationShowIsIncludingNotTranslatedPrarm = "is_including_not_translated";
+
         private const string QuotationShowIsIncludingNotApprovedPrarm = "is_including_not_approved";
+
         private const string QuotationShowIsIncludingOutdatedPrarm = "is_including_outdated";
+
         private const string QuotationShowSpecializationPrarm = "specialization";
 
         private OneSkyHelper oneSky;
@@ -33,7 +38,7 @@
         {
             return
                 this.oneSky.CreateRequest(QuotationShowAddress)
-                    .Placeholder(ProjectIdPlacehoder, projectId)
+                    .Placeholder(ProjectIdPlaceholder, projectId)
                     .Parameter(QuotationShowFilesPrarm, files)
                     .Parameter(QuotationShowToLocalePrarm, toLocale)
                     .Parameter(QuotationShowIsIncludingNotTranslatedPrarm, isIncludingNotTranslated)
