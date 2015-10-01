@@ -15,7 +15,7 @@
         /// The <see cref="IOneSkyResponse"/>.
         /// </returns>
         /// <remarks>
-        /// Password will be sent to Email specified in <paramref name="email"/>
+        /// Password will be sent to Email specified in <paramref name="email"/> parameter.
         /// </remarks>
         IOneSkyResponse SingUp(string email);
 

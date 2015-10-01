@@ -1,12 +1,12 @@
 ﻿namespace OneSky.CSharp
 {
     /// <summary>
-    /// Plugin API Quotation Locale interface.
+    /// Plugin API Locale interface.
     /// </summary>
     public interface IPluginLocale
     {
         /// <summary>
-        /// Returns all available locales in the platform..
+        /// Returns all available locales in the platform.
         /// </summary>
         /// <returns>
         /// The <see cref="IOneSkyResponse"/>.

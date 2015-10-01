@@ -14,7 +14,7 @@
         /// Id of the project.
         /// </param>
         /// <param name="screenshots">
-        /// List of screenshots (JSON serialized objects).
+        /// List of screenshots (JSON serialized).
         /// </param>
         /// <returns>
         /// The <see cref="IOneSkyResponse"/>.
