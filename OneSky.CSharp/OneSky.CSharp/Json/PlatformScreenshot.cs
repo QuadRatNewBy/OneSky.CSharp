@@ -5,7 +5,7 @@
 
     using Newtonsoft.Json;
 
-    public class PlatformScreenshot : IPlatformScreenshot
+    internal class PlatformScreenshot : IPlatformScreenshot
     {
         private CSharp.IPlatformScreenshot screenshot;
 
