@@ -42,7 +42,7 @@ System.IO.File.WriteAllBytes(
     "Path/To/Save/Translation.ext",
     Encoding.UTF8.GetBytes(translation));
 ```
-To find your API keys please go to [OneSky Support](http://support.oneskyapp.com/support/solutions/articles/89104-how-to-find-your-api-keys) page.
+To find your API keys please go to [OneSky Support](https://support.oneskyapp.com/hc/en-us/articles/206887797-How-to-find-your-API-keys-) page.
 
 For more information go to [Wiki](https://github.com/QuadRatNewBy/OneSky-DotNet/wiki/Home) *(Soon)*
 
