@@ -50,7 +50,7 @@ For more information go to [Wiki](https://github.com/QuadRatNewBy/OneSky-DotNet/
 * [Wiki](https://github.com/QuadRatNewBy/OneSky-DotNet/wiki/Home) *(Soon)*
 * C# XML Documentation *(Soon)*
 * Official [Platform](https://github.com/onesky/api-documentation-platform) and [Plugin](https://github.com/onesky/api-documentation-plugin) API Documentations
-* [Version Log]() and [Roadmap]() *(Soon)*
+* [Roadmap]() with [Version Log]() *(Soon)*
 
 ### Credits ###
 * [OneSkyApp](http://www.oneskyapp.com/) Team - Thanks for translation platform itself  
