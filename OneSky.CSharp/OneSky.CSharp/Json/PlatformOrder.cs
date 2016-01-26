@@ -11,10 +11,10 @@
             this.order = order;
         }
 
-        public IOneSkyResponse<IMetaList, IOrderPlatformEntry> List(int projectId, int page = 1, int perPage = 50, string fileName = null)
+        public IOneSkyResponse<IMetaList, IEnumerable<IOrderPlatformEntry>> List(int projectId, int page = 1, int perPage = 50, string fileName = null)
         {
             var plain = this.order.List(projectId, page, perPage, fileName);
-            return JsonHelper.PlatformCompose<IMetaList, IOrderPlatformEntry, MetaList, OrderPlatformEntry>(plain);
+            return JsonHelper.PlatformCompose<IMetaList, IEnumerable<IOrderPlatformEntry>, MetaList, List<OrderPlatformEntry>>(plain);
         }
 
         public IOneSkyResponse<IMeta, IOrderPlatformDetails> Show(int projectId, int orderId)

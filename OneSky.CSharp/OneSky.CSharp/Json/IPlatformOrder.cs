@@ -27,7 +27,7 @@
         /// <returns>
         /// The <see cref="IOneSkyResponse{TMeta,TData}"/> with <see cref="IMetaList"/> as <c>Meta</c> and list of <see cref="IOrderPlatformEntry"/> as <c>Data</c>.
         /// </returns>
-        IOneSkyResponse<IMetaList, IOrderPlatformEntry> List(int projectId, int page = 1, int perPage = 50, string fileName = null);
+        IOneSkyResponse<IMetaList, IEnumerable<IOrderPlatformEntry>> List(int projectId, int page = 1, int perPage = 50, string fileName = null);
 
         /// <summary>
         /// Shows specific order from the project
