@@ -1,7 +1,7 @@
 # OneSky.CSharp #
 C# client for OneSky API.
 
-[<img src="https://img.shields.io/nuget/dt/OneSKy.CSharp.svg">](https://www.nuget.org/packages/OneSky.CSharp/)
+[<img src="https://img.shields.io/nuget/dt/OneSky.CSharp.svg">](https://www.nuget.org/packages/OneSky.CSharp/)
 
 ## Information ##
 
