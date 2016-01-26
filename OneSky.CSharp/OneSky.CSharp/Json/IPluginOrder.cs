@@ -111,8 +111,8 @@
         IOneSkyResponse<IMeta, IOrderPluginNew> PostOrders(
             int projectId,
             string fromLocale,
-            string toLocales,
-            string items,
+            IEnumerable<string> toLocales,
+            IDictionary<string, IItem> items,
             string tone = null,
             string note = null,
             bool isIncludingReview = false,

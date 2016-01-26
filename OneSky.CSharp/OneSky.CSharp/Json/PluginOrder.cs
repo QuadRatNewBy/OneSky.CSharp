@@ -3,6 +3,8 @@
     using System.Collections.Generic;
     using System.Linq;
 
+    using Newtonsoft.Json;
+
     internal class PluginOrder : IPluginOrder
     {
         private CSharp.IPluginOrder order;
@@ -62,18 +64,20 @@
         public IOneSkyResponse<IMeta, IOrderPluginNew> PostOrders(
             int projectId,
             string fromLocale,
-            string toLocales,
-            string items,
+            IEnumerable<string> toLocales,
+            IDictionary<string, IItem> items,
             string tone = null,
             string note = null,
             bool isIncludingReview = false,
             string specialization = "general")
         {
+            var plainItems = JsonConvert.SerializeObject(items.ToDictionary(x => x.Key, x => new Item(x.Value)));
+            var plainToLocales = string.Join(",", toLocales);
             var plain = this.order.PostOrders(
                 projectId,
                 fromLocale,
-                toLocales,
-                items,
+                plainToLocales,
+                plainItems,
                 tone,
                 note,
                 isIncludingReview,
