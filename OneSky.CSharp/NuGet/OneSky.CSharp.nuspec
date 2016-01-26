@@ -11,6 +11,10 @@
         <iconUrl>https://raw.githubusercontent.com/wiki/QuadRatNewBy/OneSky.CSharp/icon.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>C# client for OneSky API (oneskyapp.com)</description>
+        <releaseNotes>XML Documentation for Endpoints
+Issue #5 fixed (Breaking change)
+Issue #6 fixed (Breaking change)
+(https://github.com/QuadRatNewBy/OneSky.CSharp/wiki/Roadmap#110)</releaseNotes>
         <tags>onesky oneskyapp</tags>
         <dependencies>
             <dependency id="Newtonsoft.Json" version="5.0.1" />
@@ -18,5 +22,6 @@
     </metadata>
     <files>
         <file src="..\OneSky.CSharp\bin\Release\OneSky.CSharp.dll" target="lib\net40-client\OneSky.CSharp.dll" />
+        <file src="..\OneSky.CSharp\bin\Release\OneSky.CSharp.xml" target="lib\net40-client\OneSky.CSharp.xml" />
     </files>
 </package>
