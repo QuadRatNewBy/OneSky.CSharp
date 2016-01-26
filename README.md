@@ -48,9 +48,9 @@ For more information go to [Wiki](https://github.com/QuadRatNewBy/OneSky-DotNet/
 
 ### Documentation ###
 * [Wiki](https://github.com/QuadRatNewBy/OneSky-DotNet/wiki/Home) *(Soon)*
-* C# XML Documentation *(Soon)*
+* C# XML Documentation
 * Official [Platform](https://github.com/onesky/api-documentation-platform) and [Plugin](https://github.com/onesky/api-documentation-plugin) API Documentations
-* [Roadmap]() with [Version Log]() *(Soon)*
+* [Roadmap](https://github.com/QuadRatNewBy/OneSky.CSharp/wiki/Roadmap)
 
 ### Credits ###
 * [OneSkyApp](http://www.oneskyapp.com/) Team - Thanks for translation platform itself  
