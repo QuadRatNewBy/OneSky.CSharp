@@ -17,7 +17,7 @@
         /// <remarks>
         /// Password will be sent to Email specified in <paramref name="email"/> parameter.
         /// </remarks>
-        IOneSkyResponse SingUp(string email);
+        IOneSkyResponse SignUp(string email);
 
         /// <summary>
         /// Login to OneSky account.
@@ -31,6 +31,6 @@
         /// <returns>
         /// The <see cref="IOneSkyResponse"/>.
         /// </returns>
-        IOneSkyResponse SingIn(string email, string password);
+        IOneSkyResponse SignIn(string email, string password);
     }
 }

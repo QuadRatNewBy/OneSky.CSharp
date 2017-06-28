@@ -13,7 +13,7 @@
         [Fact]
         public void Login()
         {
-            var response = this.anonymous.SingIn(SettingsUser.Email, SettingsUser.Password);
+            var response = this.anonymous.SignIn(SettingsUser.Email, SettingsUser.Password);
 
             response.StatusCode.Should().BeGreaterOrEqualTo(200).And.BeLessThan(300);
 

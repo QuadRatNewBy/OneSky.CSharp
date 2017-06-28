@@ -14,14 +14,14 @@
             this.anonymous = anonymous;
         }
 
-        public IOneSkyResponse<IMeta, INull> SingUp(string email)
+        public IOneSkyResponse<IMeta, INull> SignUp(string email)
         {
-            return this.anonymous.SingUp(email);
+            return this.anonymous.SignUp(email);
         }
 
-        public IOneSkyResponse<IMeta, IEnumerable<IAccount>> SingIn(string email, string password)
+        public IOneSkyResponse<IMeta, IEnumerable<IAccount>> SignIn(string email, string password)
         {
-            return this.anonymous.SingIn(email, password);
+            return this.anonymous.SignIn(email, password);
         }
 
         public IOneSkyResponse<IMeta, IAccountCredit> GetCredit()
