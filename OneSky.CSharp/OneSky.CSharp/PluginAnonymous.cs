@@ -2,27 +2,27 @@
 {
     internal class PluginAnonymous : IPluginAnonymous
     {
-        private const string SingUpAddress = "https://plugin.api.onesky.io/1/accounts/sign-up";
+        private const string SignUpAddress = "https://plugin.api.onesky.io/1/accounts/sign-up";
 
-        private const string SingInAddress = "https://plugin.api.onesky.io/1/accounts/sign-in";
+        private const string SignInAddress = "https://plugin.api.onesky.io/1/accounts/sign-in";
 
-        private const string SingUpEmailBody = "email";
+        private const string SignUpEmailBody = "email";
 
-        private const string SingInEmailBody = "email";
+        private const string SignInEmailBody = "email";
 
-        private const string SingInPasswordBody = "password";
+        private const string SignInPasswordBody = "password";
 
-        public IOneSkyResponse SingUp(string email)
+        public IOneSkyResponse SignUp(string email)
         {
-            return OneSkyHelper.CreateAnonymousRequest(SingUpAddress).Body(SingUpEmailBody, email).Post();
+            return OneSkyHelper.CreateAnonymousRequest(SignUpAddress).Body(SignUpEmailBody, email).Post();
         }
 
-        public IOneSkyResponse SingIn(string email, string password)
+        public IOneSkyResponse SignIn(string email, string password)
         {
             return
-                OneSkyHelper.CreateAnonymousRequest(SingInAddress)
-                    .Body(SingInEmailBody, email)
-                    .Body(SingInPasswordBody, password)
+                OneSkyHelper.CreateAnonymousRequest(SignInAddress)
+                    .Body(SignInEmailBody, email)
+                    .Body(SignInPasswordBody, password)
                     .Post();
         }
     }

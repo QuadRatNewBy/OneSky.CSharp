@@ -19,7 +19,7 @@
         /// <remarks>
         /// Password will be sent to Email specified in <paramref name="email"/> parameter.
         /// </remarks>
-        IOneSkyResponse<IMeta, INull> SingUp(string email);
+        IOneSkyResponse<IMeta, INull> SignUp(string email);
 
         /// <summary>
         /// Login to OneSky account.
@@ -33,6 +33,6 @@
         /// <returns>
         /// The <see cref="IOneSkyResponse{TMeta,TData}"/> with <see cref="IMeta"/> as <c>Meta</c> and list of <see cref="IAccount"/> as <c>Data</c>.
         /// </returns>
-        IOneSkyResponse<IMeta, IEnumerable<IAccount>> SingIn(string email, string password);
+        IOneSkyResponse<IMeta, IEnumerable<IAccount>> SignIn(string email, string password);
     }
 }

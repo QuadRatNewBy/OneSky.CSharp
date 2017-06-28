@@ -11,9 +11,9 @@
             this.anonymous = anonymous;
         }
 
-        public IOneSkyResponse<IMeta, INull> SingUp(string email)
+        public IOneSkyResponse<IMeta, INull> SignUp(string email)
         {
-            var plain = this.anonymous.SingUp(email);
+            var plain = this.anonymous.SignUp(email);
             var tuple = JsonHelper.PluginDeserialize(plain, new Null(), x => x);
             return new OneSkyResponse<IMeta, INull>(
                 plain.StatusCode,
@@ -22,9 +22,9 @@
                 tuple.Item2);
         }
 
-        public IOneSkyResponse<IMeta, IEnumerable<IAccount>> SingIn(string email, string password)
+        public IOneSkyResponse<IMeta, IEnumerable<IAccount>> SignIn(string email, string password)
         {
-            var plain = this.anonymous.SingIn(email, password);
+            var plain = this.anonymous.SignIn(email, password);
             var tuple = JsonHelper.PluginDeserialize(plain, new { accounts = new List<Account>() }, x => x.accounts);
             return new OneSkyResponse<IMeta, IEnumerable<IAccount>>(
                 plain.StatusCode,
