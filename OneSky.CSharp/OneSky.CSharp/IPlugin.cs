@@ -1,4 +1,6 @@
-﻿namespace OneSky.CSharp
+﻿using System;
+
+namespace OneSky.CSharp
 {
     /// <summary>
     /// Plugin API access interface.
@@ -28,6 +30,7 @@
         /// <summary>
         /// Provides access Item resources.
         /// </summary>
+        [Obsolete("Plugin Items endpoints were removed from official documentation. Will be completely removed in 2.0", false)]
         IPluginItem Item { get; }
 
         /// <summary>

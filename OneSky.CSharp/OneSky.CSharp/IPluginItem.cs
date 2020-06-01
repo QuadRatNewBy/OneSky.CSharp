@@ -1,8 +1,11 @@
+using System;
+
 namespace OneSky.CSharp
 {
     /// <summary>
     /// Plugin API Item endpoints interface.
     /// </summary>
+    [Obsolete("Plugin Items endpoints were removed from official documentation. Will be completely removed in 2.0", false)]
     public interface IPluginItem
     {
         /// <summary>
@@ -26,6 +29,7 @@ namespace OneSky.CSharp
         /// <returns>
         /// The <see cref="IOneSkyResponse"/>.
         /// </returns>
+        [Obsolete("Endpoint was removed from official documentation. Will be removed completely in 2.0", false)]
         IOneSkyResponse GetItems(int projectId, string locale = null, int page = 1, int perPage = 15);
 
         /// <summary>
@@ -40,6 +44,7 @@ namespace OneSky.CSharp
         /// <returns>
         /// The <see cref="IOneSkyResponse"/>.
         /// </returns>
+        [Obsolete("Endpoint was removed from official documentation. Will be removed completely in 2.0", false)]
         IOneSkyResponse GetItem(int projectId, int itemId);
 
         /// <summary>
@@ -54,6 +59,7 @@ namespace OneSky.CSharp
         /// <returns>
         /// The <see cref="IOneSkyResponse"/>.
         /// </returns>
+        [Obsolete("Endpoint was removed from official documentation. Will be removed completely in 2.0", false)]
         IOneSkyResponse DeleteItem(int projectId, int itemId);
     }
 }

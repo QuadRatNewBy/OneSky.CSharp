@@ -1,4 +1,6 @@
-﻿namespace OneSky.CSharp.Json
+﻿using System;
+
+namespace OneSky.CSharp.Json
 {
     internal class Plugin : IPlugin
     {
@@ -14,6 +16,7 @@
 
         public IPluginLanguagePair LanguagePair { get; private set; }
 
+        [Obsolete("Plugin Items endpoints were removed from official documentation. Will be completely removed in 2.0", false)]
         public IPluginItem Item { get; private set; }
 
         public IPluginOrder Order { get; private set; }

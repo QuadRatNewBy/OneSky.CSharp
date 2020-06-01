@@ -1,10 +1,13 @@
-﻿namespace OneSky.CSharp.Json
+﻿using System;
+
+namespace OneSky.CSharp.Json
 {
     using System.Collections.Generic;
 
     /// <summary>
     /// Plugin API Item endpoints interface.
     /// </summary>
+    [Obsolete("Plugin Items endpoints were removed from official documentation. Will be completely removed in 2.0", false)]
     public interface IPluginItem
     {
         /// <summary>
@@ -26,6 +29,7 @@
         /// <returns>
         /// The <see cref="IOneSkyResponse{TMeta,TData}"/> with <see cref="IMeta"/> as <c>Meta</c> and list of <see cref="IItemEntry"/> as <c>Data</c>.
         /// </returns>
+        [Obsolete("Endpoint was removed from official documentation. Will be removed completely in 2.0", false)]
         IOneSkyResponse<IMeta, IEnumerable<IItemEntry>> GetItems(
             int projectId,
             string locale = null,
@@ -44,6 +48,7 @@
         /// <returns>
         /// The <see cref="IOneSkyResponse{TMeta,TData}"/> with <see cref="IMeta"/> as <c>Meta</c> and <see cref="IItemDetails"/> as <c>Data</c>.
         /// </returns>
+        [Obsolete("Endpoint was removed from official documentation. Will be removed completely in 2.0", false)]
         IOneSkyResponse<IMeta, IItemDetails> GetItem(int projectId, int itemId);
 
         /// <summary>
@@ -58,6 +63,7 @@
         /// <returns>
         /// The <see cref="IOneSkyResponse{TMeta,TData}"/> with <see cref="IMeta"/> as <c>Meta</c> and no <c>Data</c>.
         /// </returns>
+        [Obsolete("Endpoint was removed from official documentation. Will be removed in 2.0", false)]
         IOneSkyResponse<IMeta, INull> DeleteItem(int projectId, int itemId);
     }
 }
