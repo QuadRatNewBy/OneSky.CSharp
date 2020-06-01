@@ -1,4 +1,6 @@
-﻿namespace OneSky.CSharp
+﻿using System;
+
+namespace OneSky.CSharp
 {
     internal class PluginAnonymous : IPluginAnonymous
     {
@@ -24,6 +26,18 @@
                     .Body(SignInEmailBody, email)
                     .Body(SignInPasswordBody, password)
                     .Post();
+        }
+
+        [Obsolete("'Sign' is misspelled as 'Sing'. Will be removed in 2.0", false)]
+        public IOneSkyResponse SingUp(string email)
+        {
+            return this.SignUp(email);
+        }
+
+        [Obsolete("'Sign' is misspelled as 'Sing'. Will be removed in 2.0", false)]
+        public IOneSkyResponse SingIn(string email, string password)
+        {
+            return this.SignIn(email, password);
         }
     }
 }

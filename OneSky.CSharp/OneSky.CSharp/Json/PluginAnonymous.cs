@@ -1,4 +1,6 @@
-﻿namespace OneSky.CSharp.Json
+﻿using System;
+
+namespace OneSky.CSharp.Json
 {
     using System.Collections.Generic;
 
@@ -31,6 +33,18 @@
                 plain.StatusDescription,
                 tuple.Item1,
                 tuple.Item2);
+        }
+
+        [Obsolete("'Sign' is misspelled as 'Sing'. Will be removed in 2.0", false)]
+        public IOneSkyResponse<IMeta, INull> SingUp(string email)
+        {
+            return this.SignUp(email);
+        }
+
+        [Obsolete("'Sign' is misspelled as 'Sing'. Will be removed in 2.0", false)]
+        public IOneSkyResponse<IMeta, IEnumerable<IAccount>> SingIn(string email, string password)
+        {
+            return this.SignIn(email, password);
         }
     }
 }
