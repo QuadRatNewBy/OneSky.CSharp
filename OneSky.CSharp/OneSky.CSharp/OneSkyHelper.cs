@@ -54,19 +54,21 @@
 
         private string GetDevHash(int timestamp)
         {
-            var md5 = MD5.Create();
-            var sb = new StringBuilder();
-
-            var input = timestamp + this.secretKey;
-            var inputBytes = Encoding.ASCII.GetBytes(input);
-            var hash = md5.ComputeHash(inputBytes);
-
-            foreach (var b in hash)
+            using (var md5 = MD5.Create())
             {
-                sb.Append(b.ToString("x2"));
-            }
+                var sb = new StringBuilder();
 
-            return sb.ToString();
+                var input = timestamp + this.secretKey;
+                var inputBytes = Encoding.ASCII.GetBytes(input);
+                var hash = md5.ComputeHash(inputBytes);
+
+                foreach (var b in hash)
+                {
+                    sb.Append(b.ToString("x2"));
+                }
+
+                return sb.ToString();
+            }
         }
     }
 }
