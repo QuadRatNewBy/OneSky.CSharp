@@ -80,8 +80,6 @@
         [Fact]
         public void GrandTest()
         {
-            this.Nuke();
-            
             this.ProjectGroupCreate();
             this.ProjectGroupCreateFake();
             this.ProjectGroupList();
@@ -428,16 +426,6 @@
         {
             var response = this.platform.ProjectGroup.Delete(this.projectGroupId);
             response.StatusCode.Should().Be(200);
-        }
-
-        public void Nuke()
-        {
-            // WARNING! This will remove everi bit from your account
-            var ids = this.platform.ProjectGroup.List(1, 100).Data.Select(x => x.Id).Where(id => id != 32182);
-            foreach (var id in ids)
-            {
-                this.platform.ProjectGroup.Delete(id);
-            }
         }
 
         public void QuickStart()

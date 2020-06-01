@@ -7,3 +7,4 @@ OneSky.CSharp/OneSky.CSharp.Tests/bin/
 OneSky.CSharp/packages/
 *.coverage
 /OneSky.CSharp/*.user
+OneSky.CSharp/.vs
