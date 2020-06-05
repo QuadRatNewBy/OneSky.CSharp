@@ -2,19 +2,19 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>OneSky.CSharp</id>
-        <version>1.1.0</version>
+        <version>1.2.0</version>
         <title>OneSky C#</title>
         <authors>Uladzimir Herasimionak</authors>
         <owners>Uladzimir Herasimionak</owners>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <licenseUrl>https://github.com/QuadRatNewBy/OneSky.CSharp/blob/master/LICENSE.md</licenseUrl>
         <projectUrl>https://github.com/QuadRatNewBy/OneSky.CSharp</projectUrl>
         <iconUrl>https://raw.githubusercontent.com/wiki/QuadRatNewBy/OneSky.CSharp/icon.png</iconUrl>
-        <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>C# client for OneSky API (oneskyapp.com)</description>
-        <releaseNotes>XML Documentation for Endpoints
-Issue #5 fixed (Breaking change)
-Issue #6 fixed (Breaking change)
-(https://github.com/QuadRatNewBy/OneSky.CSharp/wiki/Roadmap#110)</releaseNotes>
+        <releaseNotes>"Sign" was misspelled as "Sing". Fixed
+"Plugin Item" endpoints deprecated to match official documentation (Issue #7)
+Proper disposal of MD5 resources (Issue #8)
+(https://github.com/QuadRatNewBy/OneSky.CSharp/wiki/Roadmap#120)</releaseNotes>
         <tags>onesky oneskyapp</tags>
         <dependencies>
             <dependency id="Newtonsoft.Json" version="5.0.1" />
@@ -23,5 +23,6 @@ Issue #6 fixed (Breaking change)
     <files>
         <file src="..\OneSky.CSharp\bin\Release\OneSky.CSharp.dll" target="lib\net40-client\OneSky.CSharp.dll" />
         <file src="..\OneSky.CSharp\bin\Release\OneSky.CSharp.xml" target="lib\net40-client\OneSky.CSharp.xml" />
+		<file src="..\OneSky.CSharp\bin\Release\OneSky.CSharp.pdb" target="lib\net40-client\OneSky.CSharp.pdb" />
     </files>
 </package>
