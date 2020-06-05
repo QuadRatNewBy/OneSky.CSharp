@@ -1,5 +1,6 @@
 # OneSky.CSharp #
 C# client for OneSky API.
+Branch for version 1.*
 
 [<img src="https://img.shields.io/nuget/v/OneSky.CSharp.svg">](https://www.nuget.org/packages/OneSky.CSharp/)
 
