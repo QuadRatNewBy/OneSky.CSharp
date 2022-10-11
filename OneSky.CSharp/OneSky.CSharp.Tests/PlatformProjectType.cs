@@ -20,7 +20,7 @@
             response.StatusCode.Should().BeGreaterOrEqualTo(200).And.BeLessThan(300);
 
             response.Meta.Should().NotBeNull(". [Platform].[ProjectType].[List] should response with non-empty meta.");
-            response.Meta.Status.ShouldBeEquivalentTo(response.StatusCode, ". A assume that's just how it should be");
+            response.Meta.Status.Should().Be(response.StatusCode, ". A assume that's just how it should be");
             response.Meta.RecordCount.Should().BePositive(". Expecting non-empty list");
 
             response.Data.Should()
