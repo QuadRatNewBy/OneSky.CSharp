@@ -54,7 +54,7 @@
             this.PostQuotation();
         }
 
-        public void ProjectCreate() 
+        private void ProjectCreate() 
         {
             this.projectName = this.RandomString(8);
 
@@ -66,7 +66,7 @@
             this.projectId = response.Data.Id;
         }
 
-        public void ProjectCreateFake() 
+    private void ProjectCreateFake() 
         {
             var name = this.RandomString(4);
             var response = this.plugin.Project.PostProject(name);
@@ -77,7 +77,7 @@
             this.projectId2 = response.Data.Id;
         }
 
-        public void ProjectList()
+        private void ProjectList()
         {
             var response = this.plugin.Project.GetProjects();
 
@@ -85,7 +85,7 @@
                 .And.Contain(x => x.Name.StartsWith(this.projectName));
         }
 
-        public void PostQuotation()
+        private void PostQuotation()
         {
             var response = this.plugin.Quotation.PostQuotations(
                 this.projectId,
