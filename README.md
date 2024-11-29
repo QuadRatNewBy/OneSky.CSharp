@@ -1,3 +1,5 @@
+# PROJECT IS ABANDONED #
+
 # OneSky.CSharp #
 C# client for OneSky API.
 
